@@ -140,23 +140,23 @@ class MemoryGame {
 extension MemoryGame {
 
     static var topCardImages: [UIImage] = [
-        UIImage(named: "257")!, UIImage(named:"248")!, UIImage(named:"130")!, UIImage(named: "448")!, UIImage(named: "65")!, UIImage(named: "157")!, UIImage(named: "384")!, UIImage(named: "149")!, UIImage(named: "59")!, UIImage(named: "249")!, UIImage(named: "94")!, UIImage(named: "151")!, UIImage(named: "9")!, UIImage(named: "150")!, UIImage(named: "6")!
+        UIImage(named: "test")!
     ]
     
     static var gen1Images: [UIImage] = [
-        
+        UIImage(named: "test")!
     ]
     
     static var gen2Images: [UIImage] = [
-        
+        UIImage(named: "test")!
     ]
     
     static var gen3Images: [UIImage] = [
-        
+        UIImage(named: "test")!
     ]
     
     static var gen4Images: [UIImage] = [
-        
+        UIImage(named: "test")!
     ]
     
     static var gen5Images: [UIImage] = [

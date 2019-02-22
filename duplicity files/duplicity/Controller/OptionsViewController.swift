@@ -10,7 +10,6 @@ import UIKit
 import AVFoundation
 import GameKit
 import StoreKit
-import SwiftyGif
 import GoogleMobileAds
 
 var difficulty = UInt()
@@ -34,7 +33,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     
     private var bannerView: GADBannerView!
     
-    private var imageCategoryArray: [String] = ["Most Popular", "Generation 1", "Generation 2", "Generation 3", "Generation 4", "Generation 5", "Generation 6", "Generation 7"]
+    private var imageCategoryArray: [String] = ["Most Popular", "Generation 1", "Generation 2"]
     
     override func viewWillAppear(_ animated: Bool) {
         versionLabel.text = version()
@@ -221,36 +220,36 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         switch row {
         case 0:
             rowString = imageCategoryArray[0]
-            myImageView.image = UIImage(named: "25")
+            myImageView.image = UIImage(named: "test")
             imageGroupArray = MemoryGame.topCardImages
         case 1:
             rowString = imageCategoryArray[1]
-            myImageView.image = UIImage(named: "_6")
+            myImageView.image = UIImage(named: "test")
             imageGroupArray = MemoryGame.gen1Images
         case 2:
             rowString = imageCategoryArray[2]
-            myImageView.image = UIImage(named: "249")
+            myImageView.image = UIImage(named: "test")
             imageGroupArray = MemoryGame.gen2Images
-        case 3:
-            rowString = imageCategoryArray[3]
-            myImageView.image = UIImage(named: "384")
-            imageGroupArray = MemoryGame.gen3Images
-        case 4:
-            rowString = imageCategoryArray[4]
-            myImageView.image = UIImage(named: "448")
-            imageGroupArray = MemoryGame.gen4Images
-        case 5:
-            rowString = imageCategoryArray[5]
-            myImageView.image = UIImage(named: "635")
-            imageGroupArray = MemoryGame.gen5Images
-        case 6:
-            rowString = imageCategoryArray[6]
-            myImageView.image = UIImage(named: "658")
-            imageGroupArray = MemoryGame.gen6Images
-        case 7:
-            rowString = imageCategoryArray[7]
-            myImageView.image = UIImage(named: "745_2")
-            imageGroupArray = MemoryGame.gen7Images
+//        case 3:
+//            rowString = imageCategoryArray[3]
+//            myImageView.image = UIImage(named: "384")
+//            imageGroupArray = MemoryGame.gen3Images
+//        case 4:
+//            rowString = imageCategoryArray[4]
+//            myImageView.image = UIImage(named: "448")
+//            imageGroupArray = MemoryGame.gen4Images
+//        case 5:
+//            rowString = imageCategoryArray[5]
+//            myImageView.image = UIImage(named: "635")
+//            imageGroupArray = MemoryGame.gen5Images
+//        case 6:
+//            rowString = imageCategoryArray[6]
+//            myImageView.image = UIImage(named: "658")
+//            imageGroupArray = MemoryGame.gen6Images
+//        case 7:
+//            rowString = imageCategoryArray[7]
+//            myImageView.image = UIImage(named: "745_2")
+//            imageGroupArray = MemoryGame.gen7Images
         case 8: break
         default:
             rowString = "Error: too many rows"

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FirebasePerformance
 import GoogleMobileAds
 
 // Global Identifier
@@ -128,7 +127,7 @@ extension GameController: GameDelegate {
     func memoryGame(_ game: MemoryGame, showCards cards: [Card]) {
         for card in cards {
             guard let index = gameController.indexForCard(card) else { continue }
-            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeViewCell
+            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! GameCell
             cell.showCard(true, animated: true)
         }
     }
@@ -137,7 +136,7 @@ extension GameController: GameDelegate {
     func memoryGame(_ game: MemoryGame, hideCards cards: [Card]) {
         for card in cards {
             guard let index = gameController.indexForCard(card) else { continue }
-            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! PokeViewCell
+            let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! GameCell
             cell.showCard(false, animated: true)
         }
     }
@@ -182,7 +181,7 @@ extension GameController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PokeViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! GameCell
         cell.showCard(false, animated: false)
         
         guard let card = gameController.cardAtIndex(indexPath.item) else { return cell }
@@ -196,7 +195,7 @@ extension GameController: UICollectionViewDataSource {
 
 extension GameController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! PokeViewCell
+        let cell = collectionView.cellForItem(at: indexPath) as! GameCell
         
         if cell.shown { return }
         gameController.didSelectCard(cell.card)
