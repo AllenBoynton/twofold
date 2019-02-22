@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0F7572EE221F432000498C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572ED221F432000498C2B /* AppDelegate.swift */; };
-		0F7572F0221F432000498C2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572EF221F432000498C2B /* ViewController.swift */; };
+		0F7572F0221F432000498C2B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572EF221F432000498C2B /* HomeController.swift */; };
 		0F7572F3221F432000498C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F1221F432000498C2B /* Main.storyboard */; };
 		0F7572F5221F432300498C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F4221F432300498C2B /* Assets.xcassets */; };
 		0F7572F8221F432300498C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F6221F432300498C2B /* LaunchScreen.storyboard */; };
 		0F757303221F432300498C2B /* duplicityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757302221F432300498C2B /* duplicityTests.swift */; };
 		0F75730E221F432300498C2B /* duplicityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F75730D221F432300498C2B /* duplicityUITests.swift */; };
+		0F757324221F44D600498C2B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F757323221F44D600498C2B /* Default-568h@2x.png */; };
+		0F757329221F919200498C2B /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757325221F919200498C2B /* Music.swift */; };
+		0F75732A221F919200498C2B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757326221F919200498C2B /* Device.swift */; };
+		0F75732B221F919200498C2B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757327221F919200498C2B /* Card.swift */; };
+		0F75732C221F919200498C2B /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757328221F919200498C2B /* MemoryGame.swift */; };
+		0F757330221F92B800498C2B /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F75732F221F92B800498C2B /* GameDelegate.swift */; };
+		0F757334221F936800498C2B /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757331221F936700498C2B /* OptionsViewController.swift */; };
+		0F757335221F936800498C2B /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757332221F936800498C2B /* GameController.swift */; };
+		0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757333221F936800498C2B /* HighScoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,7 @@
 /* Begin PBXFileReference section */
 		0F7572EA221F432000498C2B /* duplicity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = duplicity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7572ED221F432000498C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F7572EF221F432000498C2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F7572EF221F432000498C2B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		0F7572F2221F432000498C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F7572F4221F432300498C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7572F7221F432300498C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,15 @@
 		0F757309221F432300498C2B /* duplicityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = duplicityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F75730D221F432300498C2B /* duplicityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = duplicityUITests.swift; sourceTree = "<group>"; };
 		0F75730F221F432300498C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F757323221F44D600498C2B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0F757325221F919200498C2B /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		0F757326221F919200498C2B /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		0F757327221F919200498C2B /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		0F757328221F919200498C2B /* MemoryGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		0F75732F221F92B800498C2B /* GameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
+		0F757331221F936700498C2B /* OptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		0F757332221F936800498C2B /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		0F757333221F936800498C2B /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,7 @@
 		0F7572E1221F432000498C2B = {
 			isa = PBXGroup;
 			children = (
+				0F757323221F44D600498C2B /* Default-568h@2x.png */,
 				0F7572EC221F432000498C2B /* duplicity */,
 				0F757301221F432300498C2B /* duplicityTests */,
 				0F75730C221F432300498C2B /* duplicityUITests */,
@@ -97,11 +116,14 @@
 		0F7572EC221F432000498C2B /* duplicity */ = {
 			isa = PBXGroup;
 			children = (
-				0F7572ED221F432000498C2B /* AppDelegate.swift */,
-				0F7572EF221F432000498C2B /* ViewController.swift */,
-				0F7572F1221F432000498C2B /* Main.storyboard */,
-				0F7572F4221F432300498C2B /* Assets.xcassets */,
-				0F7572F6221F432300498C2B /* LaunchScreen.storyboard */,
+				0F757320221F437C00498C2B /* AppDelegate */,
+				0F75731F221F437400498C2B /* Model */,
+				0F75731E221F436C00498C2B /* View */,
+				0F75731D221F436100498C2B /* Controller */,
+				0F75731C221F435100498C2B /* Extensions */,
+				0F75732E221F928C00498C2B /* Protocols */,
+				0F75731B221F434500498C2B /* Resources */,
+				0F757321221F43B200498C2B /* Storyboard */,
 				0F7572F9221F432300498C2B /* Info.plist */,
 			);
 			path = duplicity;
@@ -123,6 +145,75 @@
 				0F75730F221F432300498C2B /* Info.plist */,
 			);
 			path = duplicityUITests;
+			sourceTree = "<group>";
+		};
+		0F75731B221F434500498C2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0F7572F4221F432300498C2B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0F75731C221F435100498C2B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0F75731D221F436100498C2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F7572EF221F432000498C2B /* HomeController.swift */,
+				0F757331221F936700498C2B /* OptionsViewController.swift */,
+				0F757332221F936800498C2B /* GameController.swift */,
+				0F757333221F936800498C2B /* HighScoreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0F75731E221F436C00498C2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0F75731F221F437400498C2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F757327221F919200498C2B /* Card.swift */,
+				0F757326221F919200498C2B /* Device.swift */,
+				0F757328221F919200498C2B /* MemoryGame.swift */,
+				0F757325221F919200498C2B /* Music.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0F757320221F437C00498C2B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0F7572ED221F432000498C2B /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0F757321221F43B200498C2B /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				0F7572F1221F432000498C2B /* Main.storyboard */,
+				0F7572F6221F432300498C2B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		0F75732E221F928C00498C2B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0F75732F221F92B800498C2B /* GameDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F7572F8221F432300498C2B /* LaunchScreen.storyboard in Resources */,
+				0F757324221F44D600498C2B /* Default-568h@2x.png in Resources */,
 				0F7572F5221F432300498C2B /* Assets.xcassets in Resources */,
 				0F7572F3221F432000498C2B /* Main.storyboard in Resources */,
 			);
@@ -256,8 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F7572F0221F432000498C2B /* ViewController.swift in Sources */,
+				0F75732C221F919200498C2B /* MemoryGame.swift in Sources */,
+				0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */,
+				0F757334221F936800498C2B /* OptionsViewController.swift in Sources */,
+				0F7572F0221F432000498C2B /* HomeController.swift in Sources */,
 				0F7572EE221F432000498C2B /* AppDelegate.swift in Sources */,
+				0F75732B221F919200498C2B /* Card.swift in Sources */,
+				0F757329221F919200498C2B /* Music.swift in Sources */,
+				0F757330221F92B800498C2B /* GameDelegate.swift in Sources */,
+				0F75732A221F919200498C2B /* Device.swift in Sources */,
+				0F757335221F936800498C2B /* GameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GTM24L94G;
-				INFOPLIST_FILE = duplicity/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/duplicity/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +552,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GTM24L94G;
-				INFOPLIST_FILE = duplicity/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/duplicity/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

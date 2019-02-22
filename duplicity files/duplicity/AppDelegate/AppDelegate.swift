@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//
+//        window?.rootViewController = UINavigationController(rootViewController: HomeController())
+        
+        // Start app with sound
+//        Music().startGameMusic(name: "music")
+        
+//        StoreReviewHelper().checkAndAskForReview()
+        
+        // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
+        // Testing banner ID:  ca-app-pub-3940256099942544/2934735716
+//        GADMobileAds.configure(withApplicationID: "ca-app-pub-2292175261120907~2981949238")
+        
         return true
     }
 
