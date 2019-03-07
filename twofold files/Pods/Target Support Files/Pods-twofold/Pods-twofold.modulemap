@@ -1,0 +1,6 @@
+framework module Pods_twofold {
+  umbrella header "Pods-twofold-umbrella.h"
+
+  export *
+  module * { export * }
+}
