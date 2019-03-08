@@ -1,6 +1,6 @@
 //
 //  Music.swift
-//  duplicity
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
@@ -32,7 +32,7 @@ class Music {
     
     func playWinnerAudio1() {
         // Winning music
-        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "", ofType: "mp3")!)
+        let url = URL.init(fileURLWithPath: Bundle.main.path(forResource: "fanfare", ofType: "mp3")!)
         
         do {
             winnerAudio1 = try AVAudioPlayer(contentsOf: url)
