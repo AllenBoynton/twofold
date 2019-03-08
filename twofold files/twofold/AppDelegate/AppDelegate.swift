@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  duplicity
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,19 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        FirebaseApp.configure()
+        
 //        window = UIWindow(frame: UIScreen.main.bounds)
 //        window?.makeKeyAndVisible()
 //
 //        window?.rootViewController = UINavigationController(rootViewController: HomeController())
         
         // Start app with sound
-//        Music().startGameMusic(name: "music")
+        Music().startGameMusic(name: "bgMusic")
         
 //        StoreReviewHelper().checkAndAskForReview()
         
         // Sample AdMob app ID: ca-app-pub-3940256099942544~1458002511
         // Testing banner ID:  ca-app-pub-3940256099942544/2934735716
-//        GADMobileAds.configure(withApplicationID: "ca-app-pub-2292175261120907~2981949238")
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-2292175261120907~4379774462")
         
         return true
     }
