@@ -1,6 +1,6 @@
 //
 //  PokeMatchViewController.swift
-//  duplicity
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
@@ -24,10 +24,10 @@ class GameController: UIViewController {
     @IBOutlet weak var timerDisplay: UILabel!
     
     // Outlets for views
-    @IBOutlet weak var cancelButton: UIButton!
+//    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var restartButton: UIButton!
+//    @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var difficultyLabel: UILabel!
     
     // MARK - Local variables
@@ -70,7 +70,7 @@ class GameController: UIViewController {
         GADMobileAds.sharedInstance().applicationVolume = 0.5
         handleDifficultyLabel()
         gameController.delegate = self
-        restartButton.isHidden = true
+//        restartButton.isHidden = true
     }
     
     // Sets up for new game
@@ -87,13 +87,13 @@ class GameController: UIViewController {
         }
         
         bottomView.isHidden = true
-        restartButton.isHidden = true
+//        restartButton.isHidden = true
         collectionView.isHidden = true
         collectionView.isUserInteractionEnabled = true
         collectionView.reloadData()
         
-        cancelButton.isHidden = false
-        cancelButton.isEnabled = true
+//        cancelButton.isHidden = false
+//        cancelButton.isEnabled = true
         
         playButton.isHidden = false
         playButton.isEnabled = true
@@ -258,11 +258,11 @@ extension GameController: UICollectionViewDelegateFlowLayout {
             setupNewGame(numCards: iPadDifficulty)
         }
         // Shows button at beginning of game
-        restartButton.isHidden = false
+//        restartButton.isHidden = false
         playButton.isHidden = true
         playButton.isEnabled = false
-        cancelButton.isHidden = true
-        cancelButton.isEnabled = false
+//        cancelButton.isHidden = true
+//        cancelButton.isEnabled = false
         
         // Unhides views after start button is pressed
         collectionView.isHidden = false
@@ -389,7 +389,7 @@ extension GameController: GADBannerViewDelegate {
         adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(adBannerView)
         
-        adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/6252355617"
+        adBannerView.adUnitID = "ca-app-pub-2292175261120907/4080391563" //"ca-app-pub-3940256099942544/2934735716"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
         
