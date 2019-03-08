@@ -16,6 +16,10 @@
 		0F2D4B2F2231C13500B57F31 /* Pods_twofold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B2E2231C13500B57F31 /* Pods_twofold.framework */; };
 		0F2D4B312231C13500B57F31 /* Pods_twofoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B302231C13500B57F31 /* Pods_twofoldTests.framework */; };
 		0F2D4B332231C13500B57F31 /* Pods_twofoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B322231C13500B57F31 /* Pods_twofoldUITests.framework */; };
+		0F2D4B362231D4A200B57F31 /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B352231D4A200B57F31 /* bgMusic.mp3 */; };
+		0F2D4B382231D52600B57F31 /* fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B372231D52600B57F31 /* fanfare.mp3 */; };
+		0F2D4B3C2231F63000B57F31 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B3B2231F63000B57F31 /* GameKit.framework */; };
+		0F2D4B3E2231FB6A00B57F31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B3D2231FB6A00B57F31 /* GoogleService-Info.plist */; };
 		0F7572EE221F432000498C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572ED221F432000498C2B /* AppDelegate.swift */; };
 		0F7572F0221F432000498C2B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572EF221F432000498C2B /* HomeController.swift */; };
 		0F7572F3221F432000498C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F1221F432000498C2B /* Main.storyboard */; };
@@ -33,6 +37,8 @@
 		0F757335221F936800498C2B /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757332221F936800498C2B /* GameController.swift */; };
 		0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757333221F936800498C2B /* HighScoreViewController.swift */; };
 		0F757338221FA3D200498C2B /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757337221FA3D200498C2B /* GameCell.swift */; };
+		2AF7A3F5595D9A61EDC1E66D /* Pods_twofoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B322231C13500B57F31 /* Pods_twofoldUITests.framework */; };
+		CFC8CC12399496F8A2D160A6 /* Pods_twofoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B302231C13500B57F31 /* Pods_twofoldTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,10 @@
 		0F2D4B2E2231C13500B57F31 /* Pods_twofold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_twofold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2D4B302231C13500B57F31 /* Pods_twofoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_twofoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2D4B322231C13500B57F31 /* Pods_twofoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_twofoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F2D4B352231D4A200B57F31 /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
+		0F2D4B372231D52600B57F31 /* fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fanfare.mp3; sourceTree = "<group>"; };
+		0F2D4B3B2231F63000B57F31 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		0F2D4B3D2231FB6A00B57F31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "twofold/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0F7572EA221F432000498C2B /* twofold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twofold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7572ED221F432000498C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7572EF221F432000498C2B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 				0F2D4B2F2231C13500B57F31 /* Pods_twofold.framework in Frameworks */,
 				0F2D4B312231C13500B57F31 /* Pods_twofoldTests.framework in Frameworks */,
 				0F2D4B332231C13500B57F31 /* Pods_twofoldUITests.framework in Frameworks */,
+				0F2D4B3C2231F63000B57F31 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFC8CC12399496F8A2D160A6 /* Pods_twofoldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,12 +131,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF7A3F5595D9A61EDC1E66D /* Pods_twofoldUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F2D4B342231D47000B57F31 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				0F2D4B372231D52600B57F31 /* fanfare.mp3 */,
+				0F2D4B352231D4A200B57F31 /* bgMusic.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		0F7572E1221F432000498C2B = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +181,7 @@
 				0F75732E221F928C00498C2B /* Protocols */,
 				0F75731B221F434500498C2B /* Resources */,
 				0F757321221F43B200498C2B /* Storyboard */,
+				0F2D4B3D2231FB6A00B57F31 /* GoogleService-Info.plist */,
 				0F7572F9221F432300498C2B /* Info.plist */,
 			);
 			path = twofold;
@@ -185,6 +208,7 @@
 		0F75731B221F434500498C2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D4B342231D47000B57F31 /* Sound */,
 				0F7572F4221F432300498C2B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -257,6 +281,7 @@
 		49A216FD6E8EEECEAC38E1F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D4B3B2231F63000B57F31 /* GameKit.framework */,
 				0F2D4B262231C13500B57F31 /* FirebaseCore.framework */,
 				0F2D4B282231C13500B57F31 /* FirebaseInstanceID.framework */,
 				0F2D4B2A2231C13500B57F31 /* GoogleUtilities.framework */,
@@ -353,6 +378,11 @@
 				TargetAttributes = {
 					0F7572E9221F432000498C2B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.GameCenter.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					0F7572FD221F432300498C2B = {
 						CreatedOnToolsVersion = 10.1;
@@ -391,8 +421,11 @@
 			files = (
 				0F7572F8221F432300498C2B /* LaunchScreen.storyboard in Resources */,
 				0F757324221F44D600498C2B /* Default-568h@2x.png in Resources */,
+				0F2D4B362231D4A200B57F31 /* bgMusic.mp3 in Resources */,
 				0F7572F5221F432300498C2B /* Assets.xcassets in Resources */,
+				0F2D4B382231D52600B57F31 /* fanfare.mp3 in Resources */,
 				0F7572F3221F432000498C2B /* Main.storyboard in Resources */,
+				0F2D4B3E2231FB6A00B57F31 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
