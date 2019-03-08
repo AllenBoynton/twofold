@@ -1,6 +1,6 @@
 //
 //  HighScoreViewController.swift
-//  duplicity
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
@@ -11,10 +11,10 @@ import GameKit
 import GoogleMobileAds
 
 // Global GC identifiers
-let easyTimeLeaderboardID = "com.alsmobileapps.PokeMatch" // Easy Time Leaderboard
-let mediumTimeLeaderboardID = "com.alsmobileapps.PokeMatch.medium" // Medium Time Leaderboard
-let hardTimeLeaderboardID = "com.alsmobileapps.PokeMatch.hard" // Hard Time Leaderboard
-let overallTimeLeaderboardID = "com.alsmobileapps.PokeMatch.overall" // Total Time Leaderboard
+let easyID = "EasyLeaderboard" // Easy Time Leaderboard
+let mediumID = "MediumLeaderboard" // Medium Time Leaderboard
+let hardID = "HardLeaderboard" // Hard Time Leaderboard
+let overallTimeLeaderboardID = "TotalLeaderBoard" // Total Time Leaderboard
 
 class HighScoreViewController: UIViewController {
     
@@ -34,11 +34,7 @@ class HighScoreViewController: UIViewController {
     @IBOutlet weak var hardHighScoreLbl: UILabel!
     @IBOutlet weak var newHighScoreLabel: UILabel!
     
-    @IBOutlet weak var bestTimeLabel: UILabel!
     @IBOutlet weak var bestTimeStackLabel: UILabel!
-    @IBOutlet weak var youWonLabel: UILabel!
-    @IBOutlet weak var playAgainButton: UIButton!
-    @IBOutlet weak var menuButton: UIButton!
     
     @IBOutlet weak var gcIconView: UIView!
     
@@ -62,6 +58,7 @@ class HighScoreViewController: UIViewController {
     private var mute = true
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         animateGCIcon()
         loadImage()
         newHighScoreLabel.startBlink()
@@ -70,10 +67,8 @@ class HighScoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.interstitial = createAndLoadInterstitial()
         handleAdRequest()
-        
         showItems()
         checkHighScoreForNil()
         numOfGames = defaults.integer(forKey: "Games")
@@ -91,15 +86,14 @@ class HighScoreViewController: UIViewController {
             if numTime <= 3000 {
                 numOfGames += 1
                 defaults.set(numOfGames, forKey: "Games")
-                handleGameAchievements()
+//                handleGameAchievements()
             }
         } 
     }
     
     // Shows items depending on best score screen or final score screen
     private func showItems() {
-        playAgainButton.isHidden = false
-        menuButton.isHidden = false
+        navigationItem.title = "Best Times"
         bestTimeStackLabel.isHidden = false
     }
     
@@ -141,7 +135,10 @@ class HighScoreViewController: UIViewController {
     // Adds time from game to high scores. Compares against others for order
     func addScore() {
         if timePassed != nil {
-            menuButton.isHidden = true
+            self.navigationController?.setNavigationBarHidden(false, animated: true)
+            self.navigationItem.setHidesBackButton(true, animated: false)
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Play Again", style: .done, target: self, action: #selector(playAgainButtonPressed))
+            navigationItem.title = "YOU WON!"
             score = Int(convertStringToNumbers(time: timePassed!)!)
             scoreLabel.text = "\(intToScoreString(score: score))"
             
@@ -175,12 +172,10 @@ class HighScoreViewController: UIViewController {
                 }
             }
         } else {
-            bestTimeLabel.isHidden = false
+            navigationItem.title = "Best Times"
             bestTimeStackLabel.isHidden = true
             newGameTimeStackview.isHidden = true
             scoreLabel.isHidden = true
-            playAgainButton.isHidden = true
-            youWonLabel.isHidden = true
         }
     }
     
@@ -206,28 +201,24 @@ class HighScoreViewController: UIViewController {
     
     /**************************** IBActions ************************/
     
-    @IBAction func showGameCenter(_ sender: UIButton) {
-        showLeaderboard()
-        gifView.image = nil
-    }
-    
     // Play again game button to main menu
-    @IBAction func playAgainButtonPressed(_ sender: Any) {
+    @objc func playAgainButtonPressed(_ sender: Any) {
         // Return to game screen
         // Interstitial Ad setup
         if interstitial.isReady {
             interstitial.present(fromRootViewController: self)
         }
         
-//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchViewController")
-//        show(vc!, sender: self)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameController")
+        show(vc!, sender: self)
     }
     
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func showGameCenter(_ sender: UIButton) {
+        showLeaderboard()
+        gifView.image = nil
     }
 }
-
+    
 // MARK:  Game Center
 extension HighScoreViewController: GKGameCenterControllerDelegate {
     
@@ -237,15 +228,15 @@ extension HighScoreViewController: GKGameCenterControllerDelegate {
         if GKLocalPlayer.local.isAuthenticated {
             // Save game time to GC
             if defaults.integer(forKey: "difficulty") == 0 {
-                handleScoreReporter(id: easyTimeLeaderboardID)
+                handleScoreReporter(id: easyID)
             }
             
             if defaults.integer(forKey: "difficulty") == 1 {
-                handleScoreReporter(id: mediumTimeLeaderboardID)
+                handleScoreReporter(id: mediumID)
             }
             
             if defaults.integer(forKey: "difficulty") == 2 {
-                handleScoreReporter(id: hardTimeLeaderboardID)
+                handleScoreReporter(id: hardID)
             }
         }
     }
@@ -263,16 +254,16 @@ extension HighScoreViewController: GKGameCenterControllerDelegate {
     private func showLeaderboard() {
         let gameCenterViewController = GKGameCenterViewController()
         gameCenterViewController.gameCenterDelegate = self
-        gameCenterViewController.viewState = .default
+        gameCenterViewController.viewState = .leaderboards
         
         // Show leaderboard
         self.present(gameCenterViewController, animated: true, completion: nil)
     }
     
-    private func handleGameAchievements() {
-        if GKLocalPlayer.local.isAuthenticated {
-            let games = defaults.integer(forKey: "Games")
-            switch games {
+//    private func handleGameAchievements() {
+//        if GKLocalPlayer.local.isAuthenticated {
+//            let games = defaults.integer(forKey: "Games")
+//            switch games {
 //            case 10:
 //                reportAchievement(identifier: gamesAchievementID10, percentCompleted: Double(games / 10) * 100)
 //            case 20:
@@ -303,16 +294,16 @@ extension HighScoreViewController: GKGameCenterControllerDelegate {
 //                reportAchievement(identifier: gamesAchievementID450, percentCompleted: Double(games / 450) * 100)
 //            case 500:
 //                reportAchievement(identifier: gamesAchievementID500, percentCompleted: Double(games / 500) * 100)
-            default:
-                break
-            }
-        }
-    
-        GKAchievement.loadAchievements() { achievements, error in
-            guard let achievements = achievements else { return }
-            print(achievements)
-        }
-    }
+//            default:
+//                break
+//            }
+//        }
+//
+//        GKAchievement.loadAchievements() { achievements, error in
+//            guard let achievements = achievements else { return }
+//            print(achievements)
+//        }
+//    }
     
     private func reportAchievement(identifier: String, percentCompleted: Double) {
         let achievement = GKAchievement(identifier: identifier)
@@ -390,7 +381,7 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
         addBannerViewToView(adBannerView)
         
         // Ad setup
-        adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/3388241322"
+        adBannerView.adUnitID = "ca-app-pub-2292175261120907/9576260829" //ca-app-pub-3940256099942544/2934735716"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
         
@@ -399,7 +390,7 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
     
     // Create and load an Interstitial Ad
     func createAndLoadInterstitial() -> GADInterstitial {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2292175261120907/1071084845") //"ca-app-pub-3940256099942544/4411468910")
         interstitial.delegate = self
         
         let request = GADRequest()
