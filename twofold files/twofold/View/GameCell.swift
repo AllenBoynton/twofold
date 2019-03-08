@@ -1,6 +1,6 @@
 //
-//  PokeViewCell.swift
-//  PokeMatch
+//  GamecellCell.swift
+//  twofold
 //
 //  Created by Allen Boynton on 11/23/18.
 //  Copyright © 2018 Allen Boynton. All rights reserved.
