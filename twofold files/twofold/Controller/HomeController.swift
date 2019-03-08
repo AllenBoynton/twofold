@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  duplicity
+//  HomeController.swift
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
