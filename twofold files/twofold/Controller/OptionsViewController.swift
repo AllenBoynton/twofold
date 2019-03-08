@@ -1,6 +1,6 @@
 //
 //  OptionsViewController.swift
-//  duplicity
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
@@ -36,6 +36,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     private var imageCategoryArray: [String] = ["Most Popular", "Generation 1", "Generation 2"]
     
     override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
         versionLabel.text = version()
     }
     
@@ -325,7 +326,7 @@ extension OptionsViewController: GADBannerViewDelegate {
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(bannerView)
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/4964310398"
+        bannerView.adUnitID = "ca-app-pub-2292175261120907/9987324360" //"ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.delegate = self
         
