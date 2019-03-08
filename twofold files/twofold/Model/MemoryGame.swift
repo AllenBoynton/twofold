@@ -1,6 +1,6 @@
 //
 //  MemoryGame.swift
-//  duplicity
+//  twofold
 //
 //  Created by Allen Boynton on 2/21/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
@@ -140,7 +140,7 @@ class MemoryGame {
 extension MemoryGame {
 
     static var topCardImages: [UIImage] = [
-        UIImage(named: "test")!
+        UIImage(named: "1")!
     ]
     
     static var gen1Images: [UIImage] = [
