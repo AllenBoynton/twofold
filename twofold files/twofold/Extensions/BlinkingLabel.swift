@@ -1,6 +1,6 @@
 //
 //  BlinkingLabel.swift
-//  PokeMatch
+//  twofold
 //
 //  Created by Allen Boynton on 1/4/19.
 //  Copyright © 2019 Allen Boynton. All rights reserved.
