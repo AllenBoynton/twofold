@@ -27,16 +27,37 @@ class HomeController: UIViewController {
     let score = 0
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        authenticatePlayer()
+//        authenticatePlayer()
+        theme = UInt(defaults.integer(forKey: "theme"))
+        setupTheme()
+    }
+    
+    private func setupTheme() {
+        switch theme {
+        case 0:
+            self.view.backgroundColor = .white
+            imageView.image = UIImage(named: "8")
+        case 1:
+            self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+            imageView.image = UIImage(named: "30")
+        case 2:
+            self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+            imageView.image = UIImage(named: "51")
+        default:
+            self.view.backgroundColor = .white
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        imageView.image = nil
+        super.viewWillDisappear(animated)
+        // Show the navigation bar on other view controllers
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     // Authenticates the user to access to the GC
@@ -99,6 +120,13 @@ class HomeController: UIViewController {
     @IBAction func muteButtonTapped(_ sender: UIButton) {
         music.handleMuteMusic(clip: bgMusic)
         handleMusicButtons()
+        if musicIsOn {
+            musicButton.setImage(UIImage(named: "audio"), for: .normal)
+            musicIsOn = true
+        } else {
+            musicButton.setImage(UIImage(named: "mute3"), for: .normal)
+            musicIsOn = false
+        }
     }
 }
 

@@ -14,11 +14,8 @@ import GoogleMobileAds
 let easyID = "EasyLeaderboard" // Easy Time Leaderboard
 let mediumID = "MediumLeaderboard" // Medium Time Leaderboard
 let hardID = "HardLeaderboard" // Hard Time Leaderboard
-let overallTimeLeaderboardID = "TotalLeaderBoard" // Total Time Leaderboard
 
 class HighScoreViewController: UIViewController {
-    
-    private var pokeMatchViewController: GameController!
     
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var newGameTimeStackview: UIStackView!
@@ -55,14 +52,13 @@ class HighScoreViewController: UIViewController {
     // Time passed from PokeMatchVC
     var timePassed: String?
     
-    private var mute = true
-    
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        super.viewWillAppear(animated)
         animateGCIcon()
         loadImage()
         newHighScoreLabel.startBlink()
         addScore()
+        setupLayout()
     }
     
     override func viewDidLoad() {
@@ -79,6 +75,22 @@ class HighScoreViewController: UIViewController {
         gifView.image = nil
     }
     
+    private func setupLayout() {
+        switch theme {
+        case 0:
+            self.view.backgroundColor = .white
+            gifView.image = UIImage(named: "8")
+        case 1:
+            self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+            gifView.image = UIImage(named: "30")
+        case 2:
+            self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+            gifView.image = UIImage(named: "51")
+        default:
+            self.view.backgroundColor = .white
+        }
+    }
+    
     private func showTime() {
         if timePassed != nil {
             let numTime = convertStringToNumbers(time: timePassed!)!
@@ -93,12 +105,12 @@ class HighScoreViewController: UIViewController {
     
     // Shows items depending on best score screen or final score screen
     private func showItems() {
-        navigationItem.title = "Best Times"
         bestTimeStackLabel.isHidden = false
     }
     
     private func loadImage() {
         gifView.contentMode = .scaleAspectFit
+        
     }
     
     /*************************** High Score Logic *********************/
@@ -135,9 +147,8 @@ class HighScoreViewController: UIViewController {
     // Adds time from game to high scores. Compares against others for order
     func addScore() {
         if timePassed != nil {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
-            self.navigationItem.setHidesBackButton(true, animated: false)
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Play Again", style: .done, target: self, action: #selector(playAgainButtonPressed))
+            navigationItem.setHidesBackButton(true, animated: false)
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "play again", style: .done, target: self, action: #selector(playAgainButtonPressed))
             navigationItem.title = "YOU WON!"
             score = Int(convertStringToNumbers(time: timePassed!)!)
             scoreLabel.text = "\(intToScoreString(score: score))"
@@ -172,7 +183,7 @@ class HighScoreViewController: UIViewController {
                 }
             }
         } else {
-            navigationItem.title = "Best Times"
+            self.title = "best times"
             bestTimeStackLabel.isHidden = true
             newGameTimeStackview.isHidden = true
             scoreLabel.isHidden = true
@@ -376,27 +387,23 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
     func handleAdRequest() {
         let request = GADRequest()
         request.testDevices = [kGADSimulatorID]
-        
         adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(adBannerView)
         
         // Ad setup
-        adBannerView.adUnitID = "ca-app-pub-2292175261120907/9576260829" //ca-app-pub-3940256099942544/2934735716"
+        adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//ca-app-pub-2292175261120907/9576260829"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
-        
         adBannerView.load(request)
     }
     
     // Create and load an Interstitial Ad
     func createAndLoadInterstitial() -> GADInterstitial {
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-2292175261120907/1071084845") //"ca-app-pub-3940256099942544/4411468910")
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")//ca-app-pub-2292175261120907/1071084845")
         interstitial.delegate = self
-        
         let request = GADRequest()
         request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9b" ]
         interstitial.load(request)
-
         return interstitial
     }
     

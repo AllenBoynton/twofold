@@ -55,8 +55,10 @@ class GameController: UIViewController {
     private var resumeTapped = false
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        collectionView.reloadData()
+        super.viewWillAppear(animated)
+        self.navigationItem.title = "twofold"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "restart", style: .plain, target: self, action: #selector(restartButtonTapped))
+        setupTheme()
         resetGame()
         if musicIsOn {
             bgMusic?.play()
@@ -70,7 +72,6 @@ class GameController: UIViewController {
         GADMobileAds.sharedInstance().applicationVolume = 0.5
         handleDifficultyLabel()
         gameController.delegate = self
-//        restartButton.isHidden = true
     }
     
     // Sets up for new game
@@ -79,22 +80,28 @@ class GameController: UIViewController {
         gameController.newGame(cardsData)
     }
     
+    func setupTheme() {
+        switch defaults.integer(forKey: "theme") {
+        case 0:
+            self.view.backgroundColor = .white
+        case 1:
+            self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+        case 2:
+            self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+        default:
+            self.view.backgroundColor = .white
+        }
+    }
+    
     // Created to reset game. Resets points, time and start button.
     private func resetGame() {
         gameController.stopGame()
         if timer?.isValid == true {
             timer?.invalidate()
         }
-        
         bottomView.isHidden = true
-//        restartButton.isHidden = true
         collectionView.isHidden = true
         collectionView.isUserInteractionEnabled = true
-        collectionView.reloadData()
-        
-//        cancelButton.isHidden = false
-//        cancelButton.isEnabled = true
-        
         playButton.isHidden = false
         playButton.isEnabled = true
     }
@@ -102,13 +109,13 @@ class GameController: UIViewController {
     private func handleDifficultyLabel() {
         switch defaults.integer(forKey: "difficulty") {
         case 0:
-            difficultyLabel.text = "Difficulty: Easy"
+            difficultyLabel.text = "difficulty: easy"
         case 1:
-            difficultyLabel.text = "Difficulty: Medium"
+            difficultyLabel.text = "difficulty: medium"
         case 2:
-            difficultyLabel.text = "Difficulty: Hard"
+            difficultyLabel.text = "difficulty: hard"
         default:
-            difficultyLabel.text = ""
+            difficultyLabel.isHidden = true
         }
     }
 }
@@ -159,9 +166,8 @@ extension GameController: GameDelegate {
         
         let when = DispatchTime.now() + 1.0
         DispatchQueue.main.asyncAfter(deadline: when) {
-            let myVC = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController") as! HighScoreViewController
-            myVC.timePassed = self.display
-            self.present(myVC, animated: true)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController")
+            self.show(vc!, sender: self)
         }
     }
 }
@@ -176,7 +182,6 @@ extension GameController: UICollectionViewDataSource {
         } else {
             return gameController.numberOfCards > 0 ? gameController.numberOfCards: 30
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -228,7 +233,8 @@ extension GameController: UICollectionViewDelegateFlowLayout {
                 itemHeight = collectionView.frame.height / 4 - 10.0
                 break
             }
-        } else if Device.IS_IPAD {
+        }
+        else if Device.IS_IPAD {
             switch iPadDifficulty {
             case 6:
                 itemWidth = collectionView.frame.width / 3 - 12.0
@@ -258,26 +264,14 @@ extension GameController: UICollectionViewDelegateFlowLayout {
             setupNewGame(numCards: iPadDifficulty)
         }
         // Shows button at beginning of game
-//        restartButton.isHidden = false
         playButton.isHidden = true
         playButton.isEnabled = false
-//        cancelButton.isHidden = true
-//        cancelButton.isEnabled = false
-        
         // Unhides views after start button is pressed
         collectionView.isHidden = false
         bottomView.isHidden = false
     }
     
-    // Back button to bring to main menu
-    @IBAction func backButtonTapped(_ sender: Any) {
-        timer?.invalidate()
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OptionsViewController")
-        self.show(vc!, sender: self)
-    }
-    
-    @IBAction func restartButtonTapped(_ sender: Any) {
+    @objc func restartButtonTapped(_ sender: Any) {
         timer?.invalidate()
         resetGame()
         
@@ -286,7 +280,7 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         playButton.isEnabled = true
         
         // Unhides views after start button is pressed
-        collectionView.isHidden = true
+//        collectionView.isHidden = true
         bottomView.isHidden = true
     }
     
@@ -389,7 +383,7 @@ extension GameController: GADBannerViewDelegate {
         adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(adBannerView)
         
-        adBannerView.adUnitID = "ca-app-pub-2292175261120907/4080391563" //"ca-app-pub-3940256099942544/2934735716"
+        adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/4080391563"
         adBannerView.rootViewController = self
         adBannerView.delegate = self
         

@@ -20,6 +20,11 @@
 		0F2D4B382231D52600B57F31 /* fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B372231D52600B57F31 /* fanfare.mp3 */; };
 		0F2D4B3C2231F63000B57F31 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B3B2231F63000B57F31 /* GameKit.framework */; };
 		0F2D4B3E2231FB6A00B57F31 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B3D2231FB6A00B57F31 /* GoogleService-Info.plist */; };
+		0F2D4B40223210A900B57F31 /* RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B3F223210A900B57F31 /* RGB.swift */; };
+		0F2D4B422232EF9500B57F31 /* DesignableButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B412232EF9500B57F31 /* DesignableButtons.swift */; };
+		0F2D4B442232EFDE00B57F31 /* DesignableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B432232EFDE00B57F31 /* DesignableViews.swift */; };
+		0F2D4B46223320C500B57F31 /* DesignableImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B45223320C500B57F31 /* DesignableImageViews.swift */; };
+		0F2D4B482233212700B57F31 /* ImageWithInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B472233212700B57F31 /* ImageWithInsets.swift */; };
 		0F7572EE221F432000498C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572ED221F432000498C2B /* AppDelegate.swift */; };
 		0F7572F0221F432000498C2B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572EF221F432000498C2B /* HomeController.swift */; };
 		0F7572F3221F432000498C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F1221F432000498C2B /* Main.storyboard */; };
@@ -72,6 +77,11 @@
 		0F2D4B372231D52600B57F31 /* fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fanfare.mp3; sourceTree = "<group>"; };
 		0F2D4B3B2231F63000B57F31 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0F2D4B3D2231FB6A00B57F31 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "twofold/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0F2D4B3F223210A900B57F31 /* RGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGB.swift; sourceTree = "<group>"; };
+		0F2D4B412232EF9500B57F31 /* DesignableButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButtons.swift; sourceTree = "<group>"; };
+		0F2D4B432232EFDE00B57F31 /* DesignableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableViews.swift; sourceTree = "<group>"; };
+		0F2D4B45223320C500B57F31 /* DesignableImageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageViews.swift; sourceTree = "<group>"; };
+		0F2D4B472233212700B57F31 /* ImageWithInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithInsets.swift; sourceTree = "<group>"; };
 		0F7572EA221F432000498C2B /* twofold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twofold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7572ED221F432000498C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7572EF221F432000498C2B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -138,13 +148,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F2D4B342231D47000B57F31 /* Sound */ = {
+		0F2D4B342231D47000B57F31 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
 				0F2D4B372231D52600B57F31 /* fanfare.mp3 */,
 				0F2D4B352231D4A200B57F31 /* bgMusic.mp3 */,
 			);
-			path = Sound;
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		0F7572E1221F432000498C2B = {
@@ -208,7 +218,7 @@
 		0F75731B221F434500498C2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0F2D4B342231D47000B57F31 /* Sound */,
+				0F2D4B342231D47000B57F31 /* Audio */,
 				0F7572F4221F432300498C2B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -217,8 +227,10 @@
 		0F75731C221F435100498C2B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D4B3F223210A900B57F31 /* RGB.swift */,
 				0F2D4B1E2231BFE100B57F31 /* BlinkingLabel.swift */,
 				0F2D4B1F2231BFE200B57F31 /* RandomArray.swift */,
+				0F2D4B472233212700B57F31 /* ImageWithInsets.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,6 +249,9 @@
 		0F75731E221F436C00498C2B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0F2D4B45223320C500B57F31 /* DesignableImageViews.swift */,
+				0F2D4B432232EFDE00B57F31 /* DesignableViews.swift */,
+				0F2D4B412232EF9500B57F31 /* DesignableButtons.swift */,
 				0F757337221FA3D200498C2B /* GameCell.swift */,
 			);
 			path = View;
@@ -547,13 +562,18 @@
 				0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */,
 				0F757334221F936800498C2B /* OptionsViewController.swift in Sources */,
 				0F7572F0221F432000498C2B /* HomeController.swift in Sources */,
+				0F2D4B442232EFDE00B57F31 /* DesignableViews.swift in Sources */,
 				0F7572EE221F432000498C2B /* AppDelegate.swift in Sources */,
 				0F75732B221F919200498C2B /* Card.swift in Sources */,
 				0F2D4B212231BFE200B57F31 /* RandomArray.swift in Sources */,
 				0F757329221F919200498C2B /* Music.swift in Sources */,
 				0F757330221F92B800498C2B /* GameDelegate.swift in Sources */,
 				0F2D4B202231BFE200B57F31 /* BlinkingLabel.swift in Sources */,
+				0F2D4B482233212700B57F31 /* ImageWithInsets.swift in Sources */,
+				0F2D4B46223320C500B57F31 /* DesignableImageViews.swift in Sources */,
 				0F75732A221F919200498C2B /* Device.swift in Sources */,
+				0F2D4B422232EF9500B57F31 /* DesignableButtons.swift in Sources */,
+				0F2D4B40223210A900B57F31 /* RGB.swift in Sources */,
 				0F757338221FA3D200498C2B /* GameCell.swift in Sources */,
 				0F757335221F936800498C2B /* GameController.swift in Sources */,
 			);

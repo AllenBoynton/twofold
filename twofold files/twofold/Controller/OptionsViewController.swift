@@ -14,6 +14,7 @@ import GoogleMobileAds
 
 var difficulty = UInt()
 var iPadDifficulty = UInt()
+var theme = UInt()
 let defaults = UserDefaults.standard
 var imageGroupArray: [UIImage] = []
 
@@ -28,21 +29,21 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet var imagePicker: UIPickerView!
     @IBOutlet weak var musicOnView: UIView!
     @IBOutlet weak var musicOffView: UIView!
-    @IBOutlet weak var offMusicImage: UIButton!
     @IBOutlet weak var versionLabel: UILabel!
     
     private var bannerView: GADBannerView!
     
-    private var imageCategoryArray: [String] = ["Most Popular", "Generation 1", "Generation 2"]
+    private var imageCategoryArray: [String] = ["stickmen", "butterflies", "beaches"]
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationItem.setHidesBackButton(true, animated: animated)
         versionLabel.text = version()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.imagePicker.dataSource = self
         self.imagePicker.delegate = self
         
@@ -54,10 +55,14 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         handleAdRequest()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func handleMusicButtons() {
         if (bgMusic?.isPlaying)! {
             musicOnView.layer.borderWidth = 2.0
-            musicOnView.layer.cornerRadius = 8.0
             musicOnView.layer.borderColor = UIColor.yellow.cgColor
             musicOffView.layer.borderWidth = 0
             musicOnView.alpha = 1.0
@@ -66,7 +71,6 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         } else {
             musicOnView.layer.borderWidth = 0
             musicOffView.layer.borderWidth = 2.0
-            musicOffView.layer.cornerRadius = 8.0
             musicOffView.layer.borderColor = UIColor.yellow.cgColor
             musicOnView.alpha = 0.4
             musicOffView.alpha = 1.0
@@ -78,10 +82,9 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         // Saves the current state of the segmented control
         let segmentName = defaults.integer(forKey: "difficulty")
         self.segmentedControl.selectedSegmentIndex = segmentName
-        self.segmentedControl.layer.cornerRadius = 8.0
-        self.segmentedControl.layer.borderWidth = 2.0
+        self.segmentedControl.layer.cornerRadius = 2.0
+        self.segmentedControl.layer.borderWidth = 1.0
         self.segmentedControl.layer.masksToBounds = true
-        self.segmentedControl.layer.borderColor = UIColor.yellow.cgColor
         
         if segmentName == 0 {
             difficulty = 6
@@ -93,23 +96,13 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
             difficulty = 10
             iPadDifficulty = 15
         }
-        
-        segmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.font : UIFont(name: "Marker Felt", size: 15) as Any,
-            NSAttributedString.Key.foregroundColor: UIColor.yellow
-            ], for: .normal)
-        
-        segmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.font : UIFont(name: "Marker Felt", size: 15) as Any,
-            NSAttributedString.Key.foregroundColor: UIColor.blue
-            ], for: .selected)
     }
     
     func version() -> String {
         let dictionary = Bundle.main.infoDictionary!
         let version = dictionary["CFBundleShortVersionString"] as! String
         let build = dictionary["CFBundleVersion"] as! String
-        return "PokéMatch Version \(version) Build \(build)"
+        return "twofold Version \(version) Build \(build)"
     }
     
     @IBAction func difficultySelection(_ sender: AnyObject) {
@@ -141,9 +134,9 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         handleMusicButtons()
     }
     
-    @IBAction func doneButtonTapped(_ sender: Any) {
+    @objc func doneButtonTapped(_ sender: Any) {
         // Return to game screen
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PokeMatchViewController")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameController")
         show(vc!, sender: self)
     }
     
@@ -158,7 +151,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func rateButtonTapped(_ sender: Any) {
-        let appleID = "1444497236"
+        let appleID = "1455567974"
         guard let writeReviewURL = URL(string: "https://itunes.apple.com/app/id\(appleID)?action=write-review")
             else { fatalError("Expected a valid URL") }
         UIApplication.shared.open(writeReviewURL, options: [:], completionHandler: nil)
@@ -215,22 +208,67 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         let myImageView = UIImageView(frame: CGRect(x:60, y:15, width:50, height:50))
         myImageView.contentMode = .scaleAspectFit
         let myLabel = UILabel(frame: CGRect(x:pickerView.bounds.maxX - 190, y:10, width:pickerView.bounds.width - 90, height:60 ))
-        myLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        myLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
         var rowString = String()
         
         switch row {
         case 0:
+            theme = 0
+            defaults.set(0, forKey: "theme")
             rowString = imageCategoryArray[0]
-            myImageView.image = UIImage(named: "test")
-            imageGroupArray = MemoryGame.topCardImages
+            myImageView.image = UIImage(named: "1")
+            imageGroupArray = MemoryGame.stickmen
+            self.view?.backgroundColor = .white
+            segmentedControl.layer.borderColor = UIColor.darkGray.cgColor
+            segmentedControl.tintColor = .lightGray
+            segmentedControl.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
+                NSAttributedString.Key.foregroundColor: UIColor.black
+                ], for: .normal)
+            segmentedControl.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
+                NSAttributedString.Key.foregroundColor: UIColor.white
+                ], for: .selected)
+            musicOnView.backgroundColor = .lightGray
+            musicOffView.backgroundColor = .lightGray
         case 1:
+            theme = 1
+            defaults.set(1, forKey: "theme")
             rowString = imageCategoryArray[1]
-            myImageView.image = UIImage(named: "test")
-            imageGroupArray = MemoryGame.gen1Images
+            myImageView.image = UIImage(named: "30")
+            imageGroupArray = MemoryGame.butterflies
+            self.view?.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+            segmentedControl.layer.borderColor = UIColor.purple.cgColor
+            segmentedControl.tintColor = UIColor.rgb(red: 231, green: 80, blue: 69)
+            segmentedControl.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
+                NSAttributedString.Key.foregroundColor: UIColor.blue
+                ], for: .normal)
+            segmentedControl.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
+                NSAttributedString.Key.foregroundColor: UIColor.white
+                ], for: .selected)
+            musicOnView.backgroundColor = UIColor.rgb(red: 231, green: 80, blue: 69)
+            musicOffView.backgroundColor = UIColor.rgb(red: 231, green: 80, blue: 69)
         case 2:
+            theme = 2
+            defaults.set(2, forKey: "theme")
             rowString = imageCategoryArray[2]
-            myImageView.image = UIImage(named: "test")
-            imageGroupArray = MemoryGame.gen2Images
+            myImageView.image = UIImage(named: "51")
+            imageGroupArray = MemoryGame.beach
+            self.view?.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+            segmentedControl.layer.borderColor = UIColor.blue.cgColor
+            segmentedControl.tintColor = UIColor.rgb(red: 230, green: 206, blue: 158)
+            segmentedControl.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 13) as Any,
+                NSAttributedString.Key.foregroundColor: UIColor.white
+                ], for: .normal)
+            segmentedControl.setTitleTextAttributes([
+                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 13) as Any,
+                NSAttributedString.Key.foregroundColor: UIColor.blue
+                ], for: .selected)
+            musicOnView.backgroundColor = UIColor.rgb(red: 230, green: 206, blue: 158)
+            musicOffView.backgroundColor = UIColor.rgb(red: 230, green: 206, blue: 158)
 //        case 3:
 //            rowString = imageCategoryArray[3]
 //            myImageView.image = UIImage(named: "384")
@@ -263,6 +301,21 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         myView.addSubview(myImageView)
         
         return myView
+    }
+    
+    private func handleThemeChange(imageSet: [UIImage], bgColor: UIColor, borderColor: CGColor, tintColor: UIColor, sizeText: Int, normTextColor: CGColor, selTextColor: CGColor) {
+        imageGroupArray = imageSet
+        self.view?.backgroundColor = bgColor
+        segmentedControl.layer.borderColor = borderColor
+        segmentedControl.tintColor = tintColor
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: CGFloat(sizeText)) as Any,
+            NSAttributedString.Key.foregroundColor: normTextColor
+            ], for: .normal)
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: CGFloat(sizeText)) as Any,
+            NSAttributedString.Key.foregroundColor: selTextColor
+            ], for: .selected)
     }
 }
 
@@ -326,7 +379,7 @@ extension OptionsViewController: GADBannerViewDelegate {
         bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(bannerView)
         
-        bannerView.adUnitID = "ca-app-pub-2292175261120907/9987324360" //"ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/9987324360"
         bannerView.rootViewController = self
         bannerView.delegate = self
         
