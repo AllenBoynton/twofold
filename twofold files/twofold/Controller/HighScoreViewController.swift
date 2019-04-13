@@ -68,6 +68,7 @@ class HighScoreViewController: UIViewController {
         showItems()
         checkHighScoreForNil()
         numOfGames = defaults.integer(forKey: "Games")
+        print("NumOfGames: \(numOfGames)")
         showTime()
     }
     
@@ -95,6 +96,7 @@ class HighScoreViewController: UIViewController {
         if timePassed != nil {
             let numTime = convertStringToNumbers(time: timePassed!)!
             saveHighScore(numTime)
+            print("numTime: \(numTime)")
             if numTime <= 3000 {
                 numOfGames += 1
                 defaults.set(numOfGames, forKey: "Games")
@@ -154,7 +156,7 @@ class HighScoreViewController: UIViewController {
             scoreLabel.text = "\(intToScoreString(score: score))"
             
             if defaults.integer(forKey: "difficulty") == 0 {
-                if (score < easyHighScore) || (easyHighScore == 0) {
+                if (score > easyHighScore) || (easyHighScore == 0) {
                     newHighScoreLabel.isHidden = false
                     bestEasyTimeStackView.startBlink()
                     easyHighScore = score
@@ -215,13 +217,13 @@ class HighScoreViewController: UIViewController {
     // Play again game button to main menu
     @objc func playAgainButtonPressed(_ sender: Any) {
         // Return to game screen
+        
         // Interstitial Ad setup
         if interstitial.isReady {
             interstitial.present(fromRootViewController: self)
         }
         
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameController")
-        show(vc!, sender: self)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func showGameCenter(_ sender: UIButton) {
