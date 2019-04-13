@@ -24,10 +24,8 @@ class GameController: UIViewController {
     @IBOutlet weak var timerDisplay: UILabel!
     
     // Outlets for views
-//    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var playButton: UIButton!
-//    @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var difficultyLabel: UILabel!
     
     // MARK - Local variables
@@ -57,7 +55,6 @@ class GameController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = "twofold"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "restart", style: .plain, target: self, action: #selector(restartButtonTapped))
         setupTheme()
         resetGame()
         if musicIsOn {
@@ -84,21 +81,33 @@ class GameController: UIViewController {
         switch defaults.integer(forKey: "theme") {
         case 0:
             self.view.backgroundColor = .white
+            self.navigationController?.navigationBar.barTintColor = .white
         case 1:
             self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+            self.difficultyLabel.textColor = .purple
+            self.playButton.setTitleColor(.purple, for: .normal)
+            self.navigationController?.navigationBar.barTintColor = UIColor.rgb(red: 231, green: 80, blue: 69)
         case 2:
             self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+            self.difficultyLabel.textColor = .white
+            self.playButton.setTitleColor(.white, for: .normal)
+            self.navigationController?.navigationBar.barTintColor = .white
         default:
             self.view.backgroundColor = .white
+            self.navigationController?.navigationBar.barTintColor = .white
         }
     }
     
     // Created to reset game. Resets points, time and start button.
-    private func resetGame() {
+    @objc private func resetGame() {
         gameController.stopGame()
         if timer?.isValid == true {
             timer?.invalidate()
         }
+        navigationItem.hidesBackButton = false
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        navigationItem.rightBarButtonItem?.tintColor = .clear
+        
         bottomView.isHidden = true
         collectionView.isHidden = true
         collectionView.isUserInteractionEnabled = true
@@ -151,7 +160,6 @@ extension GameController: GameDelegate {
     // End of game methods
     func memoryGameDidEnd(_ game: MemoryGame, elapsedTime: TimeInterval) {
         timer?.invalidate()
-                
         if musicIsOn {
             bgMusic?.pause()
             Music().playWinnerAudio1()
@@ -166,8 +174,9 @@ extension GameController: GameDelegate {
         
         let when = DispatchTime.now() + 1.0
         DispatchQueue.main.asyncAfter(deadline: when) {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController")
-            self.show(vc!, sender: self)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController") as! HighScoreViewController
+            vc.timePassed = self.display
+            self.show(vc, sender: self)
         }
     }
 }
@@ -220,31 +229,31 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         if Device.IS_IPHONE {
             switch difficulty {
             case 6:
-                itemWidth = collectionView.frame.width / 3 - 12.0
-                itemHeight = collectionView.frame.height / 4 - 10.0
+                itemWidth = collectionView.frame.width / 3 - 16.0
+                itemHeight = collectionView.frame.height / 4 - 12.0
             case 8:
-                itemWidth = collectionView.frame.width / 4 - 8.0
+                itemWidth = collectionView.frame.width / 4 - 12.0
                 itemHeight = collectionView.frame.height / 4 - 14.0
             case 10:
-                itemWidth = collectionView.frame.width / 4 - 8.0
+                itemWidth = collectionView.frame.width / 4 - 12.0
                 itemHeight = collectionView.frame.height / 5 - 10.0
             default:
-                itemWidth = collectionView.frame.width / 3 - 12.0
-                itemHeight = collectionView.frame.height / 4 - 10.0
+                itemWidth = collectionView.frame.width / 4 - 12.0
+                itemHeight = collectionView.frame.height / 5 - 10.0
                 break
             }
         }
         else if Device.IS_IPAD {
             switch iPadDifficulty {
             case 6:
-                itemWidth = collectionView.frame.width / 3 - 12.0
+                itemWidth = collectionView.frame.width / 3 - 8.0
                 itemHeight = collectionView.frame.height / 4 - 10.0
             case 10:
-                itemWidth = collectionView.frame.width / 4 - 8.0
-                itemHeight = collectionView.frame.height / 5 - 12.0
+                itemWidth = collectionView.frame.width / 4 - 6.0
+                itemHeight = collectionView.frame.height / 5 - 10.0
             case 15:
-                itemWidth = collectionView.frame.width / 5 - 8.0
-                itemHeight = collectionView.frame.height / 6 - 10.0
+                itemWidth = collectionView.frame.width / 5 - 4.0
+                itemHeight = collectionView.frame.height / 6 - 6.0
             default:
                 itemWidth = collectionView.frame.width / 4 - 12.0
                 itemHeight = collectionView.frame.height / 5 - 10.0
@@ -269,19 +278,9 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         // Unhides views after start button is pressed
         collectionView.isHidden = false
         bottomView.isHidden = false
-    }
-    
-    @objc func restartButtonTapped(_ sender: Any) {
-        timer?.invalidate()
-        resetGame()
         
-        // Shows button at beginning of game
-        playButton.isHidden = false
-        playButton.isEnabled = true
-        
-        // Unhides views after start button is pressed
-//        collectionView.isHidden = true
-        bottomView.isHidden = true
+        navigationItem.hidesBackButton = true
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "restart", style: .plain, target: self, action: #selector(resetGame))
     }
     
     func timeString() -> String {
