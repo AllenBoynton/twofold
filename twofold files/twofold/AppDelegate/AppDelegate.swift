@@ -19,15 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.makeKeyAndVisible()
-//
-//        window?.rootViewController = UINavigationController(rootViewController: HomeController())
-        
         // Change nav bar color
         let navigationBarAppearance = UINavigationBar.appearance()
         navigationBarAppearance.barTintColor = UIColor.init(white: 1.0, alpha: 0.1)
-//        navigationBarAppearance.alpha = 0.3
         
         // Change nav bar title color/font/size
         let attrs = [
