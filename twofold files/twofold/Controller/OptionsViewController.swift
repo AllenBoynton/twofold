@@ -145,7 +145,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func supportButtonTapped(_ sender: Any) {
-        if let url = URL(string: "https://www.facebook.com/PokeMatchMobileApp/") {
+        if let url = URL(string: "https://www...") {
             UIApplication.shared.open(url, options: [:])
         }
     }
@@ -242,7 +242,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             segmentedControl.tintColor = UIColor.rgb(red: 231, green: 80, blue: 69)
             segmentedControl.setTitleTextAttributes([
                 NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.blue
+                NSAttributedString.Key.foregroundColor: UIColor.purple
                 ], for: .normal)
             segmentedControl.setTitleTextAttributes([
                 NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
@@ -258,7 +258,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             imageGroupArray = MemoryGame.beach
             self.view?.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
             segmentedControl.layer.borderColor = UIColor.blue.cgColor
-            segmentedControl.tintColor = UIColor.rgb(red: 230, green: 206, blue: 158)
+            segmentedControl.tintColor = UIColor.rgb(red: 194, green: 178, blue: 128) // beach sand color
             segmentedControl.setTitleTextAttributes([
                 NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 13) as Any,
                 NSAttributedString.Key.foregroundColor: UIColor.white
@@ -267,8 +267,8 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 13) as Any,
                 NSAttributedString.Key.foregroundColor: UIColor.blue
                 ], for: .selected)
-            musicOnView.backgroundColor = UIColor.rgb(red: 230, green: 206, blue: 158)
-            musicOffView.backgroundColor = UIColor.rgb(red: 230, green: 206, blue: 158)
+            musicOnView.backgroundColor = UIColor.rgb(red: 194, green: 178, blue: 128)
+            musicOffView.backgroundColor = UIColor.rgb(red: 194, green: 178, blue: 128)
 //        case 3:
 //            rowString = imageCategoryArray[3]
 //            myImageView.image = UIImage(named: "384")
