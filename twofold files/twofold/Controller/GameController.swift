@@ -22,6 +22,7 @@ class GameController: UIViewController {
     
     // Outlet for game display
     @IBOutlet weak var timerDisplay: UILabel!
+//    @IBOutlet weak var scoreLabel: UILabel!
     
     // Outlets for views
     @IBOutlet weak var bottomView: UIView!
@@ -52,6 +53,8 @@ class GameController: UIViewController {
     private var isTimerRunning = false
     private var resumeTapped = false
     
+//    private var score = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.title = "twofold"
@@ -80,21 +83,25 @@ class GameController: UIViewController {
     func setupTheme() {
         switch defaults.integer(forKey: "theme") {
         case 0:
-            self.view.backgroundColor = .white
-            self.navigationController?.navigationBar.barTintColor = .white
+            self.view.backgroundColor = StickmanTheme.stickmanBGColor
+            self.navigationController?.navigationBar.barTintColor = StickmanTheme.stickmanBGColor
+            self.bottomView.backgroundColor = StickmanTheme.stickmanBGColor
         case 1:
-            self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
-            self.difficultyLabel.textColor = .purple
-            self.playButton.setTitleColor(.purple, for: .normal)
-            self.navigationController?.navigationBar.barTintColor = UIColor.rgb(red: 231, green: 80, blue: 69)
+            self.view.backgroundColor = ButterflyTheme.butterflyBGColor
+//            self.difficultyLabel.textColor = ButterflyTheme.butterflySegForegroundColorNormal
+            self.playButton.setTitleColor(ButterflyTheme.butterflySegForegroundColorNormal, for: .normal)
+            self.navigationController?.navigationBar.barTintColor = ButterflyTheme.butterflyTintColor
+            self.bottomView.backgroundColor = ButterflyTheme.butterflyTintColor
         case 2:
-            self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
-            self.difficultyLabel.textColor = .white
+            self.view.backgroundColor = BeachTheme.beachBGColor
+//            self.difficultyLabel.textColor = .white
             self.playButton.setTitleColor(.white, for: .normal)
             self.navigationController?.navigationBar.barTintColor = .white
+            self.bottomView.backgroundColor = .white
         default:
             self.view.backgroundColor = .white
             self.navigationController?.navigationBar.barTintColor = .white
+            self.bottomView.backgroundColor = .white
         }
     }
     
@@ -145,6 +152,8 @@ extension GameController: GameDelegate {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! GameCell
             cell.showCard(true, animated: true)
+//            score += 100
+//            scoreLabel.text = "\(score)"
         }
     }
     
@@ -154,6 +163,8 @@ extension GameController: GameDelegate {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! GameCell
             cell.showCard(false, animated: true)
+//            score -= 100
+//            scoreLabel.text = "\(score)"
         }
     }
     
@@ -176,6 +187,7 @@ extension GameController: GameDelegate {
         DispatchQueue.main.asyncAfter(deadline: when) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController") as! HighScoreViewController
             vc.timePassed = self.display
+//            vc.scorePassed = self.score
             self.show(vc, sender: self)
         }
     }
@@ -229,14 +241,14 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         if Device.IS_IPHONE {
             switch difficulty {
             case 6:
-                itemWidth = collectionView.frame.width / 3 - 16.0
-                itemHeight = collectionView.frame.height / 4 - 12.0
+                itemWidth = collectionView.frame.width / 4 - 4.0
+                itemHeight = collectionView.frame.height / 5 - 6.0
             case 8:
-                itemWidth = collectionView.frame.width / 4 - 12.0
-                itemHeight = collectionView.frame.height / 4 - 14.0
+                itemWidth = collectionView.frame.width / 5 - 6.0
+                itemHeight = collectionView.frame.height / 5 - 12.0
             case 10:
-                itemWidth = collectionView.frame.width / 4 - 12.0
-                itemHeight = collectionView.frame.height / 5 - 10.0
+                itemWidth = collectionView.frame.width / 5 - 8.0
+                itemHeight = collectionView.frame.height / 5 - 12.0
             default:
                 itemWidth = collectionView.frame.width / 4 - 12.0
                 itemHeight = collectionView.frame.height / 5 - 10.0
@@ -246,14 +258,14 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         else if Device.IS_IPAD {
             switch iPadDifficulty {
             case 6:
-                itemWidth = collectionView.frame.width / 3 - 8.0
-                itemHeight = collectionView.frame.height / 4 - 10.0
+                itemWidth = collectionView.frame.width / 4 - 10.0
+                itemHeight = collectionView.frame.height / 4 - 12.0
             case 10:
-                itemWidth = collectionView.frame.width / 4 - 6.0
-                itemHeight = collectionView.frame.height / 5 - 10.0
+                itemWidth = collectionView.frame.width / 5 - 12.0
+                itemHeight = collectionView.frame.height / 5 - 12.0
             case 15:
-                itemWidth = collectionView.frame.width / 5 - 4.0
-                itemHeight = collectionView.frame.height / 6 - 6.0
+                itemWidth = collectionView.frame.width / 6 - 12.0
+                itemHeight = collectionView.frame.height / 6 - 12.0
             default:
                 itemWidth = collectionView.frame.width / 4 - 12.0
                 itemHeight = collectionView.frame.height / 5 - 10.0
