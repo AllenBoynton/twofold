@@ -25,13 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Change nav bar title color/font/size
         let attrs = [
-            NSAttributedString.Key.foregroundColor: UIColor.darkGray,
-            NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 17)
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont(name: Theme.mainFontTheme, size: 17)
         ]
         navigationBarAppearance.titleTextAttributes = attrs as [NSAttributedString.Key : Any]
+        navigationBarAppearance.isTranslucent = false
         
         // Change nav bar item color/font/size
-        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: UIFont(name: "HelveticaNeue", size: 15)!], for: .normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: Theme.mainFontTheme, size: 15)!], for: .normal)
         
         // Start app with sound
         Music().startGameMusic(name: "bgMusic")
