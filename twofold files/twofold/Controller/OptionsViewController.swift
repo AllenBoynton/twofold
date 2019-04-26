@@ -31,13 +31,19 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var musicOffView: UIView!
     @IBOutlet weak var versionLabel: UILabel!
     
+    private var rowString = String()
+    private var myImageView = UIImageView()
+    
     private var bannerView: GADBannerView!
     
     private var imageCategoryArray: [String] = ["stickmen", "butterflies", "beaches"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "continue", style: .done, target: self, action: #selector(doneButtonTapped))
+        self.navigationItem.title = "options"
         self.navigationItem.setHidesBackButton(true, animated: animated)
         versionLabel.text = version()
     }
@@ -134,7 +140,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         handleMusicButtons()
     }
     
-    @objc func doneButtonTapped(_ sender: Any) {
+    @objc func doneButtonTapped() {
         // Return to game screen
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameController")
         show(vc!, sender: self)
@@ -205,90 +211,19 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         let myView = UIView(frame: CGRect(x:0, y:0, width:pickerView.bounds.width - 30, height:80))
         
-        let myImageView = UIImageView(frame: CGRect(x:60, y:15, width:50, height:50))
+        myImageView = UIImageView(frame: CGRect(x:60, y:15, width:50, height:50))
         myImageView.contentMode = .scaleAspectFit
         let myLabel = UILabel(frame: CGRect(x:pickerView.bounds.maxX - 190, y:10, width:pickerView.bounds.width - 90, height:60 ))
-        myLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 15)
-        var rowString = String()
+        myLabel.font = UIFont(name: Theme.mainFontTheme, size: 15)
+        
         
         switch row {
         case 0:
-            theme = 0
-            defaults.set(0, forKey: "theme")
-            rowString = imageCategoryArray[0]
-            myImageView.image = UIImage(named: "1")
-            imageGroupArray = MemoryGame.stickmen
-            self.view?.backgroundColor = .white
-            segmentedControl.layer.borderColor = UIColor.darkGray.cgColor
-            segmentedControl.tintColor = .lightGray
-            segmentedControl.setTitleTextAttributes([
-                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.black
-                ], for: .normal)
-            segmentedControl.setTitleTextAttributes([
-                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.white
-                ], for: .selected)
-            musicOnView.backgroundColor = .lightGray
-            musicOffView.backgroundColor = .lightGray
+            handleThemeChange(themeNum: 0, imageNum: "1", themeName: MemoryGame.stickmen, bg: StickmanTheme.stickmanBGColor, navBarColor: .white, segBorderColor: StickmanTheme.stickmanBorderColor, segTintColor: StickmanTheme.stickmanTintColor, segFont: StickmanTheme.mainFontTheme, segForeColorNorm: StickmanTheme.stickmanSegForegroundColorNormal, segForeColorSelect: StickmanTheme.stickmanSegForegroundColorSelected, musicBtnColor: StickmanTheme.stickmanTintColor)
         case 1:
-            theme = 1
-            defaults.set(1, forKey: "theme")
-            rowString = imageCategoryArray[1]
-            myImageView.image = UIImage(named: "30")
-            imageGroupArray = MemoryGame.butterflies
-            self.view?.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
-            segmentedControl.layer.borderColor = UIColor.purple.cgColor
-            segmentedControl.tintColor = UIColor.rgb(red: 231, green: 80, blue: 69)
-            segmentedControl.setTitleTextAttributes([
-                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.purple
-                ], for: .normal)
-            segmentedControl.setTitleTextAttributes([
-                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.white
-                ], for: .selected)
-            musicOnView.backgroundColor = UIColor.rgb(red: 231, green: 80, blue: 69)
-            musicOffView.backgroundColor = UIColor.rgb(red: 231, green: 80, blue: 69)
+            handleThemeChange(themeNum: 1, imageNum: "30", themeName: MemoryGame.butterflies, bg: ButterflyTheme.butterflyBGColor, navBarColor: ButterflyTheme.butterflyTintColor, segBorderColor: ButterflyTheme.butterflyBorderColor, segTintColor: ButterflyTheme.butterflyTintColor, segFont: ButterflyTheme.mainFontTheme, segForeColorNorm: ButterflyTheme.butterflySegForegroundColorNormal, segForeColorSelect: ButterflyTheme.butterflySegForegroundColorSelected, musicBtnColor: ButterflyTheme.butterflyTintColor)
         case 2:
-            theme = 2
-            defaults.set(2, forKey: "theme")
-            rowString = imageCategoryArray[2]
-            myImageView.image = UIImage(named: "51")
-            imageGroupArray = MemoryGame.beach
-            self.view?.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
-            segmentedControl.layer.borderColor = UIColor.blue.cgColor
-            segmentedControl.tintColor = UIColor.rgb(red: 194, green: 178, blue: 128) // beach sand color
-            segmentedControl.setTitleTextAttributes([
-                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.white
-                ], for: .normal)
-            segmentedControl.setTitleTextAttributes([
-                NSAttributedString.Key.font : UIFont(name: "HelveticaNeue", size: 13) as Any,
-                NSAttributedString.Key.foregroundColor: UIColor.blue
-                ], for: .selected)
-            musicOnView.backgroundColor = UIColor.rgb(red: 194, green: 178, blue: 128)
-            musicOffView.backgroundColor = UIColor.rgb(red: 194, green: 178, blue: 128)
-//        case 3:
-//            rowString = imageCategoryArray[3]
-//            myImageView.image = UIImage(named: "384")
-//            imageGroupArray = MemoryGame.gen3Images
-//        case 4:
-//            rowString = imageCategoryArray[4]
-//            myImageView.image = UIImage(named: "448")
-//            imageGroupArray = MemoryGame.gen4Images
-//        case 5:
-//            rowString = imageCategoryArray[5]
-//            myImageView.image = UIImage(named: "635")
-//            imageGroupArray = MemoryGame.gen5Images
-//        case 6:
-//            rowString = imageCategoryArray[6]
-//            myImageView.image = UIImage(named: "658")
-//            imageGroupArray = MemoryGame.gen6Images
-//        case 7:
-//            rowString = imageCategoryArray[7]
-//            myImageView.image = UIImage(named: "745_2")
-//            imageGroupArray = MemoryGame.gen7Images
+            handleThemeChange(themeNum: 2, imageNum: "51", themeName: MemoryGame.beach, bg: BeachTheme.beachBGColor, navBarColor: .white, segBorderColor: BeachTheme.beachBorderColor, segTintColor: BeachTheme.beachTintColor, segFont: BeachTheme.mainFontTheme, segForeColorNorm: BeachTheme.beachSegForegroundColorNormal, segForeColorSelect: BeachTheme.beachSegForegroundColorSelected, musicBtnColor: BeachTheme.beachTintColor)
         case 8: break
         default:
             rowString = "Error: too many rows"
@@ -296,26 +231,32 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
 
         myLabel.text = rowString
-        
         myView.addSubview(myLabel)
         myView.addSubview(myImageView)
         
         return myView
     }
     
-    private func handleThemeChange(imageSet: [UIImage], bgColor: UIColor, borderColor: CGColor, tintColor: UIColor, sizeText: Int, normTextColor: CGColor, selTextColor: CGColor) {
-        imageGroupArray = imageSet
-        self.view?.backgroundColor = bgColor
-        segmentedControl.layer.borderColor = borderColor
-        segmentedControl.tintColor = tintColor
+    private func handleThemeChange(themeNum: Int, imageNum: String, themeName: [UIImage], bg: UIColor, navBarColor: UIColor, segBorderColor: CGColor, segTintColor: UIColor, segFont: String, segForeColorNorm: UIColor, segForeColorSelect: UIColor, musicBtnColor: UIColor) {
+        theme = UInt(themeNum)
+        defaults.set(themeNum, forKey: "theme")
+        rowString = imageCategoryArray[themeNum]
+        myImageView.image = UIImage(named: imageNum)
+        imageGroupArray = themeName
+        view?.backgroundColor = bg
+        navigationController?.navigationBar.barTintColor = navBarColor
+        segmentedControl.layer.borderColor = segBorderColor
+        segmentedControl.tintColor = segTintColor
         segmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: CGFloat(sizeText)) as Any,
-            NSAttributedString.Key.foregroundColor: normTextColor
+            NSAttributedString.Key.font : UIFont(name: segFont, size: 15) as Any,
+            NSAttributedString.Key.foregroundColor: segForeColorNorm
             ], for: .normal)
         segmentedControl.setTitleTextAttributes([
-            NSAttributedString.Key.font : UIFont(name: "HelveticaNeue-Thin", size: CGFloat(sizeText)) as Any,
-            NSAttributedString.Key.foregroundColor: selTextColor
+            NSAttributedString.Key.font : UIFont(name: segFont, size: 15) as Any,
+            NSAttributedString.Key.foregroundColor: segForeColorSelect
             ], for: .selected)
+        musicOnView.backgroundColor = musicBtnColor
+        musicOffView.backgroundColor = musicBtnColor
     }
 }
 
