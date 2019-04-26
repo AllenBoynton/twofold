@@ -25,6 +25,8 @@
 		0F2D4B442232EFDE00B57F31 /* DesignableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B432232EFDE00B57F31 /* DesignableViews.swift */; };
 		0F2D4B46223320C500B57F31 /* DesignableImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B45223320C500B57F31 /* DesignableImageViews.swift */; };
 		0F2D4B482233212700B57F31 /* ImageWithInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B472233212700B57F31 /* ImageWithInsets.swift */; };
+		0F32851822629303001DA6B1 /* FugazOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F32851722629303001DA6B1 /* FugazOne-Regular.ttf */; };
+		0F32851A226296A1001DA6B1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F328519226296A1001DA6B1 /* Theme.swift */; };
 		0F7572EE221F432000498C2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572ED221F432000498C2B /* AppDelegate.swift */; };
 		0F7572F0221F432000498C2B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7572EF221F432000498C2B /* HomeController.swift */; };
 		0F7572F3221F432000498C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F1221F432000498C2B /* Main.storyboard */; };
@@ -82,6 +84,8 @@
 		0F2D4B432232EFDE00B57F31 /* DesignableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableViews.swift; sourceTree = "<group>"; };
 		0F2D4B45223320C500B57F31 /* DesignableImageViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableImageViews.swift; sourceTree = "<group>"; };
 		0F2D4B472233212700B57F31 /* ImageWithInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithInsets.swift; sourceTree = "<group>"; };
+		0F32851722629303001DA6B1 /* FugazOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FugazOne-Regular.ttf"; sourceTree = "<group>"; };
+		0F328519226296A1001DA6B1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		0F7572EA221F432000498C2B /* twofold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = twofold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F7572ED221F432000498C2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0F7572EF221F432000498C2B /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 		0F75731B221F434500498C2B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0F32851722629303001DA6B1 /* FugazOne-Regular.ttf */,
 				0F2D4B342231D47000B57F31 /* Audio */,
 				0F7572F4221F432300498C2B /* Assets.xcassets */,
 			);
@@ -253,6 +258,7 @@
 				0F2D4B432232EFDE00B57F31 /* DesignableViews.swift */,
 				0F2D4B412232EF9500B57F31 /* DesignableButtons.swift */,
 				0F757337221FA3D200498C2B /* GameCell.swift */,
+				0F328519226296A1001DA6B1 /* Theme.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				0F7572F5221F432300498C2B /* Assets.xcassets in Resources */,
 				0F2D4B382231D52600B57F31 /* fanfare.mp3 in Resources */,
 				0F7572F3221F432000498C2B /* Main.storyboard in Resources */,
+				0F32851822629303001DA6B1 /* FugazOne-Regular.ttf in Resources */,
 				0F2D4B3E2231FB6A00B57F31 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +578,7 @@
 				0F2D4B202231BFE200B57F31 /* BlinkingLabel.swift in Sources */,
 				0F2D4B482233212700B57F31 /* ImageWithInsets.swift in Sources */,
 				0F2D4B46223320C500B57F31 /* DesignableImageViews.swift in Sources */,
+				0F32851A226296A1001DA6B1 /* Theme.swift in Sources */,
 				0F75732A221F919200498C2B /* Device.swift in Sources */,
 				0F2D4B422232EF9500B57F31 /* DesignableButtons.swift in Sources */,
 				0F2D4B40223210A900B57F31 /* RGB.swift in Sources */,
