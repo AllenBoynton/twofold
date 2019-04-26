@@ -25,7 +25,7 @@ class HighScoreViewController: UIViewController {
     @IBOutlet weak var bestTimesStackView: UIStackView!
     
     @IBOutlet weak var gifView: UIImageView!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var easyHighScoreLbl: UILabel!
     @IBOutlet weak var mediumHighScoreLbl: UILabel!
     @IBOutlet weak var hardHighScoreLbl: UILabel!
@@ -33,13 +33,17 @@ class HighScoreViewController: UIViewController {
     
     @IBOutlet weak var bestTimeStackLabel: UILabel!
     
+//    @IBOutlet weak var scoreLabel: UILabel!
+//    @IBOutlet weak var timeMultiplyer: UILabel!
+//    @IBOutlet weak var totalScore: UILabel!
+    
     @IBOutlet weak var gcIconView: UIView!
     
     private var adBannerView: GADBannerView!
     private var interstitial: GADInterstitial!
     
     private var scoreReporter = GKScore()
-    private var score = Int()
+    private var timeScore = Int()
     private var easyHighScore = Int()
     private var mediumHighScore = Int()
     private var hardHighScore = Int()
@@ -49,8 +53,9 @@ class HighScoreViewController: UIViewController {
     private var seconds = Int()
     private var millis = Int()
     
-    // Time passed from PokeMatchVC
+    // Time passed from GameVC
     var timePassed: String?
+//    var scorePassed: Int?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -79,13 +84,13 @@ class HighScoreViewController: UIViewController {
     private func setupLayout() {
         switch theme {
         case 0:
-            self.view.backgroundColor = .white
+            self.view.backgroundColor = StickmanTheme.stickmanBGColor
             gifView.image = UIImage(named: "8")
         case 1:
-            self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+            self.view.backgroundColor = ButterflyTheme.butterflyBGColor
             gifView.image = UIImage(named: "30")
         case 2:
-            self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+            self.view.backgroundColor = BeachTheme.beachBGColor
             gifView.image = UIImage(named: "51")
         default:
             self.view.backgroundColor = .white
@@ -96,7 +101,6 @@ class HighScoreViewController: UIViewController {
         if timePassed != nil {
             let numTime = convertStringToNumbers(time: timePassed!)!
             saveHighScore(numTime)
-            print("numTime: \(numTime)")
             if numTime <= 3000 {
                 numOfGames += 1
                 defaults.set(numOfGames, forKey: "Games")
@@ -120,17 +124,17 @@ class HighScoreViewController: UIViewController {
     // Verifies score/time is not nil
     func checkHighScoreForNil() {
         if defaults.value(forKey: "EasyHighScore") != nil {
-            easyHighScore = score
+            easyHighScore = timeScore
             easyHighScore = defaults.value(forKey: "EasyHighScore") as! NSInteger
             easyHighScoreLbl.text = "\(intToScoreString(score: easyHighScore))"
         }
         if defaults.value(forKey: "MediumHighScore") != nil {
-            mediumHighScore = score
+            mediumHighScore = timeScore
             mediumHighScore = defaults.value(forKey: "MediumHighScore") as! NSInteger
             mediumHighScoreLbl.text = "\(intToScoreString(score: mediumHighScore))"
         }
         if defaults.value(forKey: "HardHighScore") != nil {
-            hardHighScore = score
+            hardHighScore = timeScore
             hardHighScore = defaults.value(forKey: "HardHighScore") as! NSInteger
             hardHighScoreLbl.text = "\(intToScoreString(score: hardHighScore))"
         }
@@ -149,37 +153,57 @@ class HighScoreViewController: UIViewController {
     // Adds time from game to high scores. Compares against others for order
     func addScore() {
         if timePassed != nil {
-            navigationItem.setHidesBackButton(true, animated: false)
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "options", style: .done, target: self, action: #selector(returnToOptionsVC))
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "play again", style: .done, target: self, action: #selector(playAgainButtonPressed))
             navigationItem.title = "YOU WON!"
-            score = Int(convertStringToNumbers(time: timePassed!)!)
-            scoreLabel.text = "\(intToScoreString(score: score))"
+            timeScore = Int(convertStringToNumbers(time: timePassed!)!)
+            timeLabel.text = "\(intToScoreString(score: timeScore))"
+//            scoreLabel.text = "\(scorePassed ?? 1200)"
+//
+//            print("TimeScore: \(timeScore)")
+//            if timeScore > 0 && timeScore < 1000 { // 0 - 10
+//                scorePassed! *= 10
+//                timeMultiplyer.text = "X 10"
+//            } else if timeScore >= 1000 && timeScore < 3000 { // 10 - 29.99
+//                scorePassed! *= 5
+//                timeMultiplyer.text = "X 5"
+//            } else if timeScore >= 3000 && timeScore < 4500 { // 30 - 44.99
+//                scorePassed! *= 3
+//                timeMultiplyer.text = "X 3"
+//            } else if timeScore >= 4500 && timeScore < 10000 { // 45 - 0:59.99
+//                scorePassed! *= 2
+//                timeMultiplyer.text = "X 2"
+//            } else if timeScore >= 10000 {
+//                timeMultiplyer.text = "X 0"
+//            }
+//
+//            totalScore.text = "\(scorePassed ?? 1200)"
             
             if defaults.integer(forKey: "difficulty") == 0 {
-                if (score > easyHighScore) || (easyHighScore == 0) {
+                if (timeScore > easyHighScore) || (easyHighScore == 0) {
                     newHighScoreLabel.isHidden = false
                     bestEasyTimeStackView.startBlink()
-                    easyHighScore = score
+                    easyHighScore = timeScore
                     defaults.set(easyHighScore, forKey: "EasyHighScore")
                     easyHighScoreLbl.text = "\(intToScoreString(score: Int(easyHighScore)))"
                 }
             }
             
             if defaults.integer(forKey: "difficulty") == 1 {
-                if (score < mediumHighScore) || (mediumHighScore == 0) { // Change value for testing purposes
+                if (timeScore < mediumHighScore) || (mediumHighScore == 0) { // Change value for testing purposes
                     newHighScoreLabel.isHidden = false
                     bestMedTimeStackView.startBlink()
-                    mediumHighScore = score
+                    mediumHighScore = timeScore
                     defaults.set(mediumHighScore, forKey: "MediumHighScore")
                     mediumHighScoreLbl.text = "\(intToScoreString(score: Int(mediumHighScore)))"
                 }
             }
             
             if defaults.integer(forKey: "difficulty") == 2 {
-                if (score < hardHighScore) || (hardHighScore == 0) { // Change value for testing purposes
+                if (timeScore < hardHighScore) || (hardHighScore == 0) { // Change value for testing purposes
                     newHighScoreLabel.isHidden = false
                     bestHardTimeStackView.startBlink()
-                    hardHighScore = score
+                    hardHighScore = timeScore
                     defaults.set(hardHighScore, forKey: "HardHighScore")
                     hardHighScoreLbl.text = "\(intToScoreString(score: Int(hardHighScore)))"
                 }
@@ -188,7 +212,7 @@ class HighScoreViewController: UIViewController {
             self.title = "best times"
             bestTimeStackLabel.isHidden = true
             newGameTimeStackview.isHidden = true
-            scoreLabel.isHidden = true
+            timeLabel.isHidden = true
         }
     }
     
@@ -226,6 +250,11 @@ class HighScoreViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    @objc func returnToOptionsVC(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OptionsViewController")
+        show(vc!, sender: self)
+    }
+    
     @IBAction func showGameCenter(_ sender: UIButton) {
         showLeaderboard()
         gifView.image = nil
@@ -256,7 +285,7 @@ extension HighScoreViewController: GKGameCenterControllerDelegate {
     
     private func handleScoreReporter(id: String) {
         scoreReporter = GKScore(leaderboardIdentifier: id)
-        scoreReporter.value = Int64(score)
+        scoreReporter.value = Int64(timeScore)
         let gkScoreArray: [GKScore] = [scoreReporter]
         GKScore.report(gkScoreArray, withCompletionHandler: { error in
             guard error == nil else { return }
