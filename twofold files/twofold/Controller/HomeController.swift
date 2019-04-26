@@ -15,6 +15,7 @@ class HomeController: UIViewController {
     var gameController = MemoryGame()
     var music = Music()
     
+    @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var musicButton: UIButton!
     
@@ -41,23 +42,23 @@ class HomeController: UIViewController {
     private func setupTheme() {
         switch theme {
         case 0:
-            self.view.backgroundColor = .white
+            self.view.backgroundColor = StickmanTheme.stickmanBGColor
             imageView.image = UIImage(named: "8")
         case 1:
-            self.view.backgroundColor = UIColor.rgb(red: 247, green: 207, blue: 104)
+            self.view.backgroundColor = ButterflyTheme.butterflyBGColor
             imageView.image = UIImage(named: "30")
         case 2:
-            self.view.backgroundColor = UIColor.rgb(red: 70, green: 215, blue: 215)
+            self.view.backgroundColor = BeachTheme.beachBGColor
             imageView.image = UIImage(named: "51")
         default:
             self.view.backgroundColor = .white
         }
+        imageView2.image = imageView.image?.withHorizontallyFlippedOrientation()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        // Show the navigation bar on other view controllers
-//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        
     }
     
     // Authenticates the user to access to the GC
