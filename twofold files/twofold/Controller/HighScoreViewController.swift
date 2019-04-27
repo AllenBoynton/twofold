@@ -39,6 +39,9 @@ class HighScoreViewController: UIViewController {
     
     @IBOutlet weak var gcIconView: UIView!
     
+    @IBOutlet var headerLabels: [UILabel]!
+    @IBOutlet var labels: [UILabel]!
+    
     private var adBannerView: GADBannerView!
     private var interstitial: GADInterstitial!
     
@@ -84,17 +87,29 @@ class HighScoreViewController: UIViewController {
     private func setupLayout() {
         switch theme {
         case 0:
-            self.view.backgroundColor = StickmanTheme.stickmanBGColor
-            gifView.image = UIImage(named: "8")
+            handleTheme(bgColor: StickmanTheme.stickmanBGColor, navColor: StickmanTheme.stickmanTintColor, scoreColor: .yellow, headerColor: .black, textColor: .darkText, image: "8")
         case 1:
-            self.view.backgroundColor = ButterflyTheme.butterflyBGColor
-            gifView.image = UIImage(named: "30")
+            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, navColor: ButterflyTheme.butterflyTintColor, scoreColor: .yellow, headerColor: .black, textColor: ButterflyTheme.butterflySegForegroundColorNormal, image: "30")
         case 2:
-            self.view.backgroundColor = BeachTheme.beachBGColor
-            gifView.image = UIImage(named: "51")
+            handleTheme(bgColor: BeachTheme.beachBGColor, navColor: BeachTheme.beachTintColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "51")
+        case 3:
+            handleTheme(bgColor: JungleTheme.jungleBGColor, navColor: JungleTheme.jungleTintColor, scoreColor: JungleTheme.jungleBorderColor, headerColor: JungleTheme.jungleSegForegroundColorNormal, textColor: JungleTheme.jungleTextColor, image: "76")
         default:
             self.view.backgroundColor = .white
         }
+    }
+    
+    private func handleTheme(bgColor: UIColor, navColor: UIColor, scoreColor: UIColor, headerColor: UIColor, textColor: UIColor, image: String) {
+        self.view.backgroundColor = bgColor
+        navigationController?.navigationBar.barTintColor = navColor
+        newHighScoreLabel.textColor = scoreColor
+        for label in headerLabels {
+            label.textColor = headerColor
+        }
+        for label in labels {
+            label.textColor = textColor
+        }
+        gifView.image = UIImage(named: image)
     }
     
     private func showTime() {

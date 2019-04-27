@@ -15,8 +15,14 @@ class HomeController: UIViewController {
     var gameController = MemoryGame()
     var music = Music()
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
+    
+    
+    @IBOutlet weak var startButton: DesignableButtons!
     @IBOutlet weak var musicButton: UIButton!
     
     let localPlayer = GKLocalPlayer.local
@@ -30,28 +36,28 @@ class HomeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        theme = UInt(defaults.integer(forKey: "theme"))
+        setupTheme()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        authenticatePlayer()
-        theme = UInt(defaults.integer(forKey: "theme"))
-        setupTheme()
+        
     }
     
     private func setupTheme() {
         switch theme {
         case 0:
-            self.view.backgroundColor = StickmanTheme.stickmanBGColor
-            imageView.image = UIImage(named: "8")
+            handleTheme(bgColor: StickmanTheme.stickmanBGColor, textColor: .black, btnBgColor: StickmanTheme.stickmanTintColor, image: "8")
         case 1:
-            self.view.backgroundColor = ButterflyTheme.butterflyBGColor
-            imageView.image = UIImage(named: "30")
+            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, textColor: ButterflyTheme.butterflyTintColor, btnBgColor: ButterflyTheme.butterflyTintColor, image: "30")
         case 2:
-            self.view.backgroundColor = BeachTheme.beachBGColor
-            imageView.image = UIImage(named: "51")
+            handleTheme(bgColor: BeachTheme.beachBGColor, textColor: BeachTheme.beachTintColor, btnBgColor: BeachTheme.beachTintColor, image: "51")
+        case 3:
+            handleTheme(bgColor: JungleTheme.jungleBGColor, textColor: JungleTheme.jungleTintColor, btnBgColor: JungleTheme.jungleTextColor, image: "77")
         default:
-            self.view.backgroundColor = .white
+            self.view.backgroundColor = .green
         }
         imageView2.image = imageView.image?.withHorizontallyFlippedOrientation()
     }
@@ -59,6 +65,15 @@ class HomeController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+    }
+    
+    private func handleTheme(bgColor: UIColor, textColor: UIColor, btnBgColor: UIColor, image: String) {
+        self.view.backgroundColor = bgColor
+        imageView.image = UIImage(named: image)
+        titleLabel.textColor = textColor
+        subTitleLabel.textColor = textColor
+        startButton.backgroundColor = btnBgColor
+        musicButton.tintColor = textColor
     }
     
     // Authenticates the user to access to the GC
@@ -103,29 +118,33 @@ class HomeController: UIViewController {
         print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
     }
     
-    func handleMusicButtons() {
-        let image = UIImage(named: "x")
-        musicButton.setImage(image, for: .selected)
-        if (bgMusic?.isPlaying)! {
-            musicButton.alpha = 1.0
-            musicButton.isSelected = false
-            musicIsOn = true
-        } else {
-            musicButton.alpha = 0.4
-            musicButton.isSelected = true
-            musicIsOn = false
-        }
-    }
+//    func handleMusicButtons() {
+//        let image = UIImage(named: "x")
+//        musicButton.setImage(image, for: .selected)
+//        if (bgMusic?.isPlaying)! {
+//            musicButton.alpha = 1.0
+//            musicButton.isSelected = false
+//            musicIsOn = true
+//        } else {
+//            musicButton.alpha = 0.4
+//            musicButton.isSelected = true
+//            musicIsOn = false
+//        }
+//    }
     
     // Music button to turn music on/off
     @IBAction func muteButtonTapped(_ sender: UIButton) {
         music.handleMuteMusic(clip: bgMusic)
-        handleMusicButtons()
+//        handleMusicButtons()
         if musicIsOn {
-            musicButton.setImage(UIImage(named: "audio"), for: .normal)
+            let origImage = UIImage(named: "audio")
+            let tintedImage = origImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+            musicButton.setImage(tintedImage, for: .normal)
             musicIsOn = true
         } else {
-            musicButton.setImage(UIImage(named: "mute3"), for: .normal)
+            let origImage = UIImage(named: "mute3")
+            let tintedImage = origImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+            musicButton.setImage(tintedImage, for: .normal)
             musicIsOn = false
         }
     }

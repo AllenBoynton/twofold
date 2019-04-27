@@ -31,6 +31,9 @@ class GameCell: UICollectionViewCell {
                 backImageView.image = UIImage(named: "wave")
             default:
                 backImageView.backgroundColor = UIColor.rgb(red: 239, green: 135, blue: 51) // Orange
+                backImageView.contentMode = .scaleAspectFill
+                frontImageView.contentMode = .scaleAspectFill
+                frontImageView.image = card.image.imageWithInsets(insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
             }
         }
     }

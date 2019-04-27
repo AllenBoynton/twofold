@@ -29,14 +29,24 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet var imagePicker: UIPickerView!
     @IBOutlet weak var musicOnView: UIView!
     @IBOutlet weak var musicOffView: UIView!
+    
+    @IBOutlet weak var div1View: UIView!
+    @IBOutlet weak var div2View: UIView!
+    @IBOutlet weak var div3View: UIView!
+    
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var themeLabel: UILabel!
+    @IBOutlet weak var soundLabel: UILabel!
+    @IBOutlet weak var bestTimeLabel: UIButton!
     @IBOutlet weak var versionLabel: UILabel!
     
     private var rowString = String()
     private var myImageView = UIImageView()
+    private var myLabel = UILabel()
     
     private var bannerView: GADBannerView!
     
-    private var imageCategoryArray: [String] = ["stickmen", "butterflies", "beaches"]
+    private var imageCategoryArray: [String] = ["stickmen", "butterflies", "beaches", "jungle"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -88,8 +98,8 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         // Saves the current state of the segmented control
         let segmentName = defaults.integer(forKey: "difficulty")
         self.segmentedControl.selectedSegmentIndex = segmentName
-        self.segmentedControl.layer.cornerRadius = 2.0
-        self.segmentedControl.layer.borderWidth = 1.0
+        self.segmentedControl.layer.cornerRadius = 5.0
+        self.segmentedControl.layer.borderWidth = 2.0
         self.segmentedControl.layer.masksToBounds = true
         
         if segmentName == 0 {
@@ -205,6 +215,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         defaults.set(row, forKey: "row")
+        pickerView.reloadAllComponents()
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
@@ -213,17 +224,22 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         myImageView = UIImageView(frame: CGRect(x:60, y:15, width:50, height:50))
         myImageView.contentMode = .scaleAspectFit
-        let myLabel = UILabel(frame: CGRect(x:pickerView.bounds.maxX - 190, y:10, width:pickerView.bounds.width - 90, height:60 ))
+        myLabel = UILabel(frame: CGRect(x:pickerView.bounds.maxX - 190, y:10, width:pickerView.bounds.width - 90, height:60 ))
         myLabel.font = UIFont(name: Theme.mainFontTheme, size: 15)
-        
         
         switch row {
         case 0:
             handleThemeChange(themeNum: 0, imageNum: "1", themeName: MemoryGame.stickmen, bg: StickmanTheme.stickmanBGColor, navBarColor: .white, segBorderColor: StickmanTheme.stickmanBorderColor, segTintColor: StickmanTheme.stickmanTintColor, segFont: StickmanTheme.mainFontTheme, segForeColorNorm: StickmanTheme.stickmanSegForegroundColorNormal, segForeColorSelect: StickmanTheme.stickmanSegForegroundColorSelected, musicBtnColor: StickmanTheme.stickmanTintColor)
+            handleTextTheme(color: .black)
         case 1:
             handleThemeChange(themeNum: 1, imageNum: "30", themeName: MemoryGame.butterflies, bg: ButterflyTheme.butterflyBGColor, navBarColor: ButterflyTheme.butterflyTintColor, segBorderColor: ButterflyTheme.butterflyBorderColor, segTintColor: ButterflyTheme.butterflyTintColor, segFont: ButterflyTheme.mainFontTheme, segForeColorNorm: ButterflyTheme.butterflySegForegroundColorNormal, segForeColorSelect: ButterflyTheme.butterflySegForegroundColorSelected, musicBtnColor: ButterflyTheme.butterflyTintColor)
+            handleTextTheme(color: .black)
         case 2:
-            handleThemeChange(themeNum: 2, imageNum: "51", themeName: MemoryGame.beach, bg: BeachTheme.beachBGColor, navBarColor: .white, segBorderColor: BeachTheme.beachBorderColor, segTintColor: BeachTheme.beachTintColor, segFont: BeachTheme.mainFontTheme, segForeColorNorm: BeachTheme.beachSegForegroundColorNormal, segForeColorSelect: BeachTheme.beachSegForegroundColorSelected, musicBtnColor: BeachTheme.beachTintColor)
+            handleThemeChange(themeNum: 2, imageNum: "51", themeName: MemoryGame.beach, bg: BeachTheme.beachBGColor, navBarColor: BeachTheme.beachTintColor, segBorderColor: BeachTheme.beachBorderColor, segTintColor: BeachTheme.beachTintColor, segFont: BeachTheme.mainFontTheme, segForeColorNorm: BeachTheme.beachSegForegroundColorNormal, segForeColorSelect: BeachTheme.beachSegForegroundColorSelected, musicBtnColor: BeachTheme.beachTintColor)
+            handleTextTheme(color: .white)
+        case 3:
+            handleThemeChange(themeNum: 3, imageNum: "75", themeName: MemoryGame.jungle, bg: JungleTheme.jungleBGColor, navBarColor: JungleTheme.jungleTintColor, segBorderColor: JungleTheme.jungleBorderColor.cgColor, segTintColor: JungleTheme.jungleTintColor, segFont: JungleTheme.mainFontTheme, segForeColorNorm: JungleTheme.jungleTextColor, segForeColorSelect: JungleTheme.jungleSegForegroundColorSelected, musicBtnColor: JungleTheme.jungleTextColor)
+            handleTextTheme(color: JungleTheme.jungleTextColor)
         case 8: break
         default:
             rowString = "Error: too many rows"
@@ -257,6 +273,18 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             ], for: .selected)
         musicOnView.backgroundColor = musicBtnColor
         musicOffView.backgroundColor = musicBtnColor
+    }
+    
+    private func handleTextTheme(color: UIColor) {
+        div1View.backgroundColor = color
+        div2View.backgroundColor = color
+        div3View.backgroundColor = color
+        difficultyLabel.textColor = color
+        themeLabel.textColor = color
+        soundLabel.textColor = color
+        bestTimeLabel.setTitleColor(color, for: .normal)
+        versionLabel.textColor = color
+        myLabel.textColor = color
     }
 }
 

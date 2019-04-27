@@ -88,16 +88,22 @@ class GameController: UIViewController {
             self.bottomView.backgroundColor = StickmanTheme.stickmanBGColor
         case 1:
             self.view.backgroundColor = ButterflyTheme.butterflyBGColor
-//            self.difficultyLabel.textColor = ButterflyTheme.butterflySegForegroundColorNormal
+            self.difficultyLabel.textColor = ButterflyTheme.butterflySegForegroundColorNormal
             self.playButton.setTitleColor(ButterflyTheme.butterflySegForegroundColorNormal, for: .normal)
             self.navigationController?.navigationBar.barTintColor = ButterflyTheme.butterflyTintColor
             self.bottomView.backgroundColor = ButterflyTheme.butterflyTintColor
         case 2:
             self.view.backgroundColor = BeachTheme.beachBGColor
-//            self.difficultyLabel.textColor = .white
+            self.difficultyLabel.textColor = .white
             self.playButton.setTitleColor(.white, for: .normal)
             self.navigationController?.navigationBar.barTintColor = .white
             self.bottomView.backgroundColor = .white
+        case 3:
+            self.view.backgroundColor = JungleTheme.jungleBGColor
+            self.difficultyLabel.textColor = JungleTheme.jungleBorderColor
+            self.playButton.setTitleColor(JungleTheme.jungleBorderColor, for: .normal)
+            self.navigationController?.navigationBar.barTintColor = JungleTheme.jungleTintColor
+            self.bottomView.backgroundColor = JungleTheme.jungleTintColor
         default:
             self.view.backgroundColor = .white
             self.navigationController?.navigationBar.barTintColor = .white

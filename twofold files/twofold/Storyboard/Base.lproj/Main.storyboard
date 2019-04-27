@@ -62,19 +62,19 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a memory matching game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hp-3T-pvL">
                                 <rect key="frame" x="118.5" y="209" width="177.5" height="15.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lp3-LY-9Dn" customClass="DesignableButtons" customModule="twofold" customModuleProvider="target">
-                                <rect key="frame" x="182" y="553" width="50" height="50"/>
+                                <rect key="frame" x="177" y="548" width="60" height="60"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lp3-LY-9Dn" secondAttribute="height" multiplier="1:1" id="3NP-H3-5i4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="qCQ-35-HSg">
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="qCQ-35-HSg">
                                         <variation key="heightClass=regular-widthClass=regular" constant="80"/>
                                     </constraint>
                                 </constraints>
@@ -139,6 +139,9 @@
                         <outlet property="imageView" destination="NxH-AX-p9x" id="hIH-Og-tvf"/>
                         <outlet property="imageView2" destination="rsM-2t-43S" id="GSl-dm-3N0"/>
                         <outlet property="musicButton" destination="7mh-ox-dIg" id="fJu-Mq-vYq"/>
+                        <outlet property="startButton" destination="lp3-LY-9Dn" id="67t-no-auV"/>
+                        <outlet property="subTitleLabel" destination="8hp-3T-pvL" id="s2W-iW-zlL"/>
+                        <outlet property="titleLabel" destination="A97-LU-F4a" id="Lu3-yw-cAb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -443,10 +446,17 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="bestTimeLabel" destination="C1g-AV-uR8" id="sga-u3-INg"/>
+                        <outlet property="difficultyLabel" destination="ghx-KZ-Uvg" id="Ymr-bg-7CC"/>
+                        <outlet property="div1View" destination="1hz-2w-4Tg" id="FU4-L1-o3Z"/>
+                        <outlet property="div2View" destination="UIn-bC-t51" id="TNI-gF-C69"/>
+                        <outlet property="div3View" destination="vvf-0h-jHS" id="wNg-8g-TV8"/>
                         <outlet property="imagePicker" destination="HLw-7K-JbP" id="nz7-UI-zld"/>
                         <outlet property="musicOffView" destination="bgG-6m-8wX" id="FfI-hP-ipv"/>
                         <outlet property="musicOnView" destination="dF8-SZ-pKq" id="vMG-Ee-MnZ"/>
                         <outlet property="segmentedControl" destination="uSL-kx-nv8" id="gkc-YO-N8K"/>
+                        <outlet property="soundLabel" destination="vYR-JR-UMZ" id="6tX-Vz-bUl"/>
+                        <outlet property="themeLabel" destination="hDW-Rl-UnN" id="fV1-Uw-yaV"/>
                         <outlet property="versionLabel" destination="Apt-BA-nX4" id="Ya8-4n-vdp"/>
                     </connections>
                 </viewController>
@@ -567,7 +577,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkh-g0-cy0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="703"/>
-                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="20"/>
                                 <state key="normal" title="tap screen to begin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -579,12 +589,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty: what??" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-Bb-9xz">
-                                <rect key="frame" x="162.5" y="49" width="89" height="15.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                <rect key="frame" x="157.5" y="49" width="99" height="15.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 </variation>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-Xk-rmS">
@@ -919,6 +929,16 @@
                         <outlet property="newGameTimeStackview" destination="R8M-VO-re5" id="tBd-Kn-rtJ"/>
                         <outlet property="newHighScoreLabel" destination="8gw-gc-QgM" id="wFH-U8-pSK"/>
                         <outlet property="timeLabel" destination="l6W-h6-ftB" id="Gj4-R7-lWm"/>
+                        <outletCollection property="labels" destination="ysQ-b0-fNF" collectionClass="NSMutableArray" id="Wig-nr-35L"/>
+                        <outletCollection property="labels" destination="kYZ-RV-rhm" collectionClass="NSMutableArray" id="ouY-i0-FOd"/>
+                        <outletCollection property="labels" destination="At2-pA-Dg6" collectionClass="NSMutableArray" id="4qY-NC-abz"/>
+                        <outletCollection property="labels" destination="sXO-ok-0TB" collectionClass="NSMutableArray" id="qC1-j0-uix"/>
+                        <outletCollection property="labels" destination="EIZ-KL-Af0" collectionClass="NSMutableArray" id="5Z4-SE-heY"/>
+                        <outletCollection property="labels" destination="yuh-vB-wWv" collectionClass="NSMutableArray" id="q5J-dh-yZT"/>
+                        <outletCollection property="labels" destination="l6W-h6-ftB" collectionClass="NSMutableArray" id="Xcg-nX-dPH"/>
+                        <outletCollection property="headerLabels" destination="fM7-Du-c1x" collectionClass="NSMutableArray" id="nnz-Z9-rbA"/>
+                        <outletCollection property="headerLabels" destination="PZE-YT-oyG" collectionClass="NSMutableArray" id="Wka-UF-dqN"/>
+                        <outletCollection property="headerLabels" destination="At9-ag-i0b" collectionClass="NSMutableArray" id="2EY-aQ-9FR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXZ-RO-qrt" userLabel="First Responder" sceneMemberID="firstResponder"/>
