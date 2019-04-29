@@ -22,7 +22,6 @@ class GameController: UIViewController {
     
     // Outlet for game display
     @IBOutlet weak var timerDisplay: UILabel!
-//    @IBOutlet weak var scoreLabel: UILabel!
     
     // Outlets for views
     @IBOutlet weak var bottomView: UIView!
@@ -53,11 +52,9 @@ class GameController: UIViewController {
     private var isTimerRunning = false
     private var resumeTapped = false
     
-//    private var score = 0
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.title = "twofold"
+        self.navigationItem.title = "TwoFold"
         setupTheme()
         resetGame()
         if musicIsOn {
@@ -131,11 +128,11 @@ class GameController: UIViewController {
     private func handleDifficultyLabel() {
         switch defaults.integer(forKey: "difficulty") {
         case 0:
-            difficultyLabel.text = "difficulty: easy"
+            difficultyLabel.text = "Difficulty: Easy"
         case 1:
-            difficultyLabel.text = "difficulty: medium"
+            difficultyLabel.text = "Difficulty: Medium"
         case 2:
-            difficultyLabel.text = "difficulty: hard"
+            difficultyLabel.text = "Difficulty: Hard"
         default:
             difficultyLabel.isHidden = true
         }
@@ -158,8 +155,6 @@ extension GameController: GameDelegate {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! GameCell
             cell.showCard(true, animated: true)
-//            score += 100
-//            scoreLabel.text = "\(score)"
         }
     }
     
@@ -169,8 +164,6 @@ extension GameController: GameDelegate {
             guard let index = gameController.indexForCard(card) else { continue }
             let cell = collectionView.cellForItem(at: IndexPath(item: index, section: 0)) as! GameCell
             cell.showCard(false, animated: true)
-//            score -= 100
-//            scoreLabel.text = "\(score)"
         }
     }
     
@@ -193,7 +186,6 @@ extension GameController: GameDelegate {
         DispatchQueue.main.asyncAfter(deadline: when) {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "HighScoreViewController") as! HighScoreViewController
             vc.timePassed = self.display
-//            vc.scorePassed = self.score
             self.show(vc, sender: self)
         }
     }
@@ -298,7 +290,7 @@ extension GameController: UICollectionViewDelegateFlowLayout {
         bottomView.isHidden = false
         
         navigationItem.hidesBackButton = true
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "restart", style: .plain, target: self, action: #selector(resetGame))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Restart", style: .plain, target: self, action: #selector(resetGame))
     }
     
     func timeString() -> String {
