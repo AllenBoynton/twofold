@@ -152,7 +152,7 @@ extension MemoryGame {
     ]
     
     static var jungle: [UIImage] = [
-        UIImage(named: "61")!, UIImage(named: "62")!, UIImage(named: "63")!, UIImage(named: "64")!, UIImage(named: "65")!, UIImage(named: "66")!, UIImage(named: "67")!, UIImage(named: "68")!, UIImage(named: "69")!, UIImage(named: "70")!, UIImage(named: "71")!, UIImage(named: "72")!, UIImage(named: "73")!, UIImage(named: "74")!, UIImage(named: "75")!, UIImage(named: "76")!, UIImage(named: "77")!
+        UIImage(named: "61")!, UIImage(named: "62")!, UIImage(named: "63")!, UIImage(named: "64")!, UIImage(named: "65")!, UIImage(named: "66")!, UIImage(named: "67")!, UIImage(named: "68")!, UIImage(named: "69")!, UIImage(named: "70")!, UIImage(named: "71")!, UIImage(named: "72")!, UIImage(named: "73")!, UIImage(named: "74")!
     ]
     
     static var gen4Images: [UIImage] = [
