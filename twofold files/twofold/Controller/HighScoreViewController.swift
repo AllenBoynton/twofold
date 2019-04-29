@@ -24,7 +24,7 @@ class HighScoreViewController: UIViewController {
     @IBOutlet weak var bestHardTimeStackView: UIStackView!
     @IBOutlet weak var bestTimesStackView: UIStackView!
     
-    @IBOutlet weak var gifView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var easyHighScoreLbl: UILabel!
     @IBOutlet weak var mediumHighScoreLbl: UILabel!
@@ -32,10 +32,6 @@ class HighScoreViewController: UIViewController {
     @IBOutlet weak var newHighScoreLabel: UILabel!
     
     @IBOutlet weak var bestTimeStackLabel: UILabel!
-    
-//    @IBOutlet weak var scoreLabel: UILabel!
-//    @IBOutlet weak var timeMultiplyer: UILabel!
-//    @IBOutlet weak var totalScore: UILabel!
     
     @IBOutlet weak var gcIconView: UIView!
     
@@ -56,9 +52,7 @@ class HighScoreViewController: UIViewController {
     private var seconds = Int()
     private var millis = Int()
     
-    // Time passed from GameVC
     var timePassed: String?
-//    var scorePassed: Int?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -81,19 +75,19 @@ class HighScoreViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        gifView.image = nil
+        imageView.image = nil
     }
     
     private func setupLayout() {
         switch theme {
         case 0:
-            handleTheme(bgColor: StickmanTheme.stickmanBGColor, navColor: StickmanTheme.stickmanTintColor, scoreColor: .yellow, headerColor: .black, textColor: .darkText, image: "8")
+            handleTheme(bgColor: StickmanTheme.stickmanBGColor, navColor: StickmanTheme.stickmanBGColor, scoreColor: .blue, headerColor: .black, textColor: .darkGray, image: "8")
         case 1:
-            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, navColor: ButterflyTheme.butterflyTintColor, scoreColor: .yellow, headerColor: .black, textColor: ButterflyTheme.butterflySegForegroundColorNormal, image: "30")
+            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, navColor: ButterflyTheme.butterflyTintColor, scoreColor: ButterflyTheme.butterflyTintColor, headerColor: .black, textColor: ButterflyTheme.butterflySegForegroundColorNormal, image: "30")
         case 2:
             handleTheme(bgColor: BeachTheme.beachBGColor, navColor: BeachTheme.beachTintColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "51")
         case 3:
-            handleTheme(bgColor: JungleTheme.jungleBGColor, navColor: JungleTheme.jungleTintColor, scoreColor: JungleTheme.jungleBorderColor, headerColor: JungleTheme.jungleSegForegroundColorNormal, textColor: JungleTheme.jungleTextColor, image: "76")
+            handleTheme(bgColor: JungleTheme.jungleBGColor, navColor: JungleTheme.jungleTintColor, scoreColor: JungleTheme.jungleBorderColor, headerColor: JungleTheme.jungleSegForegroundColorSelected, textColor: JungleTheme.jungleTextColor, image: "76")
         default:
             self.view.backgroundColor = .white
         }
@@ -109,7 +103,7 @@ class HighScoreViewController: UIViewController {
         for label in labels {
             label.textColor = textColor
         }
-        gifView.image = UIImage(named: image)
+        imageView.image = UIImage(named: image)
     }
     
     private func showTime() {
@@ -119,7 +113,6 @@ class HighScoreViewController: UIViewController {
             if numTime <= 3000 {
                 numOfGames += 1
                 defaults.set(numOfGames, forKey: "Games")
-//                handleGameAchievements()
             }
         } 
     }
@@ -130,8 +123,7 @@ class HighScoreViewController: UIViewController {
     }
     
     private func loadImage() {
-        gifView.contentMode = .scaleAspectFit
-        
+        imageView.contentMode = .scaleAspectFit
     }
     
     /*************************** High Score Logic *********************/
@@ -168,34 +160,14 @@ class HighScoreViewController: UIViewController {
     // Adds time from game to high scores. Compares against others for order
     func addScore() {
         if timePassed != nil {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "options", style: .done, target: self, action: #selector(returnToOptionsVC))
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "play again", style: .done, target: self, action: #selector(playAgainButtonPressed))
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Options", style: .done, target: self, action: #selector(returnToOptionsVC))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Play Again", style: .done, target: self, action: #selector(playAgainButtonPressed))
             navigationItem.title = "YOU WON!"
             timeScore = Int(convertStringToNumbers(time: timePassed!)!)
             timeLabel.text = "\(intToScoreString(score: timeScore))"
-//            scoreLabel.text = "\(scorePassed ?? 1200)"
-//
-//            print("TimeScore: \(timeScore)")
-//            if timeScore > 0 && timeScore < 1000 { // 0 - 10
-//                scorePassed! *= 10
-//                timeMultiplyer.text = "X 10"
-//            } else if timeScore >= 1000 && timeScore < 3000 { // 10 - 29.99
-//                scorePassed! *= 5
-//                timeMultiplyer.text = "X 5"
-//            } else if timeScore >= 3000 && timeScore < 4500 { // 30 - 44.99
-//                scorePassed! *= 3
-//                timeMultiplyer.text = "X 3"
-//            } else if timeScore >= 4500 && timeScore < 10000 { // 45 - 0:59.99
-//                scorePassed! *= 2
-//                timeMultiplyer.text = "X 2"
-//            } else if timeScore >= 10000 {
-//                timeMultiplyer.text = "X 0"
-//            }
-//
-//            totalScore.text = "\(scorePassed ?? 1200)"
             
             if defaults.integer(forKey: "difficulty") == 0 {
-                if (timeScore > easyHighScore) || (easyHighScore == 0) {
+                if (timeScore < easyHighScore) || (easyHighScore == 0) {
                     newHighScoreLabel.isHidden = false
                     bestEasyTimeStackView.startBlink()
                     easyHighScore = timeScore
@@ -224,7 +196,7 @@ class HighScoreViewController: UIViewController {
                 }
             }
         } else {
-            self.title = "best times"
+            self.title = "Best Times"
             bestTimeStackLabel.isHidden = true
             newGameTimeStackview.isHidden = true
             timeLabel.isHidden = true
@@ -272,7 +244,7 @@ class HighScoreViewController: UIViewController {
     
     @IBAction func showGameCenter(_ sender: UIButton) {
         showLeaderboard()
-        gifView.image = nil
+        imageView.image = nil
     }
 }
     
@@ -308,65 +280,13 @@ extension HighScoreViewController: GKGameCenterControllerDelegate {
     }
     
     // Retrieves the GC VC leaderboard
-    private func showLeaderboard() {
+    func showLeaderboard() {
         let gameCenterViewController = GKGameCenterViewController()
         gameCenterViewController.gameCenterDelegate = self
         gameCenterViewController.viewState = .leaderboards
         
         // Show leaderboard
         self.present(gameCenterViewController, animated: true, completion: nil)
-    }
-    
-//    private func handleGameAchievements() {
-//        if GKLocalPlayer.local.isAuthenticated {
-//            let games = defaults.integer(forKey: "Games")
-//            switch games {
-//            case 10:
-//                reportAchievement(identifier: gamesAchievementID10, percentCompleted: Double(games / 10) * 100)
-//            case 20:
-//                reportAchievement(identifier: gamesAchievementID20, percentCompleted: Double(games / 20) * 100)
-//            case 30:
-//                reportAchievement(identifier: gamesAchievementID30, percentCompleted: Double(games / 30) * 100)
-//            case 40:
-//                reportAchievement(identifier: gamesAchievementID40, percentCompleted: Double(games / 40) * 100)
-//            case 50:
-//                reportAchievement(identifier: gamesAchievementID50, percentCompleted: Double(games / 50) * 100)
-//            case 75:
-//                reportAchievement(identifier: gamesAchievementID50, percentCompleted: Double(games / 75) * 100)
-//            case 100:
-//                reportAchievement(identifier: gamesAchievementID100, percentCompleted: Double(games / 100) * 100)
-//            case 150:
-//                reportAchievement(identifier: gamesAchievementID150, percentCompleted: Double(games / 150) * 100)
-//            case 200:
-//                reportAchievement(identifier: gamesAchievementID200, percentCompleted: Double(games / 200) * 100)
-//            case 250:
-//                reportAchievement(identifier: gamesAchievementID250, percentCompleted: Double(games / 250) * 100)
-//            case 300:
-//                reportAchievement(identifier: gamesAchievementID300, percentCompleted: Double(games / 300) * 100)
-//            case 350:
-//                reportAchievement(identifier: gamesAchievementID350, percentCompleted: Double(games / 350) * 100)
-//            case 400:
-//                reportAchievement(identifier: gamesAchievementID400, percentCompleted: Double(games / 400) * 100)
-//            case 450:
-//                reportAchievement(identifier: gamesAchievementID450, percentCompleted: Double(games / 450) * 100)
-//            case 500:
-//                reportAchievement(identifier: gamesAchievementID500, percentCompleted: Double(games / 500) * 100)
-//            default:
-//                break
-//            }
-//        }
-//
-//        GKAchievement.loadAchievements() { achievements, error in
-//            guard let achievements = achievements else { return }
-//            print(achievements)
-//        }
-//    }
-    
-    private func reportAchievement(identifier: String, percentCompleted: Double) {
-        let achievement = GKAchievement(identifier: identifier)
-        achievement.percentComplete = percentCompleted
-        achievement.showsCompletionBanner = true
-        GKAchievement.report([achievement], withCompletionHandler: nil)
     }
     
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
