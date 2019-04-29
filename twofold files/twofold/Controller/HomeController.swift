@@ -42,8 +42,7 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        authenticatePlayer()
-        
+        authenticatePlayer()
     }
     
     private func setupTheme() {
@@ -118,24 +117,9 @@ class HomeController: UIViewController {
         print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
     }
     
-//    func handleMusicButtons() {
-//        let image = UIImage(named: "x")
-//        musicButton.setImage(image, for: .selected)
-//        if (bgMusic?.isPlaying)! {
-//            musicButton.alpha = 1.0
-//            musicButton.isSelected = false
-//            musicIsOn = true
-//        } else {
-//            musicButton.alpha = 0.4
-//            musicButton.isSelected = true
-//            musicIsOn = false
-//        }
-//    }
-    
     // Music button to turn music on/off
     @IBAction func muteButtonTapped(_ sender: UIButton) {
         music.handleMuteMusic(clip: bgMusic)
-//        handleMusicButtons()
         if musicIsOn {
             let origImage = UIImage(named: "audio")
             let tintedImage = origImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
