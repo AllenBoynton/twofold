@@ -23,8 +23,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="twofold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A97-LU-F4a">
-                                <rect key="frame" x="118.5" y="144" width="177.5" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TwoFold" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="A97-LU-F4a">
+                                <rect key="frame" x="115.5" y="144" width="183" height="65"/>
                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="44"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -60,8 +60,8 @@
                                     <constraint firstAttribute="width" secondItem="NxH-AX-p9x" secondAttribute="height" multiplier="1:1" id="d23-oD-POh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a memory matching game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hp-3T-pvL">
-                                <rect key="frame" x="118.5" y="209" width="177.5" height="15.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Memory Matching Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8hp-3T-pvL">
+                                <rect key="frame" x="115.5" y="209" width="183" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                                     </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
-                                <state key="normal" title="start">
+                                <state key="normal" title="Start">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -156,9 +156,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-KZ-Uvg">
-                                <rect key="frame" x="170.5" y="54" width="73.5" height="22.5"/>
-                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-KZ-Uvg">
+                                <rect key="frame" x="16" y="54" width="398" height="21"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -166,16 +166,16 @@
                                 </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uSL-kx-nv8">
-                                <rect key="frame" x="83" y="84.5" width="248" height="29"/>
+                                <rect key="frame" x="83" y="83" width="248" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="Ff2-4p-QNA">
                                         <variation key="heightClass=regular-widthClass=regular" constant="40"/>
                                     </constraint>
                                 </constraints>
                                 <segments>
-                                    <segment title="easy"/>
-                                    <segment title="medium"/>
-                                    <segment title="hard"/>
+                                    <segment title="Easy"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Hard"/>
                                 </segments>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -192,15 +192,15 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hz-2w-4Tg" userLabel="divider1">
-                                <rect key="frame" x="20" y="132.5" width="374" height="1"/>
+                                <rect key="frame" x="16" y="139" width="382" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6Gz-Nb-YI7"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="themes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hDW-Rl-UnN">
-                                <rect key="frame" x="179" y="143.5" width="56.5" height="22.5"/>
-                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Themes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hDW-Rl-UnN">
+                                <rect key="frame" x="16" y="150" width="398" height="21"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -208,22 +208,22 @@
                                 </variation>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLw-7K-JbP">
-                                <rect key="frame" x="20" y="166" width="374" height="179"/>
+                                <rect key="frame" x="20" y="171" width="374" height="179"/>
                             </pickerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UIn-bC-t51" userLabel="divider2">
-                                <rect key="frame" x="20" y="355" width="374" height="1"/>
+                                <rect key="frame" x="16" y="360" width="382" height="1"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="pYu-BH-hdd"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dF8-SZ-pKq" customClass="DesignableViews" customModule="twofold" customModuleProvider="target">
-                                <rect key="frame" x="60" y="366" width="50" height="50"/>
+                                <rect key="frame" x="75" y="392" width="50" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sj-PP-0oj" customClass="DesignableButtons" customModule="twofold" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
-                                        <state key="normal" title="on">
+                                        <state key="normal" title="On">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -269,9 +269,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sound" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-JR-UMZ">
-                                <rect key="frame" x="185" y="380" width="44.5" height="22.5"/>
-                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-JR-UMZ">
+                                <rect key="frame" x="16" y="366" width="398" height="21"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -279,12 +279,12 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgG-6m-8wX" customClass="DesignableViews" customModule="twofold" customModuleProvider="target">
-                                <rect key="frame" x="304" y="366" width="50" height="50"/>
+                                <rect key="frame" x="289" y="392" width="50" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A43-1N-ZbW" customClass="DesignableButtons" customModule="twofold" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
-                                        <state key="normal" title="off">
+                                        <state key="normal" title="Off">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -327,20 +327,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvf-0h-jHS" userLabel="divider3">
-                                <rect key="frame" x="20" y="426" width="374" height="1"/>
+                                <rect key="frame" x="16" y="462" width="382" height="1"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="kod-xY-BBo"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1g-AV-uR8">
-                                <rect key="frame" x="166.5" y="467" width="81" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="I7n-fB-KFU"/>
-                                    <constraint firstAttribute="height" constant="30" id="uTB-Ge-bgR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="15"/>
-                                <state key="normal" title="best times">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1g-AV-uR8">
+                                <rect key="frame" x="16" y="468" width="398" height="45"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
+                                <state key="normal" title="Best Times">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -350,16 +346,107 @@
                                     <segue destination="GcN-Wi-AJz" kind="show" identifier="toHighScoreVC" id="S1V-yG-bQg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtQ-Hl-PZN" userLabel="divider4">
+                                <rect key="frame" x="16" y="518" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Xli-3N-4mg"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="7cP-cy-NFH" userLabel="right1">
+                                <rect key="frame" x="353" y="468" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7cP-cy-NFH" secondAttribute="height" multiplier="1:1" id="RKQ-8h-zpd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrC-xc-EHh" userLabel="Game Center">
+                                <rect key="frame" x="16" y="524" width="398" height="44.5"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
+                                <state key="normal" title="Game Center">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="24"/>
+                                </variation>
+                                <connections>
+                                    <action selector="gcButtonTapped:" destination="dOD-zb-b88" eventType="touchUpInside" id="TjL-zu-3M8"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI2-KP-Hyp" userLabel="divider5">
+                                <rect key="frame" x="16" y="573.5" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="rbc-n4-gwT"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="5Z6-hJ-Cle" userLabel="right2">
+                                <rect key="frame" x="353" y="524" width="45" height="44.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Z6-hJ-Cle" secondAttribute="height" multiplier="1:1" id="96N-y0-YYt"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-k3-re3" userLabel="Website">
+                                <rect key="frame" x="16" y="579.5" width="398" height="45"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
+                                <state key="normal" title="Website and Support">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="24"/>
+                                </variation>
+                                <connections>
+                                    <action selector="supportButtonTapped:" destination="dOD-zb-b88" eventType="touchUpInside" id="vQc-sb-vQy"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hBb-2d-quJ" userLabel="divider6">
+                                <rect key="frame" x="16" y="629.5" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="CRX-E4-c8C"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-16-N7L" userLabel="right3">
+                                <rect key="frame" x="353" y="579.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ef3-16-N7L" secondAttribute="height" multiplier="1:1" id="cSZ-J6-eqA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhQ-MM-h6r" userLabel="Rate">
+                                <rect key="frame" x="16" y="635.5" width="398" height="44.5"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="14"/>
+                                <state key="normal" title="Rate on App Store">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="24"/>
+                                </variation>
+                                <connections>
+                                    <action selector="rateButtonTapped:" destination="dOD-zb-b88" eventType="touchUpInside" id="eaD-h4-48g"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hu-Wf-vRN" userLabel="divider7">
+                                <rect key="frame" x="16" y="685" width="382" height="1"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="iYB-fL-xke"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="wHi-1H-lFc" userLabel="right4">
+                                <rect key="frame" x="353" y="635.5" width="45" height="44.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wHi-1H-lFc" secondAttribute="height" multiplier="1:1" id="b0K-Xy-cr9"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apt-BA-nX4">
-                                <rect key="frame" x="20" y="767.5" width="374" height="19.5"/>
-                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="13"/>
+                                <rect key="frame" x="20" y="691" width="374" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="20"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 </variation>
                             </label>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0u0-4v-65e">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0u0-4v-65e" userLabel="Dummy Ad View">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -368,6 +455,16 @@
                                     </constraint>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="70K-x0-MV1">
+                                <rect key="frame" x="16" y="720.5" width="382" height="91.5"/>
+                                <string key="text">Pokémon © 2002-2019 Pokémon. © 1995-2019 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo. No copyright or trademark infringement is intended in using Pokémon content on PokéMatch</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -375,89 +472,138 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="160"/>
                             </constraint>
                             <constraint firstItem="bgG-6m-8wX" firstAttribute="centerY" secondItem="dF8-SZ-pKq" secondAttribute="centerY" id="1ej-jL-Ayd"/>
-                            <constraint firstItem="C1g-AV-uR8" firstAttribute="top" secondItem="vvf-0h-jHS" secondAttribute="bottom" constant="40" id="3c9-qV-67o"/>
-                            <constraint firstItem="hDW-Rl-UnN" firstAttribute="centerX" secondItem="0lA-eY-ppW" secondAttribute="centerX" id="8O9-wg-szl"/>
-                            <constraint firstAttribute="trailing" secondItem="UIn-bC-t51" secondAttribute="trailing" constant="20" id="B24-b7-tzS"/>
-                            <constraint firstItem="dF8-SZ-pKq" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="60" id="Brs-pw-ul2">
+                            <constraint firstItem="C1g-AV-uR8" firstAttribute="height" secondItem="0lA-eY-ppW" secondAttribute="height" multiplier="0.05" id="2Ov-Fy-fJX"/>
+                            <constraint firstItem="C1g-AV-uR8" firstAttribute="top" secondItem="vvf-0h-jHS" secondAttribute="bottom" constant="5" id="3c9-qV-67o"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="Ef3-16-N7L" secondAttribute="trailing" constant="16" id="4EQ-A4-wJm"/>
+                            <constraint firstItem="C1g-AV-uR8" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="5u2-A4-T3G"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="GrC-xc-EHh" secondAttribute="trailing" id="6GA-e5-Ox8"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="C1g-AV-uR8" secondAttribute="trailing" id="6iu-La-Fma"/>
+                            <constraint firstItem="GrC-xc-EHh" firstAttribute="height" secondItem="C1g-AV-uR8" secondAttribute="height" id="7w0-n4-ynY"/>
+                            <constraint firstItem="hBb-2d-quJ" firstAttribute="top" secondItem="nVW-k3-re3" secondAttribute="bottom" constant="5" id="8qg-K7-WiB"/>
+                            <constraint firstItem="Apt-BA-nX4" firstAttribute="top" secondItem="8hu-Wf-vRN" secondAttribute="bottom" constant="5" id="8qt-ff-KAf"/>
+                            <constraint firstItem="jhQ-MM-h6r" firstAttribute="top" secondItem="hBb-2d-quJ" secondAttribute="bottom" constant="5" id="99T-vt-uhi"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="5Z6-hJ-Cle" secondAttribute="trailing" constant="16" id="B1D-E5-ORn"/>
+                            <constraint firstAttribute="trailing" secondItem="UIn-bC-t51" secondAttribute="trailing" constant="16" id="B24-b7-tzS"/>
+                            <constraint firstItem="dF8-SZ-pKq" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="75" id="Brs-pw-ul2">
                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                             </constraint>
                             <constraint firstItem="UIn-bC-t51" firstAttribute="top" secondItem="HLw-7K-JbP" secondAttribute="bottom" constant="10" id="D43-cx-24y">
                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                             </constraint>
                             <constraint firstItem="bgG-6m-8wX" firstAttribute="width" secondItem="dF8-SZ-pKq" secondAttribute="width" id="Esy-5R-f0F"/>
+                            <constraint firstAttribute="trailing" secondItem="pI2-KP-Hyp" secondAttribute="trailing" constant="16" id="F2e-9l-YF4"/>
+                            <constraint firstItem="GrC-xc-EHh" firstAttribute="top" secondItem="HtQ-Hl-PZN" secondAttribute="bottom" constant="5" id="F4a-5Y-Sv3"/>
+                            <constraint firstItem="HtQ-Hl-PZN" firstAttribute="top" secondItem="C1g-AV-uR8" secondAttribute="bottom" constant="5" id="FXH-kT-L4d"/>
+                            <constraint firstItem="8hu-Wf-vRN" firstAttribute="top" secondItem="jhQ-MM-h6r" secondAttribute="bottom" constant="5" id="Hqv-ty-jB5"/>
+                            <constraint firstItem="hBb-2d-quJ" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="IsB-Mk-lpe"/>
+                            <constraint firstItem="wHi-1H-lFc" firstAttribute="height" secondItem="jhQ-MM-h6r" secondAttribute="height" id="JFA-Pf-ULc"/>
+                            <constraint firstItem="nVW-k3-re3" firstAttribute="top" secondItem="pI2-KP-Hyp" secondAttribute="bottom" constant="5" id="Jn8-Tg-RKe"/>
                             <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="0u0-4v-65e" secondAttribute="trailing" id="LyL-TY-y2o"/>
+                            <constraint firstItem="7cP-cy-NFH" firstAttribute="centerY" secondItem="C1g-AV-uR8" secondAttribute="centerY" id="MxC-x7-Fsn"/>
+                            <constraint firstItem="dF8-SZ-pKq" firstAttribute="top" secondItem="vYR-JR-UMZ" secondAttribute="bottom" constant="5" id="N9h-OH-HUr"/>
                             <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="Apt-BA-nX4" secondAttribute="trailing" constant="20" id="OYP-i5-Jkw"/>
                             <constraint firstItem="0u0-4v-65e" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" id="Pcr-Jn-Kbr"/>
-                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="bottom" secondItem="Apt-BA-nX4" secondAttribute="bottom" constant="75" id="QRC-DG-e9i">
-                                <variation key="heightClass=regular-widthClass=regular" constant="100"/>
-                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="hBb-2d-quJ" secondAttribute="trailing" constant="16" id="RjM-wH-1Sy"/>
+                            <constraint firstItem="70K-x0-MV1" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="T4A-Xi-ml6"/>
+                            <constraint firstAttribute="trailing" secondItem="7cP-cy-NFH" secondAttribute="trailing" constant="16" id="UOU-an-hUh"/>
                             <constraint firstItem="ghx-KZ-Uvg" firstAttribute="top" secondItem="Hhc-Ld-0yD" secondAttribute="top" constant="10" id="UpK-UN-ZYe">
                                 <variation key="heightClass=regular-widthClass=regular" constant="16"/>
                             </constraint>
-                            <constraint firstAttribute="trailing" secondItem="1hz-2w-4Tg" secondAttribute="trailing" constant="20" id="XM2-6r-qNa"/>
+                            <constraint firstItem="0u0-4v-65e" firstAttribute="top" secondItem="70K-x0-MV1" secondAttribute="bottom" id="VWc-fh-jzi"/>
+                            <constraint firstAttribute="trailing" secondItem="1hz-2w-4Tg" secondAttribute="trailing" constant="16" id="XM2-6r-qNa"/>
                             <constraint firstItem="Apt-BA-nX4" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="20" id="XV3-qN-kEC"/>
-                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="bgG-6m-8wX" secondAttribute="trailing" constant="60" id="YcR-9x-mOF">
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="bgG-6m-8wX" secondAttribute="trailing" constant="75" id="YcR-9x-mOF">
                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
                             </constraint>
                             <constraint firstItem="Hhc-Ld-0yD" firstAttribute="bottom" secondItem="Apt-BA-nX4" secondAttribute="bottom" constant="60" id="Yoq-3v-lxM"/>
+                            <constraint firstItem="uSL-kx-nv8" firstAttribute="height" secondItem="0lA-eY-ppW" secondAttribute="height" multiplier="0.04" id="Z4l-Ww-Sh3"/>
                             <constraint firstItem="HLw-7K-JbP" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="20" id="ZGi-xH-o2d">
                                 <variation key="heightClass=regular-widthClass=regular" constant="160"/>
                             </constraint>
-                            <constraint firstItem="1hz-2w-4Tg" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="20" id="b3Y-eR-ng6"/>
+                            <constraint firstItem="1hz-2w-4Tg" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="b3Y-eR-ng6"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="nVW-k3-re3" secondAttribute="trailing" id="bLQ-pc-8s6"/>
+                            <constraint firstItem="HtQ-Hl-PZN" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="bho-5V-tf5"/>
                             <constraint firstItem="uSL-kx-nv8" firstAttribute="centerX" secondItem="0lA-eY-ppW" secondAttribute="centerX" id="buR-5p-j2J"/>
-                            <constraint firstItem="vvf-0h-jHS" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="20" id="dog-NG-c4x"/>
+                            <constraint firstItem="Ef3-16-N7L" firstAttribute="height" secondItem="nVW-k3-re3" secondAttribute="height" id="d6f-6w-sAD"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="hDW-Rl-UnN" secondAttribute="trailing" id="dWz-9i-Ree"/>
+                            <constraint firstItem="vvf-0h-jHS" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="dog-NG-c4x"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="wHi-1H-lFc" secondAttribute="trailing" constant="16" id="ekc-Eh-Vfk"/>
+                            <constraint firstItem="vYR-JR-UMZ" firstAttribute="top" secondItem="UIn-bC-t51" secondAttribute="bottom" constant="5" id="eqG-ng-hEe"/>
                             <constraint firstItem="1hz-2w-4Tg" firstAttribute="top" secondItem="uSL-kx-nv8" secondAttribute="bottom" constant="20" id="fHc-jI-gvl">
                                 <variation key="heightClass=regular-widthClass=regular" constant="40"/>
                             </constraint>
                             <constraint firstItem="HLw-7K-JbP" firstAttribute="height" secondItem="0lA-eY-ppW" secondAttribute="height" multiplier="0.2" id="fns-ud-Sbu"/>
-                            <constraint firstItem="vvf-0h-jHS" firstAttribute="top" secondItem="dF8-SZ-pKq" secondAttribute="bottom" constant="10" id="gWM-JN-rQg">
+                            <constraint firstItem="7cP-cy-NFH" firstAttribute="height" secondItem="C1g-AV-uR8" secondAttribute="height" id="gMb-pe-TbO"/>
+                            <constraint firstItem="vvf-0h-jHS" firstAttribute="top" secondItem="dF8-SZ-pKq" secondAttribute="bottom" constant="20" id="gWM-JN-rQg">
                                 <variation key="heightClass=regular-widthClass=regular" constant="20"/>
                             </constraint>
-                            <constraint firstItem="ghx-KZ-Uvg" firstAttribute="centerX" secondItem="0lA-eY-ppW" secondAttribute="centerX" id="hsC-EC-3OU"/>
+                            <constraint firstItem="jhQ-MM-h6r" firstAttribute="height" secondItem="C1g-AV-uR8" secondAttribute="height" id="ger-BO-QGA"/>
+                            <constraint firstItem="nVW-k3-re3" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="iF6-xd-ASA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="0u0-4v-65e" secondAttribute="bottom" id="j3e-Wg-7oD"/>
-                            <constraint firstItem="vYR-JR-UMZ" firstAttribute="centerY" secondItem="dF8-SZ-pKq" secondAttribute="centerY" id="mOM-NH-fWG"/>
-                            <constraint firstItem="UIn-bC-t51" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="20" id="muE-Oa-51s"/>
-                            <constraint firstAttribute="trailing" secondItem="vvf-0h-jHS" secondAttribute="trailing" constant="20" id="pnt-s6-GG6"/>
-                            <constraint firstItem="vYR-JR-UMZ" firstAttribute="centerX" secondItem="0lA-eY-ppW" secondAttribute="centerX" id="tWl-C2-12O"/>
-                            <constraint firstItem="dF8-SZ-pKq" firstAttribute="top" secondItem="UIn-bC-t51" secondAttribute="bottom" constant="10" id="ucL-fH-guD">
-                                <variation key="heightClass=regular-widthClass=regular" constant="20"/>
-                            </constraint>
+                            <constraint firstItem="Ef3-16-N7L" firstAttribute="centerY" secondItem="nVW-k3-re3" secondAttribute="centerY" id="jcK-N0-EF6"/>
+                            <constraint firstItem="nVW-k3-re3" firstAttribute="height" secondItem="C1g-AV-uR8" secondAttribute="height" id="kYe-WQ-9YQ"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="jhQ-MM-h6r" secondAttribute="trailing" id="krp-57-JHV"/>
+                            <constraint firstItem="ghx-KZ-Uvg" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="kva-JD-3Qg"/>
+                            <constraint firstAttribute="trailing" secondItem="8hu-Wf-vRN" secondAttribute="trailing" constant="16" id="maY-Yf-EtN"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="70K-x0-MV1" secondAttribute="trailing" constant="16" id="mnP-bg-IPp"/>
+                            <constraint firstItem="UIn-bC-t51" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="muE-Oa-51s"/>
+                            <constraint firstItem="wHi-1H-lFc" firstAttribute="centerY" secondItem="jhQ-MM-h6r" secondAttribute="centerY" id="oiv-iy-CiZ"/>
+                            <constraint firstItem="jhQ-MM-h6r" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="pIq-bp-nU4"/>
+                            <constraint firstAttribute="trailing" secondItem="vvf-0h-jHS" secondAttribute="trailing" constant="16" id="pnt-s6-GG6"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="vYR-JR-UMZ" secondAttribute="trailing" id="qCp-Ee-CBE"/>
+                            <constraint firstItem="70K-x0-MV1" firstAttribute="top" relation="lessThanOrEqual" secondItem="Apt-BA-nX4" secondAttribute="bottom" constant="15" id="rn5-3L-Sa4"/>
+                            <constraint firstItem="5Z6-hJ-Cle" firstAttribute="centerY" secondItem="GrC-xc-EHh" secondAttribute="centerY" id="rz5-Vv-UKn"/>
+                            <constraint firstItem="pI2-KP-Hyp" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="sP7-fp-nWl"/>
+                            <constraint firstItem="pI2-KP-Hyp" firstAttribute="top" secondItem="GrC-xc-EHh" secondAttribute="bottom" constant="5" id="szb-hb-En1"/>
+                            <constraint firstItem="vYR-JR-UMZ" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="tk4-Uk-DTk"/>
+                            <constraint firstItem="Hhc-Ld-0yD" firstAttribute="trailing" secondItem="ghx-KZ-Uvg" secondAttribute="trailing" id="upA-m5-1Sx"/>
                             <constraint firstItem="uSL-kx-nv8" firstAttribute="width" secondItem="0lA-eY-ppW" secondAttribute="width" multiplier="0.6" id="vda-49-0tn"/>
                             <constraint firstItem="hDW-Rl-UnN" firstAttribute="top" secondItem="1hz-2w-4Tg" secondAttribute="bottom" constant="10" id="vsR-Gz-50Y">
                                 <variation key="heightClass=regular-widthClass=regular" constant="30"/>
                             </constraint>
                             <constraint firstItem="HLw-7K-JbP" firstAttribute="top" secondItem="hDW-Rl-UnN" secondAttribute="bottom" id="xKb-iK-i1C"/>
+                            <constraint firstItem="5Z6-hJ-Cle" firstAttribute="height" secondItem="GrC-xc-EHh" secondAttribute="height" id="xbD-In-X4u"/>
+                            <constraint firstItem="8hu-Wf-vRN" firstAttribute="leading" secondItem="0lA-eY-ppW" secondAttribute="leading" constant="16" id="xla-v0-QUu"/>
+                            <constraint firstItem="hDW-Rl-UnN" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="xu2-3m-YJ1"/>
                             <constraint firstItem="uSL-kx-nv8" firstAttribute="top" secondItem="ghx-KZ-Uvg" secondAttribute="bottom" constant="8" id="xxa-uU-13S">
                                 <variation key="heightClass=regular-widthClass=regular" constant="16"/>
                             </constraint>
-                            <constraint firstItem="C1g-AV-uR8" firstAttribute="centerX" secondItem="0lA-eY-ppW" secondAttribute="centerX" id="yIq-Jv-Fgc"/>
+                            <constraint firstAttribute="trailing" secondItem="HtQ-Hl-PZN" secondAttribute="trailing" constant="16" id="yL6-4I-Tvi"/>
+                            <constraint firstItem="GrC-xc-EHh" firstAttribute="leading" secondItem="Hhc-Ld-0yD" secondAttribute="leading" constant="16" id="z2S-xn-Int"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hhc-Ld-0yD"/>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="QRC-DG-e9i"/>
-                            </mask>
-                        </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="QRC-DG-e9i"/>
                                 <exclude reference="Yoq-3v-lxM"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="bestTimeLabel" destination="C1g-AV-uR8" id="sga-u3-INg"/>
-                        <outlet property="difficultyLabel" destination="ghx-KZ-Uvg" id="Ymr-bg-7CC"/>
-                        <outlet property="div1View" destination="1hz-2w-4Tg" id="FU4-L1-o3Z"/>
-                        <outlet property="div2View" destination="UIn-bC-t51" id="TNI-gF-C69"/>
-                        <outlet property="div3View" destination="vvf-0h-jHS" id="wNg-8g-TV8"/>
                         <outlet property="imagePicker" destination="HLw-7K-JbP" id="nz7-UI-zld"/>
                         <outlet property="musicOffView" destination="bgG-6m-8wX" id="FfI-hP-ipv"/>
                         <outlet property="musicOnView" destination="dF8-SZ-pKq" id="vMG-Ee-MnZ"/>
                         <outlet property="segmentedControl" destination="uSL-kx-nv8" id="gkc-YO-N8K"/>
-                        <outlet property="soundLabel" destination="vYR-JR-UMZ" id="6tX-Vz-bUl"/>
-                        <outlet property="themeLabel" destination="hDW-Rl-UnN" id="fV1-Uw-yaV"/>
                         <outlet property="versionLabel" destination="Apt-BA-nX4" id="Ya8-4n-vdp"/>
+                        <outletCollection property="dividerViews" destination="1hz-2w-4Tg" collectionClass="NSMutableArray" id="kH5-Ie-dMw"/>
+                        <outletCollection property="dividerViews" destination="UIn-bC-t51" collectionClass="NSMutableArray" id="ZLp-uI-deU"/>
+                        <outletCollection property="dividerViews" destination="vvf-0h-jHS" collectionClass="NSMutableArray" id="Kee-Rg-hhw"/>
+                        <outletCollection property="labels" destination="ghx-KZ-Uvg" collectionClass="NSMutableArray" id="g9h-Gv-CrP"/>
+                        <outletCollection property="labels" destination="hDW-Rl-UnN" collectionClass="NSMutableArray" id="6ro-kb-S9C"/>
+                        <outletCollection property="labels" destination="vYR-JR-UMZ" collectionClass="NSMutableArray" id="g4x-nK-pd9"/>
+                        <outletCollection property="labels" destination="Apt-BA-nX4" collectionClass="NSMutableArray" id="L91-jw-gvE"/>
+                        <outletCollection property="dividerViews" destination="HtQ-Hl-PZN" collectionClass="NSMutableArray" id="phT-zs-mCA"/>
+                        <outletCollection property="dividerViews" destination="pI2-KP-Hyp" collectionClass="NSMutableArray" id="42t-nr-eKy"/>
+                        <outletCollection property="dividerViews" destination="hBb-2d-quJ" collectionClass="NSMutableArray" id="SGh-bF-FbE"/>
+                        <outletCollection property="dividerViews" destination="8hu-Wf-vRN" collectionClass="NSMutableArray" id="B5W-FU-ndb"/>
+                        <outletCollection property="labels" destination="70K-x0-MV1" collectionClass="NSMutableArray" id="9qZ-Sq-gQC"/>
+                        <outletCollection property="buttonLabels" destination="C1g-AV-uR8" collectionClass="NSMutableArray" id="2gT-O3-j8y"/>
+                        <outletCollection property="buttonLabels" destination="GrC-xc-EHh" collectionClass="NSMutableArray" id="hnv-E1-JOQ"/>
+                        <outletCollection property="buttonLabels" destination="nVW-k3-re3" collectionClass="NSMutableArray" id="Jh4-8Z-765"/>
+                        <outletCollection property="buttonLabels" destination="jhQ-MM-h6r" collectionClass="NSMutableArray" id="0Nh-Zc-pJn"/>
+                        <outletCollection property="arrowImages" destination="7cP-cy-NFH" collectionClass="NSMutableArray" id="hIl-Qh-u28"/>
+                        <outletCollection property="arrowImages" destination="5Z6-hJ-Cle" collectionClass="NSMutableArray" id="nCP-GU-8HO"/>
+                        <outletCollection property="arrowImages" destination="Ef3-16-N7L" collectionClass="NSMutableArray" id="Gar-cO-8GD"/>
+                        <outletCollection property="arrowImages" destination="wHi-1H-lFc" collectionClass="NSMutableArray" id="sXw-U6-6rx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9P-E0-Txm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -473,7 +619,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-Ek-dQp">
-                                <rect key="frame" x="16" y="69.5" width="382" height="661.5"/>
+                                <rect key="frame" x="16" y="73.5" width="382" height="657.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LXA-gq-Ln1">
                                     <size key="itemSize" width="75" height="90"/>
@@ -578,7 +724,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkh-g0-cy0">
                                 <rect key="frame" x="0.0" y="44" width="414" height="703"/>
                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="20"/>
-                                <state key="normal" title="tap screen to begin">
+                                <state key="normal" title="Tap Screen To Begin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=regular">
@@ -588,13 +734,13 @@
                                     <action selector="playButtonTapped:" destination="ykS-Pd-8xj" eventType="touchUpInside" id="4FH-4o-DmJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="difficulty: what??" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-Bb-9xz">
-                                <rect key="frame" x="157.5" y="49" width="99" height="15.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty: what??" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-Bb-9xz">
+                                <rect key="frame" x="146.5" y="49" width="121" height="19.5"/>
+                                <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=regular">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="18"/>
                                 </variation>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tI9-Xk-rmS">
@@ -743,7 +889,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-Ue-rJK" userLabel="Best Easy Time Stack">
                                                 <rect key="frame" x="0.0" y="48.5" width="148" height="48.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="yuh-vB-wWv" userLabel="Best Easy Time">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="yuh-vB-wWv" userLabel="Best Easy Time">
                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="48.5"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="26"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -774,7 +920,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-YN-lhq" userLabel="Best Med Time Stack">
                                                 <rect key="frame" x="0.0" y="97" width="148" height="48.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="sXO-ok-0TB" userLabel="Best Med Time">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="sXO-ok-0TB" userLabel="Best Med Time">
                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="48.5"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="26"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -805,7 +951,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-oM-wEw" userLabel="Best Hard Time Stack">
                                                 <rect key="frame" x="0.0" y="145.5" width="148" height="48.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-RV-rhm">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-RV-rhm">
                                                         <rect key="frame" x="0.0" y="0.0" width="74" height="48.5"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="26"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -922,8 +1068,8 @@
                         <outlet property="bestTimesStackView" destination="afb-vr-fEg" id="zS6-xZ-DXs"/>
                         <outlet property="easyHighScoreLbl" destination="EIZ-KL-Af0" id="B1m-8c-dmJ"/>
                         <outlet property="gcIconView" destination="Lfx-8P-5k7" id="tBd-F8-aLh"/>
-                        <outlet property="gifView" destination="OMS-bG-DyZ" id="iok-YL-pfL"/>
                         <outlet property="hardHighScoreLbl" destination="ysQ-b0-fNF" id="VCV-uk-tNM"/>
+                        <outlet property="imageView" destination="OMS-bG-DyZ" id="iok-YL-pfL"/>
                         <outlet property="mainStackView" destination="uld-CF-HzU" id="lQ6-cI-pfM"/>
                         <outlet property="mediumHighScoreLbl" destination="At2-pA-Dg6" id="ZvN-vg-HlP"/>
                         <outlet property="newGameTimeStackview" destination="R8M-VO-re5" id="tBd-Kn-rtJ"/>
@@ -951,6 +1097,7 @@
         <image name="8" width="800" height="800"/>
         <image name="audio" width="64" height="64"/>
         <image name="gamecenter" width="1024" height="1024"/>
+        <image name="right" width="192" height="192"/>
     </resources>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
