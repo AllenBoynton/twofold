@@ -30,14 +30,13 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBOutlet weak var musicOnView: UIView!
     @IBOutlet weak var musicOffView: UIView!
     
-    @IBOutlet weak var div1View: UIView!
-    @IBOutlet weak var div2View: UIView!
-    @IBOutlet weak var div3View: UIView!
+    @IBOutlet var dividerViews: [UIView]!
     
-    @IBOutlet weak var difficultyLabel: UILabel!
-    @IBOutlet weak var themeLabel: UILabel!
-    @IBOutlet weak var soundLabel: UILabel!
-    @IBOutlet weak var bestTimeLabel: UIButton!
+    @IBOutlet var labels: [UILabel]!
+    
+    @IBOutlet var buttonLabels: [UIButton]!
+    @IBOutlet var arrowImages: [UIImageView]!
+    
     @IBOutlet weak var versionLabel: UILabel!
     
     private var rowString = String()
@@ -46,14 +45,14 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     
     private var bannerView: GADBannerView!
     
-    private var imageCategoryArray: [String] = ["stickmen", "butterflies", "beaches", "jungle"]
+    private var imageCategoryArray: [String] = ["Stickmen", "Butterflies", "Beaches", "Jungle"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
         self.navigationItem.hidesBackButton = true
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "continue", style: .done, target: self, action: #selector(doneButtonTapped))
-        self.navigationItem.title = "options"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Continue", style: .done, target: self, action: #selector(doneButtonTapped))
+        self.navigationItem.title = "Options"
         self.navigationItem.setHidesBackButton(true, animated: animated)
         versionLabel.text = version()
     }
@@ -118,7 +117,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
         let dictionary = Bundle.main.infoDictionary!
         let version = dictionary["CFBundleShortVersionString"] as! String
         let build = dictionary["CFBundleVersion"] as! String
-        return "twofold Version \(version) Build \(build)"
+        return "TwoFold Version \(version) Build \(build)"
     }
     
     @IBAction func difficultySelection(_ sender: AnyObject) {
@@ -161,7 +160,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     @IBAction func supportButtonTapped(_ sender: Any) {
-        if let url = URL(string: "https://www...") {
+        if let url = URL(string: "https://www.alsmobileapps.com") {
             UIApplication.shared.open(url, options: [:])
         }
     }
@@ -176,14 +175,13 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     // Retrieves the GC VC leaderboard
     func showLeaderboard() {
         let gameCenterViewController = GKGameCenterViewController()
-        
         gameCenterViewController.gameCenterDelegate = self
         gameCenterViewController.viewState = .default
-        
+
         // Show leaderboard
         self.present(gameCenterViewController, animated: true, completion: nil)
     }
-    
+
     // Adds the Done button to the GC view controller
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
@@ -276,14 +274,25 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     private func handleTextTheme(color: UIColor) {
-        div1View.backgroundColor = color
-        div2View.backgroundColor = color
-        div3View.backgroundColor = color
-        difficultyLabel.textColor = color
-        themeLabel.textColor = color
-        soundLabel.textColor = color
-        bestTimeLabel.setTitleColor(color, for: .normal)
-        versionLabel.textColor = color
+        for div in dividerViews {
+            div.backgroundColor = color
+        }
+        
+        for label in labels {
+            label.textColor = color
+        }
+        
+        for label in buttonLabels {
+            label.setTitleColor(color, for: .normal)
+        }
+        
+        for images in arrowImages {
+            let origImage = UIImage(named: "right")
+            let tintedImage = origImage?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+            images.image = tintedImage
+            images.tintColor = color
+        }
+
         myLabel.textColor = color
     }
 }
