@@ -24,8 +24,6 @@
 		0F7572F3221F432000498C2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F1221F432000498C2B /* Main.storyboard */; };
 		0F7572F5221F432300498C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F4221F432300498C2B /* Assets.xcassets */; };
 		0F7572F8221F432300498C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F7572F6221F432300498C2B /* LaunchScreen.storyboard */; };
-		0F757303221F432300498C2B /* twofoldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757302221F432300498C2B /* twofoldTests.swift */; };
-		0F75730E221F432300498C2B /* twofoldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F75730D221F432300498C2B /* twofoldUITests.swift */; };
 		0F757324221F44D600498C2B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F757323221F44D600498C2B /* Default-568h@2x.png */; };
 		0F757329221F919200498C2B /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757325221F919200498C2B /* Music.swift */; };
 		0F75732A221F919200498C2B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757326221F919200498C2B /* Device.swift */; };
@@ -37,26 +35,7 @@
 		0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757333221F936800498C2B /* HighScoreViewController.swift */; };
 		0F757338221FA3D200498C2B /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757337221FA3D200498C2B /* GameCell.swift */; };
 		0FCA039524A8DE2200299D9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */; };
-		2AF7A3F5595D9A61EDC1E66D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		CFC8CC12399496F8A2D160A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0F7572FF221F432300498C2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F7572E2221F432000498C2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F7572E9221F432000498C2B;
-			remoteInfo = duplicity;
-		};
-		0F75730A221F432300498C2B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F7572E2221F432000498C2B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F7572E9221F432000498C2B;
-			remoteInfo = duplicity;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		0FCA039924A9092F00299D9F /* Embed Frameworks */ = {
@@ -91,12 +70,6 @@
 		0F7572F4221F432300498C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F7572F7221F432300498C2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0F7572F9221F432300498C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F7572FE221F432300498C2B /* twofoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twofoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F757302221F432300498C2B /* twofoldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twofoldTests.swift; sourceTree = "<group>"; };
-		0F757304221F432300498C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0F757309221F432300498C2B /* twofoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = twofoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F75730D221F432300498C2B /* twofoldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = twofoldUITests.swift; sourceTree = "<group>"; };
-		0F75730F221F432300498C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F757323221F44D600498C2B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0F757325221F919200498C2B /* Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		0F757326221F919200498C2B /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -125,22 +98,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F7572FB221F432300498C2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CFC8CC12399496F8A2D160A6 /* (null) in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F757306221F432300498C2B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2AF7A3F5595D9A61EDC1E66D /* (null) in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -158,8 +115,6 @@
 			children = (
 				0F757323221F44D600498C2B /* Default-568h@2x.png */,
 				0F7572EC221F432000498C2B /* twofold */,
-				0F757301221F432300498C2B /* twofoldTests */,
-				0F75730C221F432300498C2B /* twofoldUITests */,
 				0F7572EB221F432000498C2B /* Products */,
 				4DA6AA58D19B4218BC8D8982 /* Pods */,
 				49A216FD6E8EEECEAC38E1F9 /* Frameworks */,
@@ -170,8 +125,6 @@
 			isa = PBXGroup;
 			children = (
 				0F7572EA221F432000498C2B /* twofold.app */,
-				0F7572FE221F432300498C2B /* twofoldTests.xctest */,
-				0F757309221F432300498C2B /* twofoldUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,24 +144,6 @@
 				0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */,
 			);
 			path = twofold;
-			sourceTree = "<group>";
-		};
-		0F757301221F432300498C2B /* twofoldTests */ = {
-			isa = PBXGroup;
-			children = (
-				0F757302221F432300498C2B /* twofoldTests.swift */,
-				0F757304221F432300498C2B /* Info.plist */,
-			);
-			path = twofoldTests;
-			sourceTree = "<group>";
-		};
-		0F75730C221F432300498C2B /* twofoldUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0F75730D221F432300498C2B /* twofoldUITests.swift */,
-				0F75730F221F432300498C2B /* Info.plist */,
-			);
-			path = twofoldUITests;
 			sourceTree = "<group>";
 		};
 		0F75731B221F434500498C2B /* Resources */ = {
@@ -335,44 +270,6 @@
 			productReference = 0F7572EA221F432000498C2B /* twofold.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0F7572FD221F432300498C2B /* twofoldTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0F757315221F432300498C2B /* Build configuration list for PBXNativeTarget "twofoldTests" */;
-			buildPhases = (
-				858624378970DC1B5398EB81 /* [CP] Check Pods Manifest.lock */,
-				0F7572FA221F432300498C2B /* Sources */,
-				0F7572FB221F432300498C2B /* Frameworks */,
-				0F7572FC221F432300498C2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0F757300221F432300498C2B /* PBXTargetDependency */,
-			);
-			name = twofoldTests;
-			productName = duplicityTests;
-			productReference = 0F7572FE221F432300498C2B /* twofoldTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0F757308221F432300498C2B /* twofoldUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0F757318221F432300498C2B /* Build configuration list for PBXNativeTarget "twofoldUITests" */;
-			buildPhases = (
-				F2A30138F118327E8F010B3A /* [CP] Check Pods Manifest.lock */,
-				0F757305221F432300498C2B /* Sources */,
-				0F757306221F432300498C2B /* Frameworks */,
-				0F757307221F432300498C2B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0F75730B221F432300498C2B /* PBXTargetDependency */,
-			);
-			name = twofoldUITests;
-			productName = duplicityUITests;
-			productReference = 0F757309221F432300498C2B /* twofoldUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -385,19 +282,12 @@
 				TargetAttributes = {
 					0F7572E9221F432000498C2B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1150;
 						SystemCapabilities = {
 							com.apple.GameCenter.iOS = {
 								enabled = 1;
 							};
 						};
-					};
-					0F7572FD221F432300498C2B = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 0F7572E9221F432000498C2B;
-					};
-					0F757308221F432300498C2B = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 0F7572E9221F432000498C2B;
 					};
 				};
 			};
@@ -415,8 +305,6 @@
 			projectRoot = "";
 			targets = (
 				0F7572E9221F432000498C2B /* twofold */,
-				0F7572FD221F432300498C2B /* twofoldTests */,
-				0F757308221F432300498C2B /* twofoldUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -434,20 +322,6 @@
 				0F2D4B382231D52600B57F31 /* fanfare.mp3 in Resources */,
 				0F7572F3221F432000498C2B /* Main.storyboard in Resources */,
 				0F32851822629303001DA6B1 /* FugazOne-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F7572FC221F432300498C2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F757307221F432300498C2B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,28 +345,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-twofold/Pods-twofold-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		858624378970DC1B5398EB81 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-twofoldTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9039B4F3806AE2B1A39D29D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,28 +361,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-twofold-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2A30138F118327E8F010B3A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-twofoldUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -566,36 +396,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0F7572FA221F432300498C2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F757303221F432300498C2B /* twofoldTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0F757305221F432300498C2B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F75730E221F432300498C2B /* twofoldUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0F757300221F432300498C2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0F7572E9221F432000498C2B /* twofold */;
-			targetProxy = 0F7572FF221F432300498C2B /* PBXContainerItemProxy */;
-		};
-		0F75730B221F432300498C2B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0F7572E9221F432000498C2B /* twofold */;
-			targetProxy = 0F75730A221F432300498C2B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0F7572F1221F432000498C2B /* Main.storyboard */ = {
@@ -668,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -723,7 +524,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -747,7 +548,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.twofold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -766,94 +567,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.twofold;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		0F757316221F432300498C2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92079F818F5707AA8EE17990 /* Pods-twofoldTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6GTM24L94G;
-				INFOPLIST_FILE = duplicityTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.duplicityTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twofold.app/twofold";
-			};
-			name = Debug;
-		};
-		0F757317221F432300498C2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFD3988D91ABF4C307A1A20B /* Pods-twofoldTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6GTM24L94G;
-				INFOPLIST_FILE = duplicityTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.duplicityTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/twofold.app/twofold";
-			};
-			name = Release;
-		};
-		0F757319221F432300498C2B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 95155F00D55181C85F802F52 /* Pods-twofoldUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6GTM24L94G;
-				INFOPLIST_FILE = duplicityUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.duplicityUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = duplicity;
-			};
-			name = Debug;
-		};
-		0F75731A221F432300498C2B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA971D270CB18511CB73E5F0 /* Pods-twofoldUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6GTM24L94G;
-				INFOPLIST_FILE = duplicityUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alsmobileapps.duplicityUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = duplicity;
 			};
 			name = Release;
 		};
@@ -874,24 +589,6 @@
 			buildConfigurations = (
 				0F757313221F432300498C2B /* Debug */,
 				0F757314221F432300498C2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0F757315221F432300498C2B /* Build configuration list for PBXNativeTarget "twofoldTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0F757316221F432300498C2B /* Debug */,
-				0F757317221F432300498C2B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0F757318221F432300498C2B /* Build configuration list for PBXNativeTarget "twofoldUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0F757319221F432300498C2B /* Debug */,
-				0F75731A221F432300498C2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
