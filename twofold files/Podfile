@@ -11,7 +11,9 @@ target 'twofold' do
 	# https://firebase.google.com/docs/ios/setup#available-pods
 
   # Pods for twofold
-    pod 'Firebase/AdMob'
+    # pod 'Firebase/AdMob'
+	pod 'Google-Mobile-Ads-SDK'
+
 
   target 'twofoldTests' do
     inherit! :search_paths
