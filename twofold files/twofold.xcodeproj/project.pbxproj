@@ -9,11 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F2D4B202231BFE200B57F31 /* BlinkingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B1E2231BFE100B57F31 /* BlinkingLabel.swift */; };
 		0F2D4B212231BFE200B57F31 /* RandomArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2D4B1F2231BFE200B57F31 /* RandomArray.swift */; };
-		0F2D4B272231C13500B57F31 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B262231C13500B57F31 /* FirebaseCore.framework */; };
-		0F2D4B292231C13500B57F31 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B282231C13500B57F31 /* FirebaseInstanceID.framework */; };
-		0F2D4B2B2231C13500B57F31 /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B2A2231C13500B57F31 /* GoogleUtilities.framework */; };
-		0F2D4B2D2231C13500B57F31 /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B2C2231C13500B57F31 /* nanopb.framework */; };
-		0F2D4B2F2231C13500B57F31 /* Pods_twofold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B2E2231C13500B57F31 /* Pods_twofold.framework */; };
 		0F2D4B362231D4A200B57F31 /* bgMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B352231D4A200B57F31 /* bgMusic.mp3 */; };
 		0F2D4B382231D52600B57F31 /* fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D4B372231D52600B57F31 /* fanfare.mp3 */; };
 		0F2D4B3C2231F63000B57F31 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2D4B3B2231F63000B57F31 /* GameKit.framework */; };
@@ -43,8 +38,6 @@
 		0F757338221FA3D200498C2B /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757337221FA3D200498C2B /* GameCell.swift */; };
 		0FCA039524A8DE2200299D9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */; };
 		2AF7A3F5595D9A61EDC1E66D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		3C2A5DF71185E9640E8EA733 /* Pods_twofoldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EC91ED20E1EE4DE63722B2 /* Pods_twofoldUITests.framework */; };
-		8844164287789A1FADF29254 /* Pods_twofoldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F629B98AF560F078E35247 /* Pods_twofoldTests.framework */; };
 		CFC8CC12399496F8A2D160A6 /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
@@ -65,14 +58,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0FCA039924A9092F00299D9F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0F2D4B1E2231BFE100B57F31 /* BlinkingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlinkingLabel.swift; sourceTree = "<group>"; };
 		0F2D4B1F2231BFE200B57F31 /* RandomArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomArray.swift; sourceTree = "<group>"; };
-		0F2D4B262231C13500B57F31 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F2D4B282231C13500B57F31 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F2D4B2A2231C13500B57F31 /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F2D4B2C2231C13500B57F31 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F2D4B2E2231C13500B57F31 /* Pods_twofold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_twofold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2D4B352231D4A200B57F31 /* bgMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgMusic.mp3; sourceTree = "<group>"; };
 		0F2D4B372231D52600B57F31 /* fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fanfare.mp3; sourceTree = "<group>"; };
 		0F2D4B3B2231F63000B57F31 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -107,9 +108,7 @@
 		0F757333221F936800498C2B /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		0F757337221FA3D200498C2B /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
 		0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		47EC91ED20E1EE4DE63722B2 /* Pods_twofoldUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twofoldUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75A85B85CA9F44A9543489DA /* Pods-twofold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofold.debug.xcconfig"; path = "Target Support Files/Pods-twofold/Pods-twofold.debug.xcconfig"; sourceTree = "<group>"; };
-		76F629B98AF560F078E35247 /* Pods_twofoldTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twofoldTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92079F818F5707AA8EE17990 /* Pods-twofoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldTests.debug.xcconfig"; path = "Target Support Files/Pods-twofoldTests/Pods-twofoldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95155F00D55181C85F802F52 /* Pods-twofoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldUITests.debug.xcconfig"; path = "Target Support Files/Pods-twofoldUITests/Pods-twofoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AA971D270CB18511CB73E5F0 /* Pods-twofoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldUITests.release.xcconfig"; path = "Target Support Files/Pods-twofoldUITests/Pods-twofoldUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,11 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2D4B272231C13500B57F31 /* FirebaseCore.framework in Frameworks */,
-				0F2D4B292231C13500B57F31 /* FirebaseInstanceID.framework in Frameworks */,
-				0F2D4B2B2231C13500B57F31 /* GoogleUtilities.framework in Frameworks */,
-				0F2D4B2D2231C13500B57F31 /* nanopb.framework in Frameworks */,
-				0F2D4B2F2231C13500B57F31 /* Pods_twofold.framework in Frameworks */,
 				0F2D4B3C2231F63000B57F31 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +130,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC8CC12399496F8A2D160A6 /* (null) in Frameworks */,
-				8844164287789A1FADF29254 /* Pods_twofoldTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AF7A3F5595D9A61EDC1E66D /* (null) in Frameworks */,
-				3C2A5DF71185E9640E8EA733 /* Pods_twofoldUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,13 +295,6 @@
 			isa = PBXGroup;
 			children = (
 				0F2D4B3B2231F63000B57F31 /* GameKit.framework */,
-				0F2D4B262231C13500B57F31 /* FirebaseCore.framework */,
-				0F2D4B282231C13500B57F31 /* FirebaseInstanceID.framework */,
-				0F2D4B2A2231C13500B57F31 /* GoogleUtilities.framework */,
-				0F2D4B2C2231C13500B57F31 /* nanopb.framework */,
-				0F2D4B2E2231C13500B57F31 /* Pods_twofold.framework */,
-				76F629B98AF560F078E35247 /* Pods_twofoldTests.framework */,
-				47EC91ED20E1EE4DE63722B2 /* Pods_twofoldUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -339,6 +324,7 @@
 				0F7572E7221F432000498C2B /* Frameworks */,
 				0F7572E8221F432000498C2B /* Resources */,
 				4DCA08B0E48C76167BEBDF9E /* [CP] Embed Pods Frameworks */,
+				0FCA039924A9092F00299D9F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
