@@ -40,6 +40,7 @@ class HighScoreViewController: UIViewController {
     
     private var adBannerView: GADBannerView!
     private var interstitial: GADInterstitial!
+    private var request = GADRequest()
     
     private var scoreReporter = GKScore()
     private var timeScore = Int()
@@ -351,8 +352,8 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
     
     // Ad request
     func handleAdRequest() {
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+//        let request = GADRequest()
+//        request.testDevices = [kGADSimulatorID]
         adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(adBannerView)
         
@@ -367,8 +368,8 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
     func createAndLoadInterstitial() -> GADInterstitial {
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")//ca-app-pub-2292175261120907/1071084845")
         interstitial.delegate = self
-        let request = GADRequest()
-        request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9b" ]
+//        let request = GADRequest()
+//        request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9b" ]
         interstitial.load(request)
         return interstitial
     }
