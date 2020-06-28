@@ -386,8 +386,8 @@ extension GameController: GADBannerViewDelegate {
     
     // MARK:  AdMob banner ad
     func handleAdRequest() {
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+//        let request = GADRequest()
+//        request.testDevices = [kGADSimulatorID]
         
         adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(adBannerView)
@@ -396,7 +396,7 @@ extension GameController: GADBannerViewDelegate {
         adBannerView.rootViewController = self
         adBannerView.delegate = self
         
-        adBannerView.load(request)
+        adBannerView.load(GADRequest())
     }
     
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
