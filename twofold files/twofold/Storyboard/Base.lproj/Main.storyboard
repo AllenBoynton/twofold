@@ -453,9 +453,8 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="70K-x0-MV1">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="No copyright or trademark infringement is intended in using content on TwoFold." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="70K-x0-MV1">
                                 <rect key="frame" x="16" y="720.5" width="382" height="91.5"/>
-                                <string key="text">Pokémon © 2002-2019 Pokémon. © 1995-2019 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo. No copyright or trademark infringement is intended in using Pokémon content on PokéMatch</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1092,8 +1091,8 @@
     </scenes>
     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
-        <image name="1" width="800" height="800"/>
-        <image name="8" width="800" height="800"/>
+        <image name="1" width="266.5" height="266.5"/>
+        <image name="8" width="266.5" height="266.5"/>
         <image name="audio" width="64" height="64"/>
         <image name="gamecenter" width="1024" height="1024"/>
         <image name="right" width="192" height="192"/>
