@@ -43,7 +43,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     private var myImageView = UIImageView()
     private var myLabel = UILabel()
     
-    private var bannerView: GADBannerView!
+    private var adBannerView: GADBannerView!
     
     private var imageCategoryArray: [String] = ["Stickmen", "Butterflies", "Beaches", "Jungle"]
     
@@ -353,14 +353,14 @@ extension OptionsViewController: GADBannerViewDelegate {
     func handleAdRequest() {
         let request = GADRequest()
         
-        bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        addBannerViewToView(bannerView)
+        adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        addBannerViewToView(adBannerView)
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/9987324360"
-        bannerView.rootViewController = self
-        bannerView.delegate = self
+        adBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"//"ca-app-pub-2292175261120907/9987324360"
+        adBannerView.rootViewController = self
+        adBannerView.delegate = self
         
-        bannerView.load(request)
+        adBannerView.load(request)
     }
     /// Tells the delegate an ad request loaded an ad.
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
