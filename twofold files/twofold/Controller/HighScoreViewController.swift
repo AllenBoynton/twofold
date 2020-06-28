@@ -352,8 +352,6 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
     
     // Ad request
     func handleAdRequest() {
-//        let request = GADRequest()
-//        request.testDevices = [kGADSimulatorID]
         adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
         addBannerViewToView(adBannerView)
         
@@ -368,8 +366,6 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
     func createAndLoadInterstitial() -> GADInterstitial {
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")//ca-app-pub-2292175261120907/1071084845")
         interstitial.delegate = self
-//        let request = GADRequest()
-//        request.testDevices = [ kGADSimulatorID, "2077ef9a63d2b398840261c8221a0c9b" ]
         interstitial.load(request)
         return interstitial
     }
@@ -379,7 +375,7 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
         self.dismiss(animated: true, completion: nil)
     }
     
-    /// Tells the delegate that an interstitial will be presented.
+    // Tells the delegate that an interstitial will be presented.
     func interstitialWillPresentScreen(_ ad: GADInterstitial) {
         if musicIsOn {
             bgMusic?.pause()
@@ -389,7 +385,7 @@ extension HighScoreViewController: GADBannerViewDelegate, GADInterstitialDelegat
         }
     }
     
-    /// Tells the delegate the interstitial had been animated off the screen.
+    // Tells the delegate the interstitial had been animated off the screen.
     func interstitialDidDismissScreen(_ ad: GADInterstitial) {
         if musicIsOn {
             bgMusic?.play()
