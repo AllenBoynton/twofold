@@ -91,7 +91,7 @@ class GameController: UIViewController {
         case 1:
             self.bgImageView.image = UIImage(named: "butterflyBG")
             self.view.backgroundColor = ButterflyTheme.butterflyBGColor
-            self.difficultyLabel.textColor = ButterflyTheme.butterflySegForegroundColorNormal
+            self.difficultyLabel.textColor = .white
             self.playButton.setTitleColor(ButterflyTheme.butterflySegForegroundColorNormal, for: .normal)
             self.navigationController?.navigationBar.barTintColor = ButterflyTheme.butterflyTintColor
             self.bottomView.backgroundColor = ButterflyTheme.butterflyTintColor
@@ -114,12 +114,12 @@ class GameController: UIViewController {
         case 4:
             self.bgImageView.image = UIImage(named: "seaBGImage")
             self.view.backgroundColor = SeaTheme.seaBGColor
-            self.difficultyLabel.textColor = .white
+            self.difficultyLabel.textColor = SeaTheme.seaBGColor
             self.playButton.setTitleColor(.white, for: .normal)
-            self.navigationController?.navigationBar.barTintColor = .white
+            self.navigationController?.navigationBar.barTintColor = SeaTheme.seaBorderColor
             self.bottomView.backgroundColor = SeaTheme.seaTintColor
-            self.timeLabel.textColor = .blue
-            self.timerDisplay.textColor = .blue
+            self.timeLabel.textColor = SeaTheme.seaTextColor
+            self.timerDisplay.textColor = SeaTheme.seaTextColor
         default:
             self.view.backgroundColor = .white
             self.navigationController?.navigationBar.barTintColor = .white
