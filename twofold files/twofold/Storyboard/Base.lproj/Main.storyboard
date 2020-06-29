@@ -615,6 +615,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHY-GV-p8n" userLabel="bgImage">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-Ek-dQp">
                                 <rect key="frame" x="16" y="73.5" width="382" height="657.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -662,7 +665,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="85w-2B-Kxy">
                                 <rect key="frame" x="0.0" y="747" width="414" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cP-E4-Hbq">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cP-E4-Hbq" userLabel="timeLabel">
                                         <rect key="frame" x="184.5" y="8" width="45" height="26.5"/>
                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -755,9 +758,12 @@
                             <constraint firstItem="8jx-Ek-dQp" firstAttribute="leading" secondItem="BQz-Rk-LYb" secondAttribute="leading" constant="16" id="1Yj-Gd-lB2">
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
                             </constraint>
+                            <constraint firstItem="nHY-GV-p8n" firstAttribute="trailing" secondItem="BQz-Rk-LYb" secondAttribute="trailing" id="1eS-QC-tGk"/>
+                            <constraint firstItem="nHY-GV-p8n" firstAttribute="leading" secondItem="BQz-Rk-LYb" secondAttribute="leading" id="38l-Mc-AKU"/>
                             <constraint firstItem="tkh-g0-cy0" firstAttribute="top" secondItem="BQz-Rk-LYb" secondAttribute="top" id="EzD-Pc-bFX"/>
                             <constraint firstItem="tI9-Xk-rmS" firstAttribute="bottom" secondItem="BQz-Rk-LYb" secondAttribute="bottom" id="HEo-bm-jZZ"/>
                             <constraint firstItem="BQz-Rk-LYb" firstAttribute="trailing" secondItem="85w-2B-Kxy" secondAttribute="trailing" id="LMs-p6-RSE"/>
+                            <constraint firstAttribute="bottom" secondItem="nHY-GV-p8n" secondAttribute="bottom" id="Oao-8Y-IEm"/>
                             <constraint firstItem="85w-2B-Kxy" firstAttribute="leading" secondItem="BQz-Rk-LYb" secondAttribute="leading" id="U4Z-Sy-Skx"/>
                             <constraint firstItem="EIq-Bb-9xz" firstAttribute="centerX" secondItem="GFR-kT-trk" secondAttribute="centerX" id="Vr8-Hb-wrs"/>
                             <constraint firstItem="tI9-Xk-rmS" firstAttribute="trailing" secondItem="BQz-Rk-LYb" secondAttribute="trailing" id="WEn-lm-6M2"/>
@@ -771,15 +777,18 @@
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
                             </constraint>
                             <constraint firstItem="85w-2B-Kxy" firstAttribute="top" secondItem="tkh-g0-cy0" secondAttribute="bottom" id="pNh-Fh-faP"/>
+                            <constraint firstItem="nHY-GV-p8n" firstAttribute="top" secondItem="GFR-kT-trk" secondAttribute="top" id="x0d-3R-avk"/>
                             <constraint firstItem="BQz-Rk-LYb" firstAttribute="trailing" secondItem="tkh-g0-cy0" secondAttribute="trailing" id="xqQ-0o-0Ts"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BQz-Rk-LYb"/>
                     </view>
                     <connections>
+                        <outlet property="bgImageView" destination="nHY-GV-p8n" id="35K-E5-x9H"/>
                         <outlet property="bottomView" destination="85w-2B-Kxy" id="XNt-mB-yrQ"/>
                         <outlet property="collectionView" destination="8jx-Ek-dQp" id="FMn-6g-hS2"/>
                         <outlet property="difficultyLabel" destination="EIq-Bb-9xz" id="1xE-C1-uUi"/>
                         <outlet property="playButton" destination="tkh-g0-cy0" id="7UC-dR-GZ6"/>
+                        <outlet property="timeLabel" destination="5cP-E4-Hbq" id="ch3-km-8co"/>
                         <outlet property="timerDisplay" destination="Aww-04-XrS" id="p5r-fG-gAT"/>
                     </connections>
                 </viewController>
@@ -820,6 +829,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ew2-vV-00D" userLabel="bgImage">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uld-CF-HzU" userLabel="Main Stack View">
                                 <rect key="frame" x="133" y="68" width="148" height="313.5"/>
                                 <subviews>
@@ -1063,6 +1076,7 @@
                         <outlet property="bestMedTimeStackView" destination="2Kh-YN-lhq" id="XoY-va-7sP"/>
                         <outlet property="bestTimeStackLabel" destination="PZE-YT-oyG" id="dDF-9P-Pqf"/>
                         <outlet property="bestTimesStackView" destination="afb-vr-fEg" id="zS6-xZ-DXs"/>
+                        <outlet property="bgImageView" destination="ew2-vV-00D" id="QpW-mN-IiN"/>
                         <outlet property="easyHighScoreLbl" destination="EIZ-KL-Af0" id="B1m-8c-dmJ"/>
                         <outlet property="gcIconView" destination="Lfx-8P-5k7" id="tBd-F8-aLh"/>
                         <outlet property="hardHighScoreLbl" destination="ysQ-b0-fNF" id="VCV-uk-tNM"/>
