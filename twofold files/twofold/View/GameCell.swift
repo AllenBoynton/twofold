@@ -32,10 +32,10 @@ class GameCell: UICollectionViewCell {
                 backImageView.backgroundColor = UIColor.rgb(red: 230, green: 206, blue: 158)
                 backImageView.image = UIImage(named: "wave")
             case 3:
-                backImageView.backgroundColor = .blue
+                backImageView.backgroundColor = JungleTheme.jungleBGColor
                 frontImageView.contentMode = .scaleAspectFill
             case 4:
-                backImageView.backgroundColor = .lightGray
+                backImageView.backgroundColor = SeaTheme.seaTintColor
             default:
                 backImageView.backgroundColor = UIColor.rgb(red: 239, green: 135, blue: 51) // Orange
                 frontImageView.image = card.image.imageWithInsets(insets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
