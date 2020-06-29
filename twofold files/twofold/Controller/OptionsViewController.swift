@@ -272,7 +272,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 4:
             handleThemeChange(themeNum: 4, imageNum: "80", themeName: MemoryGame.seaCreatures,
                 bg: SeaTheme.seaBGColor,
-                navBarColor: UIColor.white,
+                navBarColor: SeaTheme.seaBorderColor,
                 segBorderColor: UIColor.systemTeal.cgColor,
                 segTintColor: BeachTheme.beachTintColor,
                 segFont: BeachTheme.mainFontTheme,
