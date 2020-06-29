@@ -55,6 +55,8 @@ class HomeController: UIViewController {
             handleTheme(bgColor: BeachTheme.beachBGColor, textColor: BeachTheme.beachTintColor, btnBgColor: BeachTheme.beachTintColor, image: "51")
         case 3:
             handleTheme(bgColor: JungleTheme.jungleBGColor, textColor: JungleTheme.jungleTintColor, btnBgColor: JungleTheme.jungleTextColor, image: "77")
+        case 4:
+        handleTheme(bgColor: SeaTheme.seaBGColor, textColor: UIColor.white, btnBgColor: UIColor.systemTeal, image: "80")
         default:
             self.view.backgroundColor = .green
         }
