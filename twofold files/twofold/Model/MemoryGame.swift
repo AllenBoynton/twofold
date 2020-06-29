@@ -152,22 +152,10 @@ extension MemoryGame {
     ]
     
     static var jungle: [UIImage] = [
-        UIImage(named: "61")!, UIImage(named: "62")!, UIImage(named: "63")!, UIImage(named: "64")!, UIImage(named: "65")!, UIImage(named: "66")!, UIImage(named: "67")!, UIImage(named: "68")!, UIImage(named: "69")!, UIImage(named: "70")!, UIImage(named: "71")!, UIImage(named: "72")!, UIImage(named: "73")!, UIImage(named: "74")!
+        UIImage(named: "61")!, UIImage(named: "62")!, UIImage(named: "63")!, UIImage(named: "64")!, UIImage(named: "65")!, UIImage(named: "66")!, UIImage(named: "67")!, UIImage(named: "68")!, UIImage(named: "69")!, UIImage(named: "70")!, UIImage(named: "71")!, UIImage(named: "72")!, UIImage(named: "73")!, UIImage(named: "74")!, UIImage(named: "75")!, UIImage(named: "76")!, UIImage(named: "77")!, UIImage(named: "78")!
     ]
     
-    static var gen4Images: [UIImage] = [
-        UIImage(named: "test")!
-    ]
-    
-    static var gen5Images: [UIImage] = [
-        
-    ]
-    
-    static var gen6Images: [UIImage] = [
-        
-    ]
-    
-    static var gen7Images: [UIImage] = [
-        
+    static var seaCreatures: [UIImage] = [
+       UIImage(named: "80")!, UIImage(named: "81")!, UIImage(named: "82")!, UIImage(named: "83")!, UIImage(named: "84")!, UIImage(named: "85")!, UIImage(named: "86")!, UIImage(named: "87")!, UIImage(named: "88")!, UIImage(named: "89")!, UIImage(named: "90")!, UIImage(named: "91")!, UIImage(named: "92")!, UIImage(named: "93")!, UIImage(named: "94")!, UIImage(named: "95")!, UIImage(named: "96")!
     ]
 }
