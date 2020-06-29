@@ -21,6 +21,7 @@ class GameController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     // Outlet for game display
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timerDisplay: UILabel!
     
     // Outlets for views
@@ -83,6 +84,8 @@ class GameController: UIViewController {
             self.view.backgroundColor = StickmanTheme.stickmanBGColor
             self.navigationController?.navigationBar.barTintColor = StickmanTheme.stickmanBGColor
             self.bottomView.backgroundColor = StickmanTheme.stickmanBGColor
+            self.timeLabel.textColor = StickmanTheme.stickmanTextColor
+            self.timerDisplay.textColor = StickmanTheme.stickmanTextColor
         case 1:
             self.view.backgroundColor = ButterflyTheme.butterflyBGColor
             self.difficultyLabel.textColor = ButterflyTheme.butterflySegForegroundColorNormal
@@ -95,12 +98,22 @@ class GameController: UIViewController {
             self.playButton.setTitleColor(.white, for: .normal)
             self.navigationController?.navigationBar.barTintColor = .white
             self.bottomView.backgroundColor = .white
+            self.timeLabel.textColor = BeachTheme.beachTextColor
+            self.timerDisplay.textColor = BeachTheme.beachTextColor
         case 3:
             self.view.backgroundColor = JungleTheme.jungleBGColor
             self.difficultyLabel.textColor = JungleTheme.jungleBorderColor
             self.playButton.setTitleColor(JungleTheme.jungleBorderColor, for: .normal)
             self.navigationController?.navigationBar.barTintColor = JungleTheme.jungleTintColor
             self.bottomView.backgroundColor = JungleTheme.jungleTintColor
+        case 4:
+            self.view.backgroundColor = SeaTheme.seaBGColor
+            self.difficultyLabel.textColor = .white
+            self.playButton.setTitleColor(.white, for: .normal)
+            self.navigationController?.navigationBar.barTintColor = .white
+            self.bottomView.backgroundColor = SeaTheme.seaTintColor
+            self.timeLabel.textColor = .blue
+            self.timerDisplay.textColor = .blue
         default:
             self.view.backgroundColor = .white
             self.navigationController?.navigationBar.barTintColor = .white
@@ -271,6 +284,42 @@ extension GameController: UICollectionViewDelegateFlowLayout {
             }
         }
         return CGSize(width: itemWidth, height: itemHeight)
+        
+        // PokeMatch Flow Layout
+//        if Device.IS_IPHONE {
+//            switch difficulty {
+//            case 6:
+//                itemWidth = collectionView.frame.width / 3 - 12.0
+//                itemHeight = collectionView.frame.height / 4 - 10.0
+//            case 8:
+//                itemWidth = collectionView.frame.width / 4 - 8.0
+//                itemHeight = collectionView.frame.height / 4 - 14.0
+//            case 10:
+//                itemWidth = collectionView.frame.width / 4 - 8.0
+//                itemHeight = collectionView.frame.height / 5 - 10.0
+//            default:
+//                itemWidth = collectionView.frame.width / 3 - 12.0
+//                itemHeight = collectionView.frame.height / 4 - 10.0
+//                break
+//            }
+//        } else if Device.IS_IPAD {
+//            switch iPadDifficulty {
+//            case 6:
+//                itemWidth = collectionView.frame.width / 3 - 12.0
+//                itemHeight = collectionView.frame.height / 4 - 10.0
+//            case 10:
+//                itemWidth = collectionView.frame.width / 4 - 8.0
+//                itemHeight = collectionView.frame.height / 5 - 12.0
+//            case 15:
+//                itemWidth = collectionView.frame.width / 5 - 8.0
+//                itemHeight = collectionView.frame.height / 6 - 10.0
+//            default:
+//                itemWidth = collectionView.frame.width / 4 - 12.0
+//                itemHeight = collectionView.frame.height / 5 - 10.0
+//                break
+//            }
+//        }
+//        return CGSize(width: itemWidth, height: itemHeight)
     }
     
     // MARK - IBAction functions
