@@ -50,10 +50,10 @@ class JungleTheme: Theme {
 }
 
 class SeaTheme: Theme {
-    static let seaBGColor = UIColor.rgb(red: 11, green: 102, blue: 35)
+    static let seaBGColor = UIColor.rgb(red: 21, green: 55, blue: 79)
     static let seaBorderColor = UIColor.rgb(red: 186, green: 118, blue: 40)
-    static let seaTintColor = UIColor.systemTeal
+    static let seaTintColor = UIColor.rgb(red: 53, green: 99, blue: 109)
     static let seaSegForegroundColorNormal = UIColor.rgb(red: 111, green: 68, blue: 63)
     static let seaSegForegroundColorSelected = UIColor.rgb(red: 79, green: 34, blue: 26)
-    static let seaTextColor = UIColor.blue
+    static let seaTextColor = UIColor.rgb(red: 10, green: 36, blue: 50)
 }
