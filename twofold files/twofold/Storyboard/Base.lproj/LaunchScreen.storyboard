@@ -18,7 +18,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" id="TRu-KU-U5k">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AB_LOGO_white" translatesAutoresizingMaskIntoConstraints="NO" id="1Ys-j5-22X">
                                         <rect key="frame" x="132" y="323" width="150" height="150"/>
@@ -38,7 +38,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.99835520980000003" green="0.35496556759999998" blue="0.35236293079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="nkb-hR-Qsj" firstAttribute="width" secondItem="1Ys-j5-22X" secondAttribute="width" id="3cI-ak-U46"/>
                                     <constraint firstItem="nkb-hR-Qsj" firstAttribute="centerY" secondItem="TRu-KU-U5k" secondAttribute="centerY" constant="5" id="HCC-Zs-kmw"/>
