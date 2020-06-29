@@ -91,7 +91,7 @@ class HighScoreViewController: UIViewController {
         case 3:
             handleTheme(bgColor: JungleTheme.jungleBGColor, navColor: JungleTheme.jungleTintColor, scoreColor: JungleTheme.jungleBorderColor, headerColor: JungleTheme.jungleSegForegroundColorSelected, textColor: JungleTheme.jungleTextColor, image: "76")
         case 4:
-            handleTheme(bgColor: SeaTheme.seaBGColor, navColor: .white, scoreColor: .red, headerColor: .blue, textColor: .white, image: "80")
+            handleTheme(bgColor: SeaTheme.seaBGColor, navColor: SeaTheme.seaBorderColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "90")
         default:
             self.view.backgroundColor = .white
         }
