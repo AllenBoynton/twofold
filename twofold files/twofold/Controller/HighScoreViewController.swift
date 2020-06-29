@@ -17,6 +17,7 @@ let hardID = "HardLeaderboard" // Hard Time Leaderboard
 
 class HighScoreViewController: UIViewController {
     
+    @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var mainStackView: UIStackView!
     @IBOutlet weak var newGameTimeStackview: UIStackView!
     @IBOutlet weak var bestEasyTimeStackView: UIStackView!
