@@ -19,7 +19,8 @@ class StickmanTheme: Theme {
     static let stickmanBorderColor = UIColor.darkGray.cgColor
     static let stickmanTintColor = UIColor.lightGray
     static let stickmanSegForegroundColorNormal = UIColor.black
-    static let stickmanSegForegroundColorSelected = UIColor.white
+    static let stickmanSegForegroundColorSelected = UIColor.rgb(red: 7, green: 165, blue: 205)
+    static let stickmanTextColor = UIColor.black
 }
 
 class ButterflyTheme: Theme {
@@ -36,6 +37,7 @@ class BeachTheme: Theme {
     static let beachTintColor = UIColor.white
     static let beachSegForegroundColorNormal = UIColor.white
     static let beachSegForegroundColorSelected = UIColor.blue
+    static let beachTextColor = UIColor.black
 }
 
 class JungleTheme: Theme {
