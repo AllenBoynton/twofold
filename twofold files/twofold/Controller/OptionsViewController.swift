@@ -45,7 +45,7 @@ class OptionsViewController: UIViewController, GKGameCenterControllerDelegate {
     
     private var adBannerView: GADBannerView!
     
-    private var imageCategoryArray: [String] = ["Stickmen", "Butterflies", "Beaches", "Jungle"]
+    private var imageCategoryArray: [String] = ["Stickmen", "Butterflies", "Beaches", "Jungle", "Sea Critters"]
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -227,17 +227,59 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         switch row {
         case 0:
-            handleThemeChange(themeNum: 0, imageNum: "1", themeName: MemoryGame.stickmen, bg: StickmanTheme.stickmanBGColor, navBarColor: .white, segBorderColor: StickmanTheme.stickmanBorderColor, segTintColor: StickmanTheme.stickmanTintColor, segFont: StickmanTheme.mainFontTheme, segForeColorNorm: StickmanTheme.stickmanSegForegroundColorNormal, segForeColorSelect: StickmanTheme.stickmanSegForegroundColorSelected, musicBtnColor: StickmanTheme.stickmanTintColor)
+            handleThemeChange(themeNum: 0, imageNum: "1", themeName: MemoryGame.stickmen,
+                bg: StickmanTheme.stickmanBGColor,
+                navBarColor: .white,
+                segBorderColor: StickmanTheme.stickmanBorderColor,
+                segTintColor: StickmanTheme.stickmanTintColor,
+                segFont: StickmanTheme.mainFontTheme,
+                segForeColorNorm: StickmanTheme.stickmanSegForegroundColorNormal,
+                segForeColorSelect: StickmanTheme.stickmanSegForegroundColorSelected,
+                musicBtnColor: StickmanTheme.stickmanTintColor)
             handleTextTheme(color: .black)
         case 1:
-            handleThemeChange(themeNum: 1, imageNum: "30", themeName: MemoryGame.butterflies, bg: ButterflyTheme.butterflyBGColor, navBarColor: ButterflyTheme.butterflyTintColor, segBorderColor: ButterflyTheme.butterflyBorderColor, segTintColor: ButterflyTheme.butterflyTintColor, segFont: ButterflyTheme.mainFontTheme, segForeColorNorm: ButterflyTheme.butterflySegForegroundColorNormal, segForeColorSelect: ButterflyTheme.butterflySegForegroundColorSelected, musicBtnColor: ButterflyTheme.butterflyTintColor)
+            handleThemeChange(themeNum: 1, imageNum: "30", themeName: MemoryGame.butterflies, bg: ButterflyTheme.butterflyBGColor,
+                navBarColor: ButterflyTheme.butterflyTintColor,
+                segBorderColor: ButterflyTheme.butterflyBorderColor,
+                segTintColor: ButterflyTheme.butterflyTintColor,
+                segFont: ButterflyTheme.mainFontTheme,
+                segForeColorNorm: ButterflyTheme.butterflySegForegroundColorNormal,
+                segForeColorSelect: ButterflyTheme.butterflySegForegroundColorSelected,
+                musicBtnColor: ButterflyTheme.butterflyTintColor)
             handleTextTheme(color: .black)
         case 2:
-            handleThemeChange(themeNum: 2, imageNum: "51", themeName: MemoryGame.beach, bg: BeachTheme.beachBGColor, navBarColor: BeachTheme.beachTintColor, segBorderColor: BeachTheme.beachBorderColor, segTintColor: BeachTheme.beachTintColor, segFont: BeachTheme.mainFontTheme, segForeColorNorm: BeachTheme.beachSegForegroundColorNormal, segForeColorSelect: BeachTheme.beachSegForegroundColorSelected, musicBtnColor: BeachTheme.beachTintColor)
+            handleThemeChange(themeNum: 2, imageNum: "51", themeName: MemoryGame.beach,
+                bg: BeachTheme.beachBGColor,
+                navBarColor: BeachTheme.beachTintColor,
+                segBorderColor: BeachTheme.beachBorderColor,
+                segTintColor: BeachTheme.beachTintColor,
+                segFont: BeachTheme.mainFontTheme,
+                segForeColorNorm: BeachTheme.beachSegForegroundColorNormal,
+                segForeColorSelect: BeachTheme.beachSegForegroundColorSelected,
+                musicBtnColor: BeachTheme.beachTintColor)
             handleTextTheme(color: .white)
         case 3:
-            handleThemeChange(themeNum: 3, imageNum: "75", themeName: MemoryGame.jungle, bg: JungleTheme.jungleBGColor, navBarColor: JungleTheme.jungleTintColor, segBorderColor: JungleTheme.jungleBorderColor.cgColor, segTintColor: JungleTheme.jungleTintColor, segFont: JungleTheme.mainFontTheme, segForeColorNorm: JungleTheme.jungleTextColor, segForeColorSelect: JungleTheme.jungleSegForegroundColorSelected, musicBtnColor: JungleTheme.jungleTextColor)
+            handleThemeChange(themeNum: 3, imageNum: "75", themeName: MemoryGame.jungle,
+                bg: JungleTheme.jungleBGColor,
+                navBarColor: JungleTheme.jungleTintColor,
+                segBorderColor: JungleTheme.jungleBorderColor.cgColor,
+                segTintColor: JungleTheme.jungleTintColor,
+                segFont: JungleTheme.mainFontTheme,
+                segForeColorNorm: JungleTheme.jungleTextColor,
+                segForeColorSelect: JungleTheme.jungleSegForegroundColorSelected,
+                musicBtnColor: JungleTheme.jungleTextColor)
             handleTextTheme(color: JungleTheme.jungleTextColor)
+        case 4:
+            handleThemeChange(themeNum: 4, imageNum: "80", themeName: MemoryGame.seaCreatures,
+                bg: SeaTheme.seaBGColor,
+                navBarColor: UIColor.white,
+                segBorderColor: UIColor.systemTeal.cgColor,
+                segTintColor: BeachTheme.beachTintColor,
+                segFont: BeachTheme.mainFontTheme,
+                segForeColorNorm: UIColor.systemTeal,
+                segForeColorSelect: UIColor.blue,
+                musicBtnColor: UIColor.systemTeal)
+            handleTextTheme(color: .white)
         case 8: break
         default:
             rowString = "Error: too many rows"
