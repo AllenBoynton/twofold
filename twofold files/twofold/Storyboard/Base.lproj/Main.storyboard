@@ -619,10 +619,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-Ek-dQp">
-                                <rect key="frame" x="16" y="73.5" width="382" height="657.5"/>
+                                <rect key="frame" x="16" y="100.5" width="382" height="630.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LXA-gq-Ln1">
-                                    <size key="itemSize" width="75" height="90"/>
+                                    <size key="itemSize" width="80" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="16" minY="10" maxX="16" maxY="10"/>
@@ -772,7 +772,7 @@
                             <constraint firstItem="85w-2B-Kxy" firstAttribute="top" secondItem="8jx-Ek-dQp" secondAttribute="bottom" constant="16" id="dPX-YJ-Fao"/>
                             <constraint firstItem="tkh-g0-cy0" firstAttribute="leading" secondItem="BQz-Rk-LYb" secondAttribute="leading" id="hu8-X3-y9I"/>
                             <constraint firstItem="EIq-Bb-9xz" firstAttribute="top" secondItem="BQz-Rk-LYb" secondAttribute="top" constant="5" id="kDs-X4-jam"/>
-                            <constraint firstItem="8jx-Ek-dQp" firstAttribute="top" secondItem="EIq-Bb-9xz" secondAttribute="bottom" constant="5" id="kd0-Ct-sXG"/>
+                            <constraint firstItem="8jx-Ek-dQp" firstAttribute="top" secondItem="EIq-Bb-9xz" secondAttribute="bottom" constant="32" id="kd0-Ct-sXG"/>
                             <constraint firstItem="BQz-Rk-LYb" firstAttribute="trailing" secondItem="8jx-Ek-dQp" secondAttribute="trailing" constant="16" id="koa-A6-5W8">
                                 <variation key="heightClass=regular-widthClass=regular" constant="32"/>
                             </constraint>
