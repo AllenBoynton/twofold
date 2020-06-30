@@ -83,15 +83,15 @@ class HighScoreViewController: UIViewController {
     private func setupLayout() {
         switch theme {
         case 0:
-            handleTheme(bgColor: StickmanTheme.stickmanBGColor, navColor: StickmanTheme.stickmanBGColor, scoreColor: .blue, headerColor: .black, textColor: .darkGray, image: "8")
+            handleTheme(bgColor: StickmanTheme.stickmanBGColor, navColor: StickmanTheme.stickmanBGColor, scoreColor: .blue, headerColor: .black, textColor: .darkGray, image: "\(Int.random(in: 1..<21))")
         case 1:
-            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, navColor: ButterflyTheme.butterflyTintColor, scoreColor: ButterflyTheme.butterflyTintColor, headerColor: .black, textColor: ButterflyTheme.butterflySegForegroundColorNormal, image: "30")
+            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, navColor: ButterflyTheme.butterflyTintColor, scoreColor: ButterflyTheme.butterflyTintColor, headerColor: .black, textColor: ButterflyTheme.butterflySegForegroundColorNormal, image: "\(Int.random(in: 21..<38))")
         case 2:
-            handleTheme(bgColor: BeachTheme.beachBGColor, navColor: BeachTheme.beachTintColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "51")
+            handleTheme(bgColor: BeachTheme.beachBGColor, navColor: BeachTheme.beachTintColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "\(Int.random(in: 41..<58))")
         case 3:
-            handleTheme(bgColor: JungleTheme.jungleBGColor, navColor: JungleTheme.jungleTintColor, scoreColor: JungleTheme.jungleBorderColor, headerColor: JungleTheme.jungleSegForegroundColorSelected, textColor: JungleTheme.jungleTextColor, image: "76")
+            handleTheme(bgColor: JungleTheme.jungleBGColor, navColor: JungleTheme.jungleTintColor, scoreColor: JungleTheme.jungleBorderColor, headerColor: JungleTheme.jungleSegForegroundColorSelected, textColor: JungleTheme.jungleTextColor, image: "\(Int.random(in: 75..<79))")
         case 4:
-            handleTheme(bgColor: SeaTheme.seaBGColor, navColor: SeaTheme.seaBorderColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "90")
+            handleTheme(bgColor: SeaTheme.seaBGColor, navColor: SeaTheme.seaBorderColor, scoreColor: .red, headerColor: .blue, textColor: .white, image: "\(Int.random(in: 80..<97))")
         default:
             self.view.backgroundColor = .white
         }

@@ -227,7 +227,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         
         switch row {
         case 0:
-            handleThemeChange(themeNum: 0, imageNum: "1", themeName: MemoryGame.stickmen,
+            handleThemeChange(themeNum: 0, imageNum: "\(Int.random(in: 1..<21))", themeName: MemoryGame.stickmen,
                 bg: StickmanTheme.stickmanBGColor,
                 navBarColor: .white,
                 segBorderColor: StickmanTheme.stickmanBorderColor,
@@ -238,7 +238,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 musicBtnColor: StickmanTheme.stickmanTintColor)
             handleTextTheme(color: .black)
         case 1:
-            handleThemeChange(themeNum: 1, imageNum: "30", themeName: MemoryGame.butterflies, bg: ButterflyTheme.butterflyBGColor,
+            handleThemeChange(themeNum: 1, imageNum: "\(Int.random(in: 21..<38))", themeName: MemoryGame.butterflies, bg: ButterflyTheme.butterflyBGColor,
                 navBarColor: ButterflyTheme.butterflyTintColor,
                 segBorderColor: ButterflyTheme.butterflyBorderColor,
                 segTintColor: ButterflyTheme.butterflyTintColor,
@@ -248,7 +248,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 musicBtnColor: ButterflyTheme.butterflyTintColor)
             handleTextTheme(color: .black)
         case 2:
-            handleThemeChange(themeNum: 2, imageNum: "51", themeName: MemoryGame.beach,
+            handleThemeChange(themeNum: 2, imageNum: "\(Int.random(in: 41..<58))", themeName: MemoryGame.beach,
                 bg: BeachTheme.beachBGColor,
                 navBarColor: BeachTheme.beachTintColor,
                 segBorderColor: BeachTheme.beachBorderColor,
@@ -259,7 +259,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 musicBtnColor: BeachTheme.beachTintColor)
             handleTextTheme(color: .white)
         case 3:
-            handleThemeChange(themeNum: 3, imageNum: "75", themeName: MemoryGame.jungle,
+            handleThemeChange(themeNum: 3, imageNum: "\(Int.random(in: 75..<79))", themeName: MemoryGame.jungle,
                 bg: JungleTheme.jungleBGColor,
                 navBarColor: JungleTheme.jungleTintColor,
                 segBorderColor: JungleTheme.jungleBorderColor.cgColor,
@@ -270,7 +270,7 @@ extension OptionsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
                 musicBtnColor: JungleTheme.jungleTextColor)
             handleTextTheme(color: JungleTheme.jungleTextColor)
         case 4:
-            handleThemeChange(themeNum: 4, imageNum: "80", themeName: MemoryGame.seaCreatures,
+            handleThemeChange(themeNum: 4, imageNum: "\(Int.random(in: 80..<97))", themeName: MemoryGame.seaCreatures,
                 bg: SeaTheme.seaBGColor,
                 navBarColor: SeaTheme.seaBorderColor,
                 segBorderColor: UIColor.systemTeal.cgColor,

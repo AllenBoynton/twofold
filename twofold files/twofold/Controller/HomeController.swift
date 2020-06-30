@@ -48,15 +48,15 @@ class HomeController: UIViewController {
     private func setupTheme() {
         switch theme {
         case 0:
-            handleTheme(bgColor: StickmanTheme.stickmanBGColor, textColor: .black, btnBgColor: StickmanTheme.stickmanTintColor, image: "8")
+            handleTheme(bgColor: StickmanTheme.stickmanBGColor, textColor: .black, btnBgColor: StickmanTheme.stickmanTintColor, image: "\(Int.random(in: 1..<21))")
         case 1:
-            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, textColor: ButterflyTheme.butterflyTintColor, btnBgColor: ButterflyTheme.butterflyTintColor, image: "30")
+            handleTheme(bgColor: ButterflyTheme.butterflyBGColor, textColor: ButterflyTheme.butterflyTintColor, btnBgColor: ButterflyTheme.butterflyTintColor, image: "\(Int.random(in: 21..<38))")
         case 2:
-            handleTheme(bgColor: BeachTheme.beachBGColor, textColor: BeachTheme.beachTintColor, btnBgColor: BeachTheme.beachTintColor, image: "51")
+            handleTheme(bgColor: BeachTheme.beachBGColor, textColor: BeachTheme.beachTintColor, btnBgColor: BeachTheme.beachTintColor, image: "\(Int.random(in: 41..<58))")
         case 3:
-            handleTheme(bgColor: JungleTheme.jungleBGColor, textColor: JungleTheme.jungleTintColor, btnBgColor: JungleTheme.jungleTextColor, image: "77")
+            handleTheme(bgColor: JungleTheme.jungleBGColor, textColor: JungleTheme.jungleTintColor, btnBgColor: JungleTheme.jungleTextColor, image: "\(Int.random(in: 75..<79))")
         case 4:
-        handleTheme(bgColor: SeaTheme.seaBGColor, textColor: UIColor.white, btnBgColor: UIColor.systemTeal, image: "80")
+            handleTheme(bgColor: SeaTheme.seaBGColor, textColor: UIColor.white, btnBgColor: UIColor.systemTeal, image: "\(Int.random(in: 80..<97))")
         default:
             self.view.backgroundColor = .green
         }
@@ -66,6 +66,10 @@ class HomeController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+    }
+    
+    private func randomInteger(lowNum: Int, highNum: Int) {
+        return randomInt = Int.random(in: lowNum..<highNum)
     }
     
     private func handleTheme(bgColor: UIColor, textColor: UIColor, btnBgColor: UIColor, image: String) {
