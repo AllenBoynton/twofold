@@ -89,14 +89,14 @@ class GameController: UIViewController {
             self.timeLabel.textColor = StickmanTheme.stickmanTextColor
             self.timerDisplay.textColor = StickmanTheme.stickmanTextColor
         case 1:
-            self.bgImageView.image = UIImage(named: "butterflyBG")
+//            self.bgImageView.image = UIImage(named: "butterflyBG")
             self.view.backgroundColor = ButterflyTheme.butterflyBGColor
-            self.difficultyLabel.textColor = .white
+            self.difficultyLabel.textColor = ButterflyTheme.butterflySegForegroundColorNormal
             self.playButton.setTitleColor(ButterflyTheme.butterflySegForegroundColorNormal, for: .normal)
             self.navigationController?.navigationBar.barTintColor = ButterflyTheme.butterflyTintColor
             self.bottomView.backgroundColor = ButterflyTheme.butterflyTintColor
         case 2:
-            self.bgImageView.image = UIImage(named: "beachBGImage")
+//            self.bgImageView.image = UIImage(named: "beachBGImage")
             self.view.backgroundColor = BeachTheme.beachBGColor
             self.difficultyLabel.textColor = .white
             self.playButton.setTitleColor(.white, for: .normal)
@@ -105,16 +105,16 @@ class GameController: UIViewController {
             self.timeLabel.textColor = BeachTheme.beachTextColor
             self.timerDisplay.textColor = BeachTheme.beachTextColor
         case 3:
-            self.bgImageView.image = UIImage(named: "jungleBGImage")
+//            self.bgImageView.image = UIImage(named: "jungleBGImage")
             self.view.backgroundColor = JungleTheme.jungleBGColor
             self.difficultyLabel.textColor = JungleTheme.jungleBorderColor
             self.playButton.setTitleColor(JungleTheme.jungleBorderColor, for: .normal)
             self.navigationController?.navigationBar.barTintColor = JungleTheme.jungleTintColor
             self.bottomView.backgroundColor = JungleTheme.jungleTintColor
         case 4:
-            self.bgImageView.image = UIImage(named: "seaBGImage")
+//            self.bgImageView.image = UIImage(named: "seaBGImage")
             self.view.backgroundColor = SeaTheme.seaBGColor
-            self.difficultyLabel.textColor = SeaTheme.seaBGColor
+            self.difficultyLabel.textColor = SeaTheme.seaBorderColor
             self.playButton.setTitleColor(.white, for: .normal)
             self.navigationController?.navigationBar.barTintColor = SeaTheme.seaBorderColor
             self.bottomView.backgroundColor = SeaTheme.seaTintColor
