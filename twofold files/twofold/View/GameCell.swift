@@ -32,6 +32,8 @@ class GameCell: UICollectionViewCell {
                 backImageView.backgroundColor = UIColor.rgb(red: 230, green: 206, blue: 158)
                 backImageView.image = UIImage(named: "wave")
             case 3:
+                backImageView.image = UIImage(named: "jungleCardBG")
+                backImageView.contentMode = .scaleAspectFill
                 backImageView.backgroundColor = JungleTheme.jungleBGColor
                 frontImageView.contentMode = .scaleAspectFill
             case 4:
