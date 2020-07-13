@@ -68,9 +68,9 @@ class HomeController: UIViewController {
         
     }
     
-    private func randomInteger(lowNum: Int, highNum: Int) {
-        return randomInt = Int.random(in: lowNum..<highNum)
-    }
+//    private func randomInteger(lowNum: Int, highNum: Int) {
+//        return randomInt = Int.random(in: lowNum..<highNum)
+//    }
     
     private func handleTheme(bgColor: UIColor, textColor: UIColor, btnBgColor: UIColor, image: String) {
         self.view.backgroundColor = bgColor
