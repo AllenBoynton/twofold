@@ -35,6 +35,7 @@
 		0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757333221F936800498C2B /* HighScoreViewController.swift */; };
 		0F757338221FA3D200498C2B /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757337221FA3D200498C2B /* GameCell.swift */; };
 		0FCA039524A8DE2200299D9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */; };
+		DB36973F591E5D718D20649A /* Pods_twofold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9837F69C72209409E2114E5C /* Pods_twofold.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,6 +85,7 @@
 		75A85B85CA9F44A9543489DA /* Pods-twofold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofold.debug.xcconfig"; path = "Target Support Files/Pods-twofold/Pods-twofold.debug.xcconfig"; sourceTree = "<group>"; };
 		92079F818F5707AA8EE17990 /* Pods-twofoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldTests.debug.xcconfig"; path = "Target Support Files/Pods-twofoldTests/Pods-twofoldTests.debug.xcconfig"; sourceTree = "<group>"; };
 		95155F00D55181C85F802F52 /* Pods-twofoldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldUITests.debug.xcconfig"; path = "Target Support Files/Pods-twofoldUITests/Pods-twofoldUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9837F69C72209409E2114E5C /* Pods_twofold.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_twofold.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA971D270CB18511CB73E5F0 /* Pods-twofoldUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldUITests.release.xcconfig"; path = "Target Support Files/Pods-twofoldUITests/Pods-twofoldUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C1CA7A05FFD217AE9A84B144 /* Pods-twofold.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofold.release.xcconfig"; path = "Target Support Files/Pods-twofold/Pods-twofold.release.xcconfig"; sourceTree = "<group>"; };
 		DFD3988D91ABF4C307A1A20B /* Pods-twofoldTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldTests.release.xcconfig"; path = "Target Support Files/Pods-twofoldTests/Pods-twofoldTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F2D4B3C2231F63000B57F31 /* GameKit.framework in Frameworks */,
+				DB36973F591E5D718D20649A /* Pods_twofold.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				0F2D4B3B2231F63000B57F31 /* GameKit.framework */,
+				9837F69C72209409E2114E5C /* Pods_twofold.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,7 +281,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Allen Boynton";
 				TargetAttributes = {
 					0F7572E9221F432000498C2B = {
@@ -444,6 +448,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -469,7 +474,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -505,6 +510,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -524,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
