@@ -34,6 +34,7 @@
 		0F757335221F936800498C2B /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757332221F936800498C2B /* GameController.swift */; };
 		0F757336221F936800498C2B /* HighScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757333221F936800498C2B /* HighScoreViewController.swift */; };
 		0F757338221FA3D200498C2B /* GameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F757337221FA3D200498C2B /* GameCell.swift */; };
+		0FC74B62257C554900F0C1EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC74B61257C554900F0C1EB /* HomeView.swift */; };
 		0FCA039524A8DE2200299D9F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */; };
 		DB36973F591E5D718D20649A /* Pods_twofold.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9837F69C72209409E2114E5C /* Pods_twofold.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		0F757332221F936800498C2B /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		0F757333221F936800498C2B /* HighScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HighScoreViewController.swift; sourceTree = "<group>"; };
 		0F757337221FA3D200498C2B /* GameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameCell.swift; sourceTree = "<group>"; };
+		0FC74B61257C554900F0C1EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0FCA039424A8DE2200299D9F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75A85B85CA9F44A9543489DA /* Pods-twofold.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofold.debug.xcconfig"; path = "Target Support Files/Pods-twofold/Pods-twofold.debug.xcconfig"; sourceTree = "<group>"; };
 		92079F818F5707AA8EE17990 /* Pods-twofoldTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twofoldTests.debug.xcconfig"; path = "Target Support Files/Pods-twofoldTests/Pods-twofoldTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		0F7572EC221F432000498C2B /* twofold */ = {
 			isa = PBXGroup;
 			children = (
+				0FC74B60257C54F600F0C1EB /* SwiftUI Views */,
 				0F757320221F437C00498C2B /* AppDelegate */,
 				0F75731F221F437400498C2B /* Model */,
 				0F75731E221F436C00498C2B /* View */,
@@ -227,6 +230,14 @@
 				0F75732F221F92B800498C2B /* GameDelegate.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		0FC74B60257C54F600F0C1EB /* SwiftUI Views */ = {
+			isa = PBXGroup;
+			children = (
+				0FC74B61257C554900F0C1EB /* HomeView.swift */,
+			);
+			path = "SwiftUI Views";
 			sourceTree = "<group>";
 		};
 		49A216FD6E8EEECEAC38E1F9 /* Frameworks */ = {
@@ -391,6 +402,7 @@
 				0F2D4B202231BFE200B57F31 /* BlinkingLabel.swift in Sources */,
 				0F2D4B482233212700B57F31 /* ImageWithInsets.swift in Sources */,
 				0F2D4B46223320C500B57F31 /* DesignableImageViews.swift in Sources */,
+				0FC74B62257C554900F0C1EB /* HomeView.swift in Sources */,
 				0F32851A226296A1001DA6B1 /* Theme.swift in Sources */,
 				0F75732A221F919200498C2B /* Device.swift in Sources */,
 				0F2D4B422232EF9500B57F31 /* DesignableButtons.swift in Sources */,
@@ -474,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -530,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
