@@ -8,6 +8,7 @@
 
 import UIKit
 import GameKit
+import SwiftUI
 
 class HomeController: UIViewController {
     
@@ -24,6 +25,11 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var startButton: DesignableButtons!
     @IBOutlet weak var musicButton: UIButton!
+    
+    @IBAction func openOptionsView(_ sender: Any) {
+        let optionsView = UIHostingController(rootView: OptionsView())
+        navigationController?.pushViewController(optionsView, animated: true)
+    }
     
     let localPlayer = GKLocalPlayer.local
     
