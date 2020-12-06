@@ -83,6 +83,9 @@
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="18"/>
                                 </variation>
+                                <connections>
+                                    <segue destination="dOD-zb-b88" kind="show" identifier="toOptionsVC" id="lm3-Jf-FlL"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="rsM-2t-43S">
                                 <rect key="frame" x="241.66666666666666" y="372.66666666666669" width="98.333333333333343" height="98.666666666666686"/>
@@ -129,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1046" y="133"/>
         </scene>
         <!--options-->
         <scene sceneID="WJz-iQ-6X9">
@@ -315,7 +318,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="7cP-cy-NFH" userLabel="right1">
-                                <rect key="frame" x="331.66666666666674" y="454.66666666666669" width="42.333333333333314" height="42"/>
+                                <rect key="frame" x="331.66666666666669" y="454.66666666666669" width="42.333333333333314" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7cP-cy-NFH" secondAttribute="height" multiplier="1:1" id="RKQ-8h-zpd"/>
                                 </constraints>
@@ -341,7 +344,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="5Z6-hJ-Cle" userLabel="right2">
-                                <rect key="frame" x="331.66666666666674" y="507.66666666666669" width="42.333333333333314" height="42.333333333333314"/>
+                                <rect key="frame" x="331.66666666666669" y="507.66666666666669" width="42.333333333333314" height="42.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="5Z6-hJ-Cle" secondAttribute="height" multiplier="1:1" id="96N-y0-YYt"/>
                                 </constraints>
@@ -367,7 +370,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="Ef3-16-N7L" userLabel="right3">
-                                <rect key="frame" x="331.66666666666674" y="561" width="42.333333333333314" height="42"/>
+                                <rect key="frame" x="331.66666666666669" y="561" width="42.333333333333314" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ef3-16-N7L" secondAttribute="height" multiplier="1:1" id="cSZ-J6-eqA"/>
                                 </constraints>
@@ -393,7 +396,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="wHi-1H-lFc" userLabel="right4">
-                                <rect key="frame" x="331.66666666666674" y="614" width="42.333333333333314" height="42.333333333333371"/>
+                                <rect key="frame" x="331.66666666666669" y="614" width="42.333333333333314" height="42.333333333333371"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wHi-1H-lFc" secondAttribute="height" multiplier="1:1" id="b0K-Xy-cr9"/>
                                 </constraints>
@@ -583,7 +586,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8jx-Ek-dQp">
-                                <rect key="frame" x="16" y="96.333333333333314" width="358" height="582.66666666666674"/>
+                                <rect key="frame" x="16" y="100.33333333333331" width="358" height="578.66666666666674"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LXA-gq-Ln1">
                                     <size key="itemSize" width="80" height="90"/>
@@ -630,7 +633,7 @@
                                 <rect key="frame" x="0.0" y="695" width="390" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5cP-E4-Hbq" userLabel="timeLabel">
-                                        <rect key="frame" x="174" y="8" width="42" height="21"/>
+                                        <rect key="frame" x="172.66666666666666" y="8.0000000000000018" width="45" height="26.666666666666671"/>
                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -699,7 +702,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty: what??" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EIq-Bb-9xz">
-                                <rect key="frame" x="145" y="49" width="100" height="15.333333333333329"/>
+                                <rect key="frame" x="134.33333333333334" y="49" width="121.33333333333334" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="13"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -790,7 +793,7 @@
             <objects>
                 <viewController storyboardIdentifier="HighScoreViewController" id="GcN-Wi-AJz" customClass="HighScoreViewController" customModule="twofold" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zuL-Z2-J8E">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ew2-vV-00D" userLabel="bgImage">
@@ -798,13 +801,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uld-CF-HzU" userLabel="Main Stack View">
-                                <rect key="frame" x="124.00000000000001" y="24" width="142.33333333333337" height="276.66666666666669"/>
+                                <rect key="frame" x="121.33333333333333" y="68" width="147.66666666666669" height="295.33333333333331"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R8M-VO-re5" userLabel="Upper Stack View">
-                                        <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="85"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="93.666666666666671"/>
                                         <subviews>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="NEW BEST TIME!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gw-gc-QgM" userLabel="New High Score">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="0.0"/>
                                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="28"/>
                                                 <color key="textColor" red="0.97120636699999996" green="0.87661522629999999" blue="0.35276979209999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -817,7 +820,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Game Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="fM7-Du-c1x">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="42.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="47"/>
                                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="40"/>
                                                 <color key="textColor" systemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -830,7 +833,7 @@
                                                 </variation>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="l6W-h6-ftB" userLabel="Timer Display">
-                                                <rect key="frame" x="0.0" y="42.333333333333329" width="142.33333333333334" height="42.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="47" width="147.66666666666666" height="46.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="34"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -845,10 +848,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="afb-vr-fEg" userLabel="Lower Stack View">
-                                        <rect key="frame" x="0.0" y="104.99999999999999" width="142.33333333333334" height="171.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="113.66666666666667" width="147.66666666666666" height="181.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Best Times" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="PZE-YT-oyG" userLabel="Best Time">
-                                                <rect key="frame" x="0.0" y="0.0" width="142.33333333333334" height="43"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="147.66666666666666" height="45.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="40"/>
                                                 <color key="textColor" systemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -861,10 +864,10 @@
                                                 </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="N9Y-Ue-rJK" userLabel="Best Easy Time Stack">
-                                                <rect key="frame" x="0.0" y="43" width="142.33333333333334" height="42.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="45.666666666666686" width="147.66666666666666" height="45.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="yuh-vB-wWv" userLabel="Best Easy Time">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="42.666666666666664"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="45.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="26"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -877,7 +880,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="EIZ-KL-Af0" userLabel="Best Time">
-                                                        <rect key="frame" x="71" y="0.0" width="71.333333333333314" height="42.666666666666664"/>
+                                                        <rect key="frame" x="73.666666666666671" y="0.0" width="74.000000000000014" height="45.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="36"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -892,10 +895,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-YN-lhq" userLabel="Best Med Time Stack">
-                                                <rect key="frame" x="0.0" y="85.666666666666657" width="142.33333333333334" height="43"/>
+                                                <rect key="frame" x="0.0" y="91.000000000000028" width="147.66666666666666" height="45.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="sXO-ok-0TB" userLabel="Best Med Time">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="43"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="45.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="26"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -908,7 +911,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="At2-pA-Dg6" userLabel="Best Time">
-                                                        <rect key="frame" x="71" y="0.0" width="71.333333333333314" height="43"/>
+                                                        <rect key="frame" x="73.666666666666671" y="0.0" width="74.000000000000014" height="45.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="36"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -923,10 +926,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-oM-wEw" userLabel="Best Hard Time Stack">
-                                                <rect key="frame" x="0.0" y="128.66666666666669" width="142.33333333333334" height="42.666666666666657"/>
+                                                <rect key="frame" x="0.0" y="136.33333333333334" width="147.66666666666666" height="45.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="kYZ-RV-rhm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="71" height="42.666666666666664"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="45.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="26"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -939,7 +942,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" translatesAutoresizingMaskIntoConstraints="NO" id="ysQ-b0-fNF" userLabel="Best Time">
-                                                        <rect key="frame" x="71" y="0.0" width="71.333333333333314" height="42.666666666666664"/>
+                                                        <rect key="frame" x="73.666666666666671" y="0.0" width="74.000000000000014" height="45.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="36"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -968,7 +971,7 @@
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Game Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="At9-ag-i0b">
-                                <rect key="frame" x="147.66666666666666" y="316.66666666666669" width="94.666666666666657" height="25"/>
+                                <rect key="frame" x="144.33333333333334" y="379.33333333333331" width="101.33333333333334" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="25" id="5iH-6s-OPr"/>
                                 </constraints>
@@ -983,10 +986,10 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzk-Ve-TzY" userLabel="GC View">
-                                <rect key="frame" x="155.66666666666666" y="349.66666666666669" width="79" height="79"/>
+                                <rect key="frame" x="152.66666666666666" y="412.33333333333331" width="84.666666666666657" height="84.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfx-8P-5k7" userLabel="Game Center Button">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="79"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.333333333333329"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBlack" family="Helvetica Neue" pointSize="18"/>
                                         <state key="normal" title="Game Center" image="gamecenter"/>
                                         <connections>
@@ -1004,7 +1007,7 @@
                                 </constraints>
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" image="1" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMS-bG-DyZ">
-                                <rect key="frame" x="235.66666666666666" y="512.66666666666663" width="118.33333333333334" height="118.33333333333337"/>
+                                <rect key="frame" x="227.33333333333334" y="558.33333333333337" width="126.66666666666666" height="126.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="OMS-bG-DyZ" secondAttribute="height" multiplier="1:1" id="iSn-FK-jPj"/>
                                 </constraints>
