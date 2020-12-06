@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G8g-un-lCN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="G8g-un-lCN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home Controller-->
+        <!--TwoFold-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeController" customModule="twofold" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,8 @@
                                     <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="18"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="dOD-zb-b88" kind="show" identifier="toOptionsVC" id="OCN-6n-JPS"/>
+                                    <action selector="openOptionsView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0LY-ks-sd7"/>
+                                    <segue destination="dOD-zb-b88" kind="show" identifier="toOptionsVC" id="cAF-28-ffP"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8" translatesAutoresizingMaskIntoConstraints="NO" id="rsM-2t-43S">
@@ -132,7 +133,7 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HX8-mc-num"/>
+                    <navigationItem key="navigationItem" title="TwoFold" id="HX8-mc-num"/>
                     <connections>
                         <outlet property="imageView" destination="NxH-AX-p9x" id="hIH-Og-tvf"/>
                         <outlet property="imageView2" destination="rsM-2t-43S" id="GSl-dm-3N0"/>
@@ -575,6 +576,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Jcd-Ef-ztm"/>
                     <connections>
                         <outlet property="imagePicker" destination="HLw-7K-JbP" id="nz7-UI-zld"/>
                         <outlet property="musicOffView" destination="bgG-6m-8wX" id="FfI-hP-ipv"/>
@@ -802,7 +804,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="G8g-un-lCN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sy6-bw-Wxe">
+                    <navigationBar key="navigationBar" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Sy6-bw-Wxe">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -1070,6 +1072,7 @@
                             </constraint>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fg3-Ba-yoc"/>
                     <connections>
                         <outlet property="bestEasyTimeStackView" destination="N9Y-Ue-rJK" id="iCZ-Td-L1M"/>
                         <outlet property="bestHardTimeStackView" destination="9Lj-oM-wEw" id="WWO-J8-Lf8"/>
