@@ -11,7 +11,7 @@ import AVFoundation
 import GameKit
 import StoreKit
 import GoogleMobileAds
-import SwiftUI
+//import SwiftUI
 
 var difficulty = UInt()
 var iPadDifficulty = UInt()
