@@ -242,7 +242,7 @@ class HighScoreViewController: UIViewController {
     }
     
     @objc func returnToOptionsVC(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OptionsViewController")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "OptionsViewHostingController")
         show(vc!, sender: self)
     }
     
