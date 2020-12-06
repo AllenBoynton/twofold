@@ -8,7 +8,7 @@
 
 import UIKit
 import GameKit
-import SwiftUI
+//import SwiftUI
 
 class HomeController: UIViewController {
     
@@ -23,13 +23,8 @@ class HomeController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     
-    @IBOutlet weak var startButton: DesignableButtons!
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var musicButton: UIButton!
-    
-    @IBAction func openOptionsView(_ sender: Any) {
-        let optionsView = UIHostingController(rootView: OptionsView())
-        navigationController?.pushViewController(optionsView, animated: true)
-    }
     
     let localPlayer = GKLocalPlayer.local
     
@@ -128,6 +123,12 @@ class HomeController: UIViewController {
     func notificationReceived() {
         print("GKPlayerAuthenticationDidChangeNotificationName - Authentication Status: \(localPlayer.isAuthenticated)")
     }
+    
+    // Create segue to reach hosting controller Options View
+//    @IBAction func openOptionsView(_ sender: Any) {
+//        let optionsView = UIHostingController(rootView: OptionsView())
+//        navigationController?.pushViewController(optionsView, animated: true)
+//    }
     
     // Music button to turn music on/off
     @IBAction func muteButtonTapped(_ sender: UIButton) {
