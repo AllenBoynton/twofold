@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, NSAttributedString.Key.font: UIFont(name: Theme.mainFontTheme, size: 15)!], for: .normal)
         
         // Start app with sound
-//        Music().startGameMusic(name: "bgMusic")
+        Music().startGameMusic(name: "bgMusic")
         
 //        StoreReviewHelper().checkAndAskForReview()
         
