@@ -11,6 +11,21 @@ import AVFoundation
 import GameKit
 import StoreKit
 import GoogleMobileAds
+import SwiftUI
+
+struct OptionsView: View {
+    @available(iOS 13.0.0, *)
+    var body: some View {
+        Text("Options View")
+    }
+}
+
+struct OptionsView_Previews: PreviewProvider {
+    @available(iOS 13.0.0, *)
+    static var previews: some View {
+        OptionsView()
+    }
+}
 
 var difficulty = UInt()
 var iPadDifficulty = UInt()
@@ -412,3 +427,4 @@ extension OptionsViewController: GADBannerViewDelegate {
         })
     }
 }
+
